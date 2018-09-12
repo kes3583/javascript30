@@ -1,0 +1,16 @@
+.message, .success {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333; }
+
+.success {
+  border-color: green; }
+
+.hidden {
+  position: absolute;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  pointer-events: none; }
+
+/*# sourceMappingURL=base.css.map */
