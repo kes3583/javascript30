@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Day2 - css js clock </title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <section>
+        <div class="clock-face">
+            <div class="hand hour"></div>
+            <div class="hand minute"></div>
+            <div class="hand second"></div>
+        </div>
+    </section>
+
+
+
+    <script>
+
+        //const audio = document.querySelector(`audio[data-key=${e.keyCode}]`);
+        const hands = Array.from(document.querySelectorAll('.hand'));
+        const hourhand = hands[0];
+        const minhand = hands[1];
+        const sechand = hands[2];
+
+        window.requestAnimationFrame = window.requestAnimationFrame
+                               || window.mozRequestAnimationFrame
+                               || window.webkitRequestAnimationFrame
+                               || window.msRequestAnimationFrame
+                               || function(f){return setTimeout(f, 1000/60)}
+
+
+        //hands[0].style.transform = 'rotate(50deg)';
+
+        const setclock = function () {
+            const now = new Date();
+            const hours = now.getHours();
+            const min = now.getMinutes();
+            const sec = now.getSeconds();
+
+            const hourDeg = ((hours / 12) * 360); // move 30degree per 1 hour
+            const minDeg = ((min /60) * 360); // move 6degree per 1 minute
+            const secDeg = ((sec /60) * 360); // move 6degree per 1 second
+
+
+
+            hourhand.style.transform = `rotate(${hourDeg}deg)`;
+            minhand.style.transform = `rotate(${minDeg}deg)`;
+            sechand.style.transform = `rotate(${secDeg}deg)`;
+            console.log(secDeg)
+            requestAnimationFrame(setclock)
+        }
+
+
+        //setInterval (setclock, 1000);
+        requestAnimationFrame(setclock)
+
+    </script>
+</body>
+
+</html>

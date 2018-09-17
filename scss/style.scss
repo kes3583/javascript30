@@ -65,3 +65,101 @@ body {
     box-shadow: 0px 0px 10px 5px #fc0;
 
 }
+
+// clock-face
+.clock-face{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    background: #fff;
+    border: 3px solid rgb(228, 214, 19);
+    //opacity: 0.5;
+    transform: translate(-50%, -50%);
+
+    &::after{
+        content: "";
+        position:absolute;
+        left: 50%;
+        top:50%;
+        background-color: #000;
+        width: 18px;
+        height:18px;
+        margin:-10px 0 0 -5px;
+        border-radius: 18px;
+        z-index: 99;
+
+    }
+
+    .hand{
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 4px;
+        transform-origin: 100% 100%;
+        //transition: all .05s;
+        //transform: rotate(0deg);
+        //transition-timing-function: ease-in-out;
+
+    }
+    .hand.hour{
+        top: 20%;
+        height:30%;
+        background: #000;
+        z-index: 7;
+    }
+    .hand.minute{
+        top:10%;
+        height:40%;
+        background: #68e308;
+        z-index: 8;
+    }
+    .hand.second{
+
+        width: 2px;
+        height:50%;
+        background: #e30808;
+        z-index: 9;
+    }
+
+}
+
+//Playing with CSS Variables and JS
+:root{
+    --spacing: 20px;
+    --blur: 10px;
+    --color: #400791;
+
+}
+
+
+.range{
+    //@include toBeCenter;
+    margin: 20px auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    color:rgb(255, 255, 255);
+    h1{
+        font-size:3rem;
+        margin-bottom: 10px;
+
+        span.h1{
+            color: var(--color);
+        }
+    }
+    .box{
+        margin:30px;
+
+        img{
+            padding: var(--spacing);
+            background-color: var(--color);
+            filter: blur(var(--blur));
+        }
+
+    }
+}

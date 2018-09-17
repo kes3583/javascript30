@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Day3 - Playing with CSS Variables and JS </title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <section class="range">
+        <h1>Update CSS Variables with <span class="h1">JS</span></h1>
+        <div class="controls">
+            <label for="spacing">Spacing</label>
+            <input type="range" name="spacing" min="0" max="100" value="10" class="spacingSlider" id="spaceRange">
+
+            <label for="blur">Blur</label>
+            <input type="range" name="blur" min="0" max="100" value="10" class="blurSlider" id="blurRange">
+
+            <label for="color">Base color</label>
+            <input type="color" name="color" id="colorSlider" class="colorSlider" value="#9a1182">
+        </div>
+        <div class="box">
+            <img src="https://images.unsplash.com/photo-1537095267667-f65b33e26331?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=02041be564e4417fe60b9ec399b10750&auto=format&fit=crop&w=750&q=80" alt="" width="500" class="img">
+        </div>
+    </section>
+
+
+
+    <script>
+
+        //const audio = document.querySelector(`audio[data-key=${e.keyCode}]`);
+        const img = document.querySelector('.img');
+        const inputs = Array.from(document.querySelectorAll('input'));
+
+        var handleUpdate = function(e){
+            console.log(this.name)
+            //img.style.filter = `blur(${this.value}px)`;
+            if(this.name === "spacing"){
+                img.style.setProperty('--spacing', this.value + 'px')
+            }else if (this.name === "blur") {
+                img.style.setProperty('--blur', this.value + 'px')
+            }else {
+                img.style.setProperty('--color', this.value)
+            }
+
+        }
+        inputs.forEach(el => el.addEventListener('change', handleUpdate));
+        inputs.forEach(el => el.addEventListener('mousemove', handleUpdate));
+
+
+
+
+
+    </script>
+</body>
+
+</html>
