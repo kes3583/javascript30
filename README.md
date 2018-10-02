@@ -1,5 +1,12 @@
 # javascript30
 
+#day5 - find out an bug
+-- transitionend detects panel closing as double clicking a panel
+-- remove the transitionend , add delay property on css.
+
+
+
+
 stylesheets/
 |
 |-- modules/              # Common modules
