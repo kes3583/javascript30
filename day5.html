@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +18,7 @@
     }
     /* flex items */
   .panel > * {margin:0; flex:1; display:flex; justify-content: center; align-items: center;
-    transition: transform 0.5s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    transition: transform 0.5s cubic-bezier(0.785, 0.135, 0.150, 0.860) 0.7s;
   }
   .panel > *:first-child{transform: translateY(-100%);}
   .panel > *:last-child{transform: translateY(100%);}
@@ -27,7 +26,8 @@
   .panel.open{flex:5; font-size:30px; }
   .panel > *:nth-child(2){font-size:2em}
 
-  .panel.active > p:first-child,   .panel.active > p:last-child {transform: translateY(0);}
+  .panel.open > p:first-child,
+  .panel.open > p:last-child {transform: translateY(0);}
 
 
   .panel1 {  background-image:url(https://source.unsplash.com/gYl-UtwNg_I/1500x1500); }
@@ -74,16 +74,7 @@
 <script>
   function toggleOpen (e){
     console.log('click')
-    // for (var i = 0; i < panels.length; i++) {
-    //   panels[i].classList.remove('open')
-    // }
     this.classList.toggle('open');
-    // if(this.classList.contains('active')){
-    //   this.classList.remove('open','active');
-    // }else{
-    //   this.classList.add('open');
-    // }
-
   }
   function toggleActive (e){
     console.log(e.propertyName)
@@ -95,7 +86,7 @@
   const panels = document.querySelectorAll('.panel')
   for (var i = 0; i < panels.length; i++) {
     panels[i].addEventListener('click', toggleOpen);
-    panels[i].addEventListener('transitionend', toggleActive);
+    //panels[i].addEventListener('transitionend', toggleActive);
   }
   // for (var i = 0; i < panels.length; i++) {
   //   panels[i].addEventListener('transitionend', toggleActive);
