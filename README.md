@@ -1,9 +1,9 @@
 # javascript30
 
 #day5 - find out an bug
--- transitionend detects panel closing as double clicking a panel
--- remove the transitionend , add delay property on css.
-
+-- transitionend detects panel closing as double clicking a panel.
+-- remove the transitionend function, then add delay property on css.
+-- https://medium.com/@vikash20186/creating-accordion-with-javascript-a33743655474
 
 
 

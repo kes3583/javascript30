@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Day6 - Ajax</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+
+    <style>
+    html{width:100%; height:100%; box-sizing: border-box; padding:0; margin:0; }
+    #panels{text-align:center; padding:20px}
+
+
+
+    </style>
+</head>
+
+<body>
+
+  <div id="panels">
+    <button class="button">Fetch</button>
+    <ul class="panel">
+
+    </ul>
+</div>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script> -->
+<script>
+const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
+const ul = document.querySelector('.author-list'), // Get the list where we will place our authors
+      url = 'https://randomuser.me/api/?results=10', // Get 10 random users
+      authors = [],
+      btn = document.querySelector('.button');
+
+function fetchData(evt){
+  axios.get(url)
+    .then((response) => {
+      console.log(response);
+      document.querySelector('.panel').innerHTML= response.data.results.map(function(item,index){
+
+        return (
+          `<li> ${index} :
+          ${item.gender} , ${item.name.first} ${item.name.last}</li>`
+        );
+      }).join('');
+    })
+    // .then(function(data){
+    //   console.log(data.results)
+    //   //document.querySelector('.panel').innerHTML= data.results[0].cell;
+    //   document.querySelector('.panel').innerHTML= data.results.map(function(item,index){
+    //     //return item.gender;
+    //     return (
+    //       //console.log(item),
+    //       '<p>' + item.gender + '</p>'
+    //     );
+    //   }).join('');
+    // })
+    .catch(function(error) {
+      const message = 'errored!'
+      console.log('errored')
+      document.getElementById('panel').innerHTML = '<h2 class="text-danger">' + message + '</h2>';
+      // If there is any error you will catch them here
+    });
+}
+
+btn.addEventListener('click', fetchData);
+
+</script>
+</body>
+
+</html>
