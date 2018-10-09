@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Day6 - Ajax</title>
+    <title>Day7 - Array Cardio Day 2</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
 
     <style>
@@ -36,53 +36,79 @@
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script> -->
 <script>
-const cityUrl = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
-const cities = [],
-      suggestion = document.querySelector('.suggestion'), // Get the list where we will place our cities
-      btn = document.querySelector('.button'),
-      searchInput = document.querySelector('#searchInput');
+  // ## Array Cardio Day 2
+  const people = [
+    { name: 'Wes', year: 1988 },
+    { name: 'Kait', year: 1986 },
+    { name: 'Irv', year: 1970 },
+    { name: 'Lux', year: 2015 }
+  ];
+  const comments = [
+    { text: 'Love this!', id: 523423 },
+    { text: 'Super good', id: 823423 },
+    { text: 'You are the best', id: 2039842 },
+    { text: 'Ramen is my fav food ever', id: 123523 },
+    { text: 'Nice Nice Nice!', id: 542328 }
+  ];
+  // Some and Every Checks
+  // Array.prototype.some() // is at least one person 19 or older?
 
+  // const isAdult = people.some(function(person){
+  // 	const currentYear = new Date().getFullYear();
+  // 	if(currentYear - person.year >= 19){
+  // 		return true
+  // 	}
+  // })
+  //console.log({isAdult}) // return object
 
-  fetch(cityUrl)
-    .then((response) => {
-      return response.json();// Transform the data into json
-    })
-    .then(function(data){
-      cities.push(...data);
-      suggestion.innerHTML = cities.map((place, index) => {
-        return (
-          `<li> ${index} : ${place.city} , ${place.state} <span>${place.rank}</span></li>`);
-      }).join(' ')
-      //console.log(Array.isArray(cities))
-    })
-    .catch(function(error) {
-      console.log('errored')
-      // If there is any error you will catch them here
+  //method2
+  function age(person){
+    const currentYear = new Date().getFullYear();
+    return currentYear - person.year >= 19
+  }
+  const isAdult2 = people.some(age)
+  console.log(isAdult2)
+
+  //method2-1
+  var isAdult3 = people.some(function(person){
+
+      	var currentYear = new Date().getFullYear();
+          //console.log(person)
+          return currentYear - person.year >= 49;
     });
+  console.log('isAdult3',isAdult3);
+  //method3 - simpler
+  // const isAdult4 = people.some(person => {
+  // 	const currentYear = new Date().getFullYear();
+  // 	return currentYear - person.year >= 19
+  // })
+  // console.log(isAdult4)
 
+  // Array.prototype.every() // is everyone 19 or older?
+const isOlder = people.every(function(person){
+  const currentYear = new Date().getFullYear();
+  return currentYear >= 19
+})
+console.log(isOlder)
 
+  // Array.prototype.find()
+  // Find is like filter, but instead returns just the one you are looking for
+  // find the comment with the ID of 823423
+const findperson = comments.find(obj => {
+  return obj.id === 823423;
+})
+console.log('find',findperson)
 
+  // Array.prototype.findIndex()
+const foundIndex = comments.findIndex(obj => {
+  return obj.id === 823423
+})
+//delete comments[foundIndex];
+comments.splice(foundIndex, 1) //  fruits.splice(2,1); 2번째에서 1개만 삭제
+console.log('comments',comments)
 
-function findMatches(wordToMatch, cities){
-  return cities.filter(place => {
-    //here we need to figure out if the city or state matches what was searched
-    const regex = new RegExp(wordToMatch, 'gi'); // global match
-    return place.city.match(regex) || place.state.match(regex)
-  })
-}
-function displayMatches(){
-  const matchArray = findMatches(this.value, cities); //array that I found
-  console.log(matchArray)
-  suggestion.innerHTML = matchArray.map((place, index) => {
-    return (
-      `<li> ${index} : ${place.city} , ${place.state}<span class="rank">${place.rank}</span></li>`);
-  }).join(' ')
-}
-
-searchInput.addEventListener('keyup', displayMatches);
-searchInput.addEventListener('change', displayMatches);
-
-
+  // Find the comment with this ID
+  // delete the comment with the ID of 823423
 </script>
 </body>
 

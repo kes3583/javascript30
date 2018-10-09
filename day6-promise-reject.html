@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Day6 - Ajax</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+
+    <style>
+    html{width:100%; height:100%; box-sizing: border-box; padding:0; margin:0; }
+    #panels{text-align:center; padding:20px}
+
+
+    </style>
+</head>
+
+<body>
+
+  <div id="panels">
+    <!-- <button class="button">Fetch</button> -->
+    <form class="" action="index.html" method="post">
+      <div class="panel">
+      <h1 id="author" class="author">search city</h1>
+      <label for="searchInput"></label>
+      <input id="searchInput" type="text" name='city' placeholder="type a city" value=''>
+
+      <ul class="suggestion">
+
+      </ul>
+    </div>
+    </form>
+</div>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script> -->
+<script>
+const cityUrl = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
+const cities = [],
+      suggestion = document.querySelector('.suggestion'), // Get the list where we will place our cities
+      btn = document.querySelector('.button'),
+      searchInput = document.querySelector('#searchInput');
+
+
+  fetch(cityUrl)
+    .then((response) => {
+      if (response.ok) {
+        return response.json()
+      } else {
+        return Promise.reject('something went wrong!')
+      }
+
+    })
+    .then(function(data){
+      cities.push(...data);
+      suggestion.innerHTML = cities.map((place, index) => {
+        return (
+          `<li> ${index} : ${place.city} , ${place.state} <span>${place.rank}</span></li>`);
+      }).join(' ')
+      //console.log(Array.isArray(cities))
+    })
+    .catch(function(error) {
+      if (error.status === 404) {
+        // do something about 404
+        suggestion.innerHTML = `<li> errored !</li>`
+      }
+
+    });
+
+
+
+
+function findMatches(wordToMatch, cities){
+  return cities.filter(place => {
+    //here we need to figure out if the city or state matches what was searched
+    const regex = new RegExp(wordToMatch, 'gi'); // global match
+    return place.city.match(regex) || place.state.match(regex)
+  })
+}
+function displayMatches(){
+  const matchArray = findMatches(this.value, cities); //array that I found
+  console.log(matchArray)
+  suggestion.innerHTML = matchArray.map((place, index) => {
+    return (
+      `<li> ${index} : ${place.city} , ${place.state}<span class="rank">${place.rank}</span></li>`);
+  }).join(' ')
+}
+
+searchInput.addEventListener('keyup', displayMatches);
+searchInput.addEventListener('change', displayMatches);
+
+
+</script>
+</body>
+
+</html>
