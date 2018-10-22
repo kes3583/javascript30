@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Day7 - Array Cardio Day 2</title>
+    <title>Day8 - Fun with HTML5 Canvas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
 
     <style>
-    html{width:100%; height:100%; box-sizing: border-box; padding:0; margin:0; }
+    html, body{width:100%; height:100%; box-sizing: border-box; padding:0; margin:0; }
     #panels{text-align:center; padding:20px}
 
 
@@ -20,95 +20,86 @@
 
   <div id="panels">
     <!-- <button class="button">Fetch</button> -->
-    <form class="" action="index.html" method="post">
-      <div class="panel">
-      <h1 id="author" class="author">search city</h1>
-      <label for="searchInput"></label>
-      <input id="searchInput" type="text" name='city' placeholder="type a city" value=''>
-
-      <ul class="suggestion">
-
-      </ul>
-    </div>
-    </form>
+    <canvas id="mycanvas"></canvas>
 </div>
 
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
 <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script> -->
 <script>
-  // ## Array Cardio Day 2
-  const people = [
-    { name: 'Wes', year: 1988 },
-    { name: 'Kait', year: 1986 },
-    { name: 'Irv', year: 1970 },
-    { name: 'Lux', year: 2015 }
-  ];
-  const comments = [
-    { text: 'Love this!', id: 523423 },
-    { text: 'Super good', id: 823423 },
-    { text: 'You are the best', id: 2039842 },
-    { text: 'Ramen is my fav food ever', id: 123523 },
-    { text: 'Nice Nice Nice!', id: 542328 }
-  ];
-  // Some and Every Checks
-  // Array.prototype.some() // is at least one person 19 or older?
+  const canvas = document.querySelector("#mycanvas");
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  ctx.strokeStyle = "#bada55";
+  ctx.lineJoin = "round";
+  ctx.lineCap = "round";
+  ctx.lineWidth = 1;
+  ctx.globalCompositeOperation = 'multiply'; //blend mode
 
-  // const isAdult = people.some(function(person){
-  // 	const currentYear = new Date().getFullYear();
-  // 	if(currentYear - person.year >= 19){
-  // 		return true
-  // 	}
-  // })
-  //console.log({isAdult}) // return object
+  let isDrawing = false; //defalut
+  let lastX = 0;
+  let lastY = 0;
+  let hue = 0;
+  let direction = true;
 
-  //method2
-  function age(person){
-    const currentYear = new Date().getFullYear();
-    return currentYear - person.year >= 19
+  function draw(e){
+    if(!isDrawing) return; //if isDrawing is not true, stop the Fn from running when they are not moused down
+    //console.log(e)
+    //console.log('hue', hue)
+    console.log('event1')
+
+    //defalut set
+    ctx.beginPath();
+
+    ctx.strokeStyle = `hsla(${hue}, 100%, 64%, 1)`;
+    ctx.moveTo(lastX, lastY);
+    ctx.lineTo(e.offsetX, e.offsetY);
+    ctx.stroke();
+
+    [lastX, lastY] = [e.offsetX, e.offsetY]; //update last coordinate x,y
+    //lastX = e.offsetX;
+    //lastY = e.offsetY
+
+    hue++;
+    if(hue >= 360){
+      hue = 0;
+    }
+    //lineWidth over 100 or under 1 , the direcion 반대로. true 이면 false
+    if(ctx.lineWidth >= 100 || ctx.lineWidth <= 1){
+      direction = !direction;
+    }
+    if(direction){
+      ctx.lineWidth++;
+    }else{
+      ctx.lineWidth--;
+    }
+
+
+
+
+
+    // ctx.beginPath();
+    // ctx.lineWidth = "10";
+    // ctx.strokeStyle = "green";  // Green path
+    // ctx.moveTo(10, 10);
+    // ctx.lineTo(0, 0);
+    // ctx.stroke();  // Draw it
   }
-  const isAdult2 = people.some(age)
-  console.log(isAdult2)
 
-  //method2-1
-  var isAdult3 = people.some(function(person){
+  //after mouseup or first mousedown
+  canvas.addEventListener('mousedown', function(e) {
+    console.log('event2')
+    isDrawing = true;
+    [lastX, lastY] = [e.offsetX, e.offsetY];
+  });
+  canvas.addEventListener('mousemove', draw);
+  canvas.addEventListener('mousedown', () => {
+    isDrawing = true;
+    console.log('mousedown')
+  });
+  canvas.addEventListener('mouseup', () => isDrawing = false); //mouse up
+  canvas.addEventListener('mouseout', () => isDrawing = false);// out of canvas
 
-      	var currentYear = new Date().getFullYear();
-          //console.log(person)
-          return currentYear - person.year >= 49;
-    });
-  console.log('isAdult3',isAdult3);
-  //method3 - simpler
-  // const isAdult4 = people.some(person => {
-  // 	const currentYear = new Date().getFullYear();
-  // 	return currentYear - person.year >= 19
-  // })
-  // console.log(isAdult4)
-
-  // Array.prototype.every() // is everyone 19 or older?
-const isOlder = people.every(function(person){
-  const currentYear = new Date().getFullYear();
-  return currentYear >= 19
-})
-console.log(isOlder)
-
-  // Array.prototype.find()
-  // Find is like filter, but instead returns just the one you are looking for
-  // find the comment with the ID of 823423
-const findperson = comments.find(obj => {
-  return obj.id === 823423;
-})
-console.log('find',findperson)
-
-  // Array.prototype.findIndex()
-const foundIndex = comments.findIndex(obj => {
-  return obj.id === 823423
-})
-//delete comments[foundIndex];
-comments.splice(foundIndex, 1) //  fruits.splice(2,1); 2번째에서 1개만 delete
-console.log('comments',comments)
-
-  // Find the comment with this ID
-  // delete the comment with the ID of 823423
 </script>
 </body>
 
