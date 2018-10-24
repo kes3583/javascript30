@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Day12 - Key Sequence Detection (KONAMI CODE)</title>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css"> -->
+  <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+
+  <style>
+  html {
+box-sizing: border-box;
+}
+
+*, *:before, *:after {
+box-sizing: inherit;
+}
+
+body {
+margin: 0;
+padding: 0;
+display: flex;
+background: #7A419B;
+min-height: 100vh;
+background: linear-gradient(135deg, #7c1599 0%,#921099 48%,#7e4ae8 100%);
+background-size: cover;
+align-items: center;
+justify-content: center;
+}
+
+    </style>
+</head>
+
+<body>
+
+  <div class="player">
+     <video class="player__video viewer" src="652333414.mp4" controls></video>
+
+
+   </div>
+
+
+  <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script> -->
+  <script>
+    const pressed = [];
+    const secretCode = "eunsim"
+    window.addEventListener('keyup', (e) => {
+      console.log(e.key)
+      pressed.push(e.key)
+
+      pressed.splice(-secretCode.length -1, pressed.length - secretCode.length);
+      console.log(pressed.join(''))
+      if(pressed.join('').includes(secretCode)){
+        console.log('yoyo')
+        cornify_add();
+      }
+    });
+  </script>
+</body>
+
+</html>
