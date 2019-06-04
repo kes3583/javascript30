@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Day4 - Array Cardio Day 1 </title>
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
 </head>
 
 <body>
 
-    <section class="">
+    <section class="list">
 
     </section>
 
@@ -47,6 +47,15 @@
     // 2. Give us an array of the inventors' first and last names
     const fullNames= inventors.map(obj => obj.first + obj.last )
     console.log(fullNames) //new Array
+
+    const firstNames= inventors.map(obj => obj.first )
+    const list = document.querySelector('.list')
+    list.innerHTML = inventors.map(obj => {
+      return `
+        <p>${obj.first}</p>
+      `
+    } ).join('')
+
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
