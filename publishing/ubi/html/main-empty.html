@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+	<meta name="format-detection" content="telephone=no">
+	<title>Tmap</title>
+	<link rel="stylesheet" href="../css/base.css" media="screen, print">
+	<link rel="stylesheet" href="../css/tmap_ubi.css" media="screen, print">
+	<link rel="stylesheet" href="../css/tmap_go.css" media="screen, print">
+	
+	<script src="../../js/libs/jquery-1.11.1.min.js"></script>
+	<script src="../../js/libs/counter.min.js"></script>
+	<script src="../../js/libs/Chart.min.js"></script>
+	<script src="../../js/TmapApp.js"></script>
+	
+	<script src="../js/ubiChart.js?"></script>
+	<script src="../js/ubiCommonUtils.js?"></script>
+	
+</head>
+
+<body class="mainBg-fix">
+
+<!--  header -->
+<header id="top" class="sub">
+	<h1 class="title">운전습관</h1>
+	<a href="#" class="back"><span></span><em class="blind">뒤로 가기</em></a>
+	<button type="button" class="information" onclick="#"><span></span><em class="blind">info</em></button>
+</header>
+<!-- header : end  -->
+
+<!--  contents  -->
+<div id="contents" class="bg-fix">
+
+	<div class="cnt-nav">
+		<!-- 과속 계기판  -->
+		<div class="speedPanel">
+			<div class="dashboard">
+				<span class="score-lt"><em class="blind">안전운전점수</em>0</span>
+				<div class="panel">
+
+					<div class="pos-Img">
+						<img src="../images/@dashboard_000.png" class="df_Img" alt="계기판" />
+						<img src="../images/@dashboard_00.png" class="db_Img" alt="계기판" />
+					</div>
+
+					<span class="arrow default"></span>
+					
+				</div>
+				<span class="score-rt"><em class="blind">안전운전점수</em>100</span>
+			</div>
+			<div class="safe-score">
+				<span id="total-score">0</span><span class="lh-fixed">점</span>
+				<p class="grade">상위 --%<em class=""> (--등)</em></p>
+				<p class="miles">
+					주행거리 0km 
+					<var id="distanceInfoEmptyBtn"  onclick="openEmptyCallOutPopUP();" >
+						<img src="../images/ico-mileage.png" alt="">
+					</var>
+				</p>
+			</div>
+		</div>
+
+		<!-- 안전운전 정보  -->
+		<div class="driving-info">
+			<div class="outer">
+				<div class="inner default">
+					<span class="block">주행 이력이 없습니다.</span>
+					<span class="block light">오전 주행 이력은 다음날 오전6시,<br>오후 주행 이력은 다음날 오후 6시 경에 반영됩니다.</span>
+				</div>
+			</div>
+
+			<div id="pop-wrap" class="pop-wrap" style="display:none;">
+				<div class="pop-info">
+					<p>안전운전 점수와 랭킹을 알려 드립니다.<br>랭킹은 50km 이상 주행 시 표시됩니다.</p>
+					<button type="button" class="pop-close" onclick="closePopUp()"><span class="icon"></span><span class="blind">팝업닫기</span></button>
+				</div>
+			</div>
+			
+			<div id="pop-wrap-empty" class="pop-wrap" style="display:none;">
+				<div class="pop-info">
+					<p>안전운전 점수와 랭킹을 알려 드립니다.<br>랭킹은 50km 이상 주행 시 표시됩니다.</p>
+					<button type="button" class="pop-close" onclick="closeEmptyPopUp()"><span class="icon"></span><span class="blind">팝업닫기</span></button>
+				</div>
+			</div> 
+			
+		</div>
+<!-- 주요항목  -->
+		<section id="patternGrid" class="safeDriving-wrap">
+			<header class="hd-tit">
+				<h3>
+					<span>주요 항목</span>
+					<var onclick="openCallOutDetailPopup();">
+						<img src="../images/ico-mileage.png" alt="">
+					</var>
+				</h3>
+					
+				<a href="#"><span class="history">주행이력</span></a>
+				<div id="pop-wrap-detail" class="majorItem pop-wrap" style="display: none">
+					<div class="pop-info">
+						<p>안전운전 점수를 구성하는 주요 항목들 입니다.<br>각 항목을 선택하시면 상세 정보가 제공됩니다.</p>
+						<button type="button" class="pop-close" onclick="closeDetailPopUp()"><span class="icon"></span><span class="blind">팝업닫기</span></button>
+					</div>
+				</div>
+			</header>
+			<div class="major-wrap">
+				<ul class="canvasList">
+					<li><button type="button" onclick="#">
+						<div class="canvasDIV">
+							<canvas id="chart-doughnut-0" width="85px" height="85px" style="color:#dbdbdb"></canvas>
+						</div>
+						<div class="sort-circle">
+							<div class="tbl-out">
+								<span class="headline">--
+									<var></var>
+								</span>
+								<span class="thing">속도준수</span>
+							</div>
+						</div>
+					</button></li>
+					<li><button type="button" onclick="#">
+						<div class="canvasDIV">
+							<canvas id="chart-doughnut-1" width="85px" height="85px" style="color:#dbdbdb"></canvas>
+						</div>
+						<div class="sort-circle">
+							<div class="tbl-out">
+								<span class="headline">--
+									<var></var>
+								</span>
+								<span class="thing">여유가속</span>
+							</div>
+						</div>
+					</button></li>
+					<li><button type="button" onclick="#">
+						<div class="canvasDIV">
+							<canvas id="chart-doughnut-2" width="85px" height="85px" style="color:#dbdbdb"></canvas>
+						</div>
+						<div class="sort-circle">
+							<div class="tbl-out">
+								<span class="headline">--
+									<var"></var>
+								</span>
+								<span class="thing">안전감속</span>
+							</div>
+						</div>
+					</button></li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- 자동차 보험 할인 정보 -->
+		<section id="patternGrid" class="motor-insurance">
+			<header class="hd-tit"><h3><span>자동차 보험 할인 정보</span></h3></header>
+			<div class="ins-column">
+				<p class="txt">T map을 이용해 <em>500km</em> 더 주행 하시면, 자동차 보험료 <br>할인을 위한 안전 운전 점수를 획득하실 수 있습니다.<p class='txt-etc'>자동차 보험 먼저 가입 후, 보험할인이 가능한 안전 운전 점수를 획득하셔도 남은 보험 기간 동안 할인 혜택을 받을 수 있습니다.</p></p>
+			</div>
+			<div class="btns wid80">
+				<button type="button" class="btn-type1 red">자세히 보기</button>
+			</div>
+		</section>
+		<section id="patternGrid" class="safeDriving-wrap">
+			<header class="hd-tit"></header>
+		</section>	
+		
+	</div>
+</div>
+<!--  contents :end  -->
+
+<script>
+var errcode = "230401"
+var totDistance = 0;
+var scoreValue = 0;
+var doughnuts = new Array();
+var doughnutsVal = [
+		20
+		,20
+		,20
+];
+//페이지 로드 시
+$(function(){
+	init();
+});
+
+function init(){
+	var $arrow = $('.dashboard .panel .arrow');
+	$arrow.css('transition', '1200ms');
+	$arrow.css('-webkit-transition', '1200ms');
+	$arrow.css('transform', 'rotate(' + (scoreValue*180/100) + 'deg)');
+	/* 
+	 * Count Up 
+	 */
+	$('#total-score').counter({
+		autoStart : true,
+		duration : 1000,
+		countTo : 0,
+		placeholder : 0,
+		easing : 'linear',// easeOutQuart
+		onStart : function() {		},
+		onComplete : function() {	}
+	});
+	
+	if(totDistance==0){
+		setEmptyCallOutPopUP();
+	}
+	
+	if(errcode != "000000"){
+		var $dashboard = $('.df_Img');
+		var $dashboard1 = $('.db_Img');
+
+		$dashboard1.css('opacity', 0);
+
+		$dashboard.stop().animate({
+			opacity : 0
+		}, 2000);
+		$dashboard1.stop().delay(800).animate({
+			opacity : 1
+		}, 1000);
+	}
+	
+	drawDoughnuts();
+	setTimeout(updateDoughnuts, 300);
+}
+
+function drawDoughnuts() {
+	var i, canvasId;
+	for (i=0; i<3; i++) {
+		canvasId='chart-doughnut-'+i;
+		
+		doughnutData[0].color = $('#'+canvasId).css('color'); //TODO 각각 색 설정
+		doughnuts[i] = drawDoughnutChart(canvasId, [0, 100]);
+	}
+}
+function updateDoughnuts(){
+	for (var i=0; i<3; i++) {
+		var val = doughnutsVal[i];
+		doughnuts[i].segments[0].value = val;
+		doughnuts[i].segments[1].value = 100-val;
+		doughnuts[i].update();
+	}
+}
+
+function moveMainDetail(detailType){
+	$("#detailType").val(detailType);
+	$("#mainDetailForm").submit();
+}
+
+function openCallOutPopup(){
+	$('.pop-wrap').fadeOut(300);
+	$('#pop-wrap').fadeIn(300);
+}
+
+function openEmptyCallOutPopUP(){
+	$('.pop-wrap').fadeOut(300);
+	$('#pop-wrap-empty').fadeIn(300);
+}
+
+function openCallOutDetailPopup(){
+	$('.pop-wrap').fadeOut(300);
+	$('#pop-wrap-detail').fadeIn(300);
+}
+
+function openEmptyFirstCallOutPopUP(){
+	$('#pop-wrap-empty').show();
+}
+
+function setEmptyCallOutPopUP(){
+	//EMPTYCOPU 쿠키 있는지 확인
+	var EMPTY_COPU = getCookie('EMPTY_COPU'); 
+	
+	
+	if(EMPTY_COPU == '' || EMPTY_COPU == null){
+		openEmptyFirstCallOutPopUP();		
+		setCookie('EMPTY_COPU', 'DPNONE', 365)
+	}
+}
+
+function closeEmptyPopUp(){
+	$('#pop-wrap-empty').fadeOut(300);
+}
+
+function closeDetailPopUp(){
+	$('#pop-wrap-detail').fadeOut(300);
+}
+
+function closePopUp(){
+	$('#pop-wrap').fadeOut(300);
+}
+</script>
+
+</body>
+</html>
+
+
+

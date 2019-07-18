@@ -1,0 +1,111 @@
+@charset "utf-8";
+body * {font-size: 11px;vertical-align:top; font-family: 'notokr-demilight'}
+body h1,
+body b {font-family: 'notokr-medium';}
+img {width: 100%;}
+
+.wrap {position: relative;}
+/*
+========================
+   *    header   *
+ =======================
+ */
+ .blind {display: inline-block; width: 0; height: 1px; overflow: hidden; opacity: 0;}
+/* #top {position: fixed; left: 0; top: 0; width: 100%; height: 58px; background: #fff;} */
+#top {position: fixed; left: 0; top: 0; width: 100%; height: 49px; background: #fff; border-bottom:1px solid #ccc;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+/* #top .back {position: absolute; left: 14px; top: 50%; margin-top: -21px; padding: 10px;} */
+#top .back {position: absolute; left: 7px; top: 50%; margin-top: -21px; padding: 10px;}
+/* #top .back > span {display: inline-block; width: 15px; height: 23px; background: url(../images/ico_back.png) left top no-repeat; background-size: 15px 23px;} */
+#top .back > span {display: inline-block; width: 13px; height: 21px; background: url(../images/ico_back.png) left top no-repeat; background-size: 13px 21px;}
+/* #top .information {position: absolute; right: 10px; top: 50%; margin-top: -20px; padding: 10px; background-color: transparent;} */
+#top .information {position: absolute; right: 7px; top: 50%; margin-top: -23px; padding: 10px; background-color: transparent;}
+#top .information > span {display: inline-block; width: 22px; height: 23px; background: url(../images/ico_set.png) left top no-repeat; background-size:22px 23px;}
+#top .logo {width: 93px; margin: 0 auto; padding-top: 13px;}
+#top .logo a {display: block; width: 100%; padding: 5px;}
+/* #top.sub {box-shadow: 0 0 2px 3px rgba(230, 230, 230, .5); z-index: 51;} */
+#top.sub {border-bottom:1px solid #ccc;z-index: 51;}
+#top .title {text-align: center; color: #4b5054; font-size: 17px; line-height: 50px; font-weight: bold;}
+
+.contentBody {padding:49px 0 65px;}
+.contentBody.fixed {position: fixed;top:0px; left:0px; width: 100%; height: 100%; box-sizing:border-box; padding-bottom: 0px; background:#c4d9f7 url("../images/bottomBg.png") 0 bottom no-repeat; background-size: 100% auto;}
+
+.pointContent {padding:14.3% 0 43.5%;background: url("../images/pointBg.jpg") 0 0 no-repeat; background-size: 100% auto; margin-bottom: 20px;}
+.pointContent.fail {background-image:url("../images/pointBgFail.jpg");}
+.pointContent .pointTitle {width: 70%; padding-top: 18.4%; background:url("../images/pointSuccess.png") center 0 no-repeat; background-size:auto 100%; margin:0 auto 18%;}
+.pointContent.fail .pointTitle {background-image:url("../images/pointFail.png"); padding-top: 25.6%; margin-bottom: 20%;}
+.pointContent .score {font-size: 16px; text-align: center;}
+.pointContent .score b {font-size: 18px; position: relative;top:-3px;}
+.pointContent .gage {display: inline-block; width:28px; height:16px; background:url("../images/gage.png") 0 0 no-repeat; background-size: 100% 100%; position: relative;}
+.pointContent .gage .niddle{position: absolute;width:7px; height: 4px; bottom:-2px; left:50%; background: url("../images/niddle.png") 0 0 no-repeat; background-size: 100% 100%;}
+
+.bookingContent .bookingTop {padding-top:87%; margin-bottom: 40px; background:url("../images/booking.jpg") 0 0 no-repeat; background-size: 100% auto;}
+.bookingContent .bookingBody {padding:0 30px;}
+.bookingContent .bookingBody .infoImg {display: block; margin-bottom: 28px;}
+.bookingContent .bookingBody dl {margin-bottom: 18px;}
+.bookingContent .bookingBody dt {font-size: 13px; text-indent: 6px; color:#a3a3a3;}
+.bookingContent .bookingBody dd {position: relative;}
+.bookingContent .bookingBody dd input {width:100%; height:45px; font-size: 18px; color:#505050; text-align:center; background:#fafbfe;border:1px solid #d4d5d9; box-sizing:border-box; border-radius: 0px;-webkit-appearance: none;}
+.bookingContent .bookingBody dd input::-webkit-input-placeholder { color: #babbbd; }
+.bookingContent .bookingBody dd span {color:#ee6a63; text-indent: 5px; display: block; margin-top:3px;}
+.bookingContent .bookingBody dd span.blue {color:#5685e0;}
+.bookingContent .bookingBody dd select {display:block; line-height:45px;width:100%; height:45px; font-size: 18px; color:#505050; text-align:center; background:#fafbfe;border:1px solid #d4d5d9; border-radius: 0px;box-sizing:border-box; text-align-last:center;-webkit-appearance: none; position: relative;}
+.bookingContent .bookingBody dd .selectWrap:after {position: absolute; top:18px; right:10px;width:18px; height:10px; background:url("../images/selectArrow.gif") 0 0 no-repeat; background-size:100% 100%; content:'';}
+.bookingContent .bookingBody dd a.termsBtn {display:block;width:100%; height:45px; line-height: 45px; text-indent: 35px; font-size: 15px; color:#61666a; text-align:center; background:#e8ebf1;border:1px solid #d4d5d9; box-sizing:border-box; border-radius: 0px; text-align: left; position: relative;}
+.bookingContent .bookingBody dd a.termsBtn:before {position: absolute; width:18px; height:18px; top:12px; left:10px; background:url("../images/check_off.png") 0 0 no-repeat; background-size:100% 100%; content:'';}
+.bookingContent .bookingBody dd a.termsBtn:after {position: absolute; width:49px; height:20px; top:12px; right:10px; background:url("../images/show.png") 0 0 no-repeat; background-size:100% 100%; content:'';}
+.bookingContent .bookingBody dd a.termsBtn.open:before {background-image:url("../images/check_on.png")}
+.bookingContent .bookingBody dd a.termsBtn.open:after {background-image:url("../images/hide.png")}
+.bookingContent .bookingBody dd .cnts{padding:10px; padding-bottom: 0; margin-top: -5px; background:#f7f7f7; border: 1px solid #c8c8c8; border-top: none; font-size:11px;line-height:16px; display: none;}
+.bookingContent .bookingBody dd table {border-collapse:collapse; border-spacing:0}
+.bookingContent .bookingBody dd table caption {text-align:justify; padding: 0.5em 0; font-size:12px; font-family:'notokr-medium'; color:#61666a;}
+.bookingContent .bookingBody dd thead th {height:20px; background: #e8e8e8; color:#444; font-size:11px;line-height:20px; border: 1px solid #c8c8c8; text-align: center;}
+.bookingContent .bookingBody dd tbody td {padding: 5px; background:#fff; border: 1px solid #c8c8c8;color:#666;font-size:11px;line-height:16px; text-align: center; vertical-align: middle;}
+.bookingContent .bookingBody dd ul {padding: 5px 5px 10px 5px; text-align: justify;}
+.bookingContent .bookingBody dd ul li {color: #73787b; font-size:11px;line-height:15px;}
+
+.couponContent {padding:10.2% 0 46.5%;background: url("../images/coupon.jpg") 0 0 no-repeat; background-size: 100% auto; margin-bottom: 20px;}
+.couponContent .couponTitle {width: 68.7%; padding-top: 22.7%; background:url("../images/couponComplete.png") center 0 no-repeat; background-size:auto 100%; margin:0 auto 28.5%;}
+.couponContent .couponDate {height:20px; width:30%; background:#c2c2c4; margin-left: 46.5%; color:#fff; text-align: center; line-height: 20px; font-size: 14px; border-radius: 10px;}
+.fixed .couponContent {padding-top:40px; background:none;}
+.fixed .couponContent .couponTitle {width:62.5%; padding-top:7.5%; margin:0 auto 23px; background: url("../images/coupon_used.png") 0 0 no-repeat; background-size: 100% auto;}
+.fixed .couponContent .couponSubTitle {text-align: center; color:#5e779c; font-size: 14px; line-height: 18px; letter-spacing: -1px; margin-bottom: 13px;}
+.fixed .couponContent .couponSubTitle span {color:#e55658; font-size: 14px;}
+.fixed .couponContent .couponNotice {font-size: 12px; color:#4a7cdc; text-align: center; letter-spacing: -1px; margin-bottom: 30px;}
+.fixed .couponContent .couponUsed {width:200px; height:52px; border-radius: 7px; text-align: center;box-sizing:border-box; margin:0 auto; background: #7d9ecd; color:#fff; font-size: 15px; line-height: 18px; padding-top:7px; margin-bottom: 34px;}
+.fixed .couponContent .couponUsed b {font-size: 15px;}
+.fixed .couponContent .usedImage {width:83.8%; margin:0 auto;}
+.fixed .bottomBg {padding-top:44%; position: fixed;bottom:0px; left:0px; right:0px; background: url("../images/bottomBg.png") 0 0 no-repeat; background-size: 100% auto;}
+
+.discription {font-size: 14px; color:#86888a; line-height: 19px; text-align: center; margin-bottom: 17px; letter-spacing: -1px;}
+
+.salePoint {width:76.3%; border-radius: 5px; background: #eee; padding:13px; margin:0 auto 30px;}
+.salePoint li {color:#989898; font-size: 13px; letter-spacing: -1px; position: relative;padding-left: 9px;}
+.salePoint li:before {position: absolute; width:5px; height: 1px; background:#989898; content:''; left: 0px; top:7px;}
+
+.serviceBtn {width:230px; height:40px; border:1px solid #67c1be; border-radius: 20px; display: block; margin:0 auto 13px; text-align: center; text-indent: 20px;}
+.serviceBtn b {line-height: 40px; font-size: 14px; color:#67c1be; position: relative;}
+.serviceBtn b:before {position: absolute; width:17px; height: 17px; left:-20px; top:-1px; content:''; background: url("../images/info.png") 0 0 no-repeat; background-size: 100% 100%;}
+ 
+.bottomBtn {position: fixed;left:0px; right:0px; bottom:0px; height:58px; background: #5685e0; text-align: center; z-index: 2;}
+.bottomBtn b {line-height: 58px; color:#fff; font-size: 17px; }
+
+.localNotice {text-align: center; color:#8f9193; letter-spacing: -1px; font-size: 14px;}
+
+.txtWrap {padding:85px 30px 30px;}
+.txtWrap h1 {font-size: 15px; letter-spacing: -1px; color:#333333; margin-bottom: 5px;}
+.txtWrap p {margin-bottom: 30px; }
+.txtWrap p span {color:#666; font-size: 13px; letter-spacing: -1px;}
+.txtWrap p > span {display: block; margin-bottom: 7px; text-align: justify;}
+.txtWrap p b {font-size: 13px;}
+.txtWrap .red {color:#e55658 !important;}
+.txtWrap .black {color:#333;}
+.txtWrap .bullet {position: relative; padding-left:6px;line-height: 16px;}
+.txtWrap .bullet:before {position: absolute;top:6px; left:0px; width:3px; height:3px; background:#666; border-radius: 50%; content:'';}
+.txtWrap .bullet.dotLine {background: url("../images/dotLine.gif") 0 7px repeat-x; background-size: 3px 1px; }
+.txtWrap .black span {color:#666; text-indent: 5px;}
+.txtWrap .bullet b {color:#333; line-height: 16px;}
+.txtWrap .dotLine {color:#999; font-size: 12px;}
+.txtWrap .dotBg {background: #fff; display: inline-block;margin-bottom:3px; padding-right: 5px;}
+.txtWrap .dotCost {position: absolute;right:0px; top:0px; padding-left: 5px; background: #fff; }
+.txtWrap .lineThrough {text-decoration: line-through; position: relative; display: inline-block; margin-right:15px; color:#999;}
+.txtWrap .lineThrough:after {position: absolute;width:10px; height:7px; top:4px; right:-12px; background:url("../images/arrow.gif") 0 0 no-repeat; background-size:100% 100%;content:'';}

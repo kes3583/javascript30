@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+	<meta name="format-detection" content="telephone=no">
+	<title>Tmap</title>
+	<link rel="stylesheet" href="../css/base.css" media="screen, print">
+	<link rel="stylesheet" href="../css/tmap_ubi.css" media="screen, print">
+	<link rel="stylesheet" href="../css/tmap_go.css" media="screen, print">
+	
+	<script src="../../js/libs/jquery-1.11.1.min.js"></script>
+	<script src="../../js/libs/counter.min.js"></script>
+	<script src="../../js/libs/Chart.min.js"></script>
+	<script src="../../js/TmapApp.js"></script>
+	
+	<script src="../js/ubiChart.js?"></script>
+	<script src="../js/ubiCommonUtils.js?"></script>
+	
+</head>
+
+<body class="mainBg-fix">
+
+<!--  header -->
+<header id="top" class="sub">
+	<h1 class="title">속도준수</h1>
+	<a href="#" onClick="history.back(); return false;" class="back"><span></span><em class="blind">뒤로 가기</em></a>
+	<!--button type="button" class="information" onclick="location.href='/app/tmap/ubi/setting.do'"><span></span><em class="blind">info</em></button-->
+</header>
+<!-- header : end  -->
+
+<!--  contents  -->
+<div id="contents" class="bg-fix">
+
+	<div class="cnt-nav">
+		<!-- 과속 계기판  -->
+		<div class="speedPanel">
+			<div class="statusOBJ">
+				<div class="panel"><img src="../images/canv-circle-step-01.png" alt="" /></div>
+				<div class="status-txt">조심</div>
+			</div>
+		</div>
+
+		<!-- 안전운전 정보  -->
+		<div class="driving-info details">
+			<div class="outer">
+				<div class="inner">
+					<span class='block'>과속이 매우 잦은 편입니다.</span>
+					<span class='block light'>평소보다 조금 일찍 출발해 여유를 가져보세요.</span>
+				</div>
+			</div> 
+		</div>	
+
+
+		<!-- 주요항목  -->
+		<section id="patternGrid" class="safeDriving-wrap">
+			<header class="hd-tit">
+				<h3><span>속도준수율</span></h3>
+				<p class="notice-txt">
+					* 속도준수 주행 거리 <span>604km</span><var>/</var>주행 거리 <span>1,219km</span>
+				</p>
+			</header>
+			<div class="pdGuide">
+				<ul class="ratioParagraph graph">
+			
+					<li>
+						<h3 class="roadName">일반도로</h3>
+						<div class="webkit-box mB-15">
+							<h4 class="tit">나의 준수율</h4>
+							<p class="flex"><span class="above"><span class="bar item-pre00"></span></span></p>
+							<p class="mark"><strong class="rank" style="color:#2d7eeb">62.2%</strong></p>
+						</div>
+						<div class="webkit-box ">
+							<h4 class="tit">상위 10%</h4>
+							<p class="flex"><span class="above"><span class="bar item-pre01"></span></span></p>
+							<p class="mark"><strong class="rank">99.3%</strong></p>
+						</div>
+					</li>
+					<li>
+						<h3 class="roadName">고속화도로</h3>
+						<div class="webkit-box mB-15">
+							<h4 class="tit">나의 준수율</h4>
+							<p class="flex"><span class="above"><span class="bar item-pre00"></span></span></p>
+							<p class="mark"><strong class="rank" style="color:#2d7eeb">68.4%</strong></p>
+						</div>
+						<div class="webkit-box ">
+							<h4 class="tit">상위 10%</h4>
+							<p class="flex"><span class="above"><span class="bar item-pre01"></span></span></p>
+							<p class="mark"><strong class="rank">98.8%</strong></p>
+						</div>
+					</li>
+
+					<li>
+						<h4 class="tc summary">* 도로의 제한 속도를 15km/h 이상 초과한 주행거리가 <br>많을수록 등급이 낮아집니다.</h4>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		
+		<section id="patternGrid" class="safeDriving-wrap">
+			<header class="hd-tit"></header>
+		</section>	
+	</div>
+
+
+</div>
+<!--  contents :end  -->
+
+
+<script>
+$(function(){
+	setDrivingGraph();
+
+});
+
+/*
+*  안전운전 점수 그래프 설정
+*/
+function setDrivingGraph() {
+	'use strict';
+
+	$('.graph li .webkit-box').each(function(idx) {
+
+		var $bar = $(this).find('.bar');
+		var speed = parseInt($(this).find('.rank').text());
+
+		$bar.css('width', speed+'%');
+	});
+}
+
+</script>
+
+</body>
+</html>
+
+
+

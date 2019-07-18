@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  <head>
+      <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+  
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+
+      <meta name="apple-mobile-web-app-title" content="driving_detail" />
+      <meta name="apple-mobile-web-app-capable" content="yes">
+
+      <link rel="shortcut icon" href="/favicon.ico">
+      <link rel="apple-touch-icon-precomposed" sizes="114×114" href="/share/favicon.png">
+      <title>운전습관</title>
+      <meta property="og:title" content="운전습관">
+      <meta property="og:type" content="website">
+      <meta property="og:image" content="">
+      <meta property="og:site_name" content="운전습관">
+      <meta property="fb:app_id" content="">
+      <meta property="og:url" content="">
+      <meta property="og:description" content="운전습관">
+
+      <link rel="stylesheet" type="text/css" href="/publishing/drivingHabit/css/driving.css">
+  </head>
+  <body>
+    <section class="card">
+      <a href="javascript:;" class="detailClose"></a>
+      <dl>
+        <dt>파인애비뉴 주차장 긴거 긴거 진짜긴거 와장창긴거</dt>
+        <dd>38km <span>|</span> 46분</dd>
+        <dd>
+          <ul class="flag">
+            <li class="overspeed">과속 0</li>
+            <li class="acc">급가속 0</li>
+            <li class="stop">급감속 1</li>
+          </ul>
+        </dd>
+      </dl>
+      <div class="leftInfo">13:30</div>
+      <a href="javascript:;" class="delete"></a>
+    </section>
+    <div class="detailMap" style="position:relative;">
+      <div class="notiPop overspeed old">
+        <div>
+          과속주행거리 71m<br>
+          내속도 180km/h
+        </div>
+      </div>
+      <div class="notiPop acc">
+        <span>급감속</span>
+        <span>10km/h</span>
+        <span class="arrow"></span>
+        <span>23km/h</span>
+      </div>
+      <div class="notiPop stop">
+        <span>급감속</span>
+        <span>10km/h</span>
+        <span class="arrow"></span>
+        <span>23km/h</span>
+      </div>
+      <img src="/publishing/drivingHabit/images/samples/driving_detail.png" alt="" class="sample" style="position:absolute; z-index:2000; left:0px; right:0px; top:50%; margin-top: -20%;">
+      <div id="map_div" class="driveMap"></div> 
+    </div>  
+    <div class="blueNoti drivingDetail">
+      지도상 위반 지점을 누르시면<br>자세한 내역을 보실 수 있습니다.
+    </div>
+    <div class="confirmDim">
+      <div class="confirm">
+        <h1 class="bold">주행이력을 삭제하시겠습니까?</h1>
+        <div>삭제한 이력은 다시 표출되지 않지만,<br>운전습관 점수 반영은 유지됩니다.</div>
+        <ul>
+          <li><a href="javascript:;">취소</a></li>
+          <li><a href="javascript:;">삭제</a></li>
+        </ul>
+      </div>  
+    </div>
+  </body>
+  <script src="/publishing/drivingHabit/js/plugins/jquery-1.11.1.min.js"></script>
+  <script src="https://toptmap.tmap.co.kr:10612/tmapv20/js?version=1&format=javascript&appKey=91d8433b-370a-4093-a4f5-740facda1ddf"></script>
+  <script src="/publishing/drivingHabit/js/sampleData.js"></script>
+  <script src="/publishing/drivingHabit/js/common.js"></script>
+  <script src="/publishing/drivingHabit/js/driving_detail.js"></script>
+</html>

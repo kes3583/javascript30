@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+  <head>
+      <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+  
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+  
+      <meta name="apple-mobile-web-app-title" content="index" />
+      <meta name="apple-mobile-web-app-capable" content="yes">
+
+      <link rel="shortcut icon" href="/favicon.ico">
+      <link rel="apple-touch-icon-precomposed" sizes="114×114" href="/share/favicon.png">
+      <title>운전습관</title>
+      <meta property="og:title" content="운전습관">
+      <meta property="og:type" content="website">
+      <meta property="og:image" content="">
+      <meta property="og:site_name" content="운전습관">
+      <meta property="fb:app_id" content="">
+      <meta property="og:url" content="">
+      <meta property="og:description" content="운전습관">
+
+      <!--link rel="stylesheet" type="text/css" href="/publishing/drivingHabit/css/font.css">
+      <link rel="stylesheet" href="/publishing/drivingHabit/css/swiper.min.css"-->
+      <!-- <link rel="stylesheet" type="text/css" href="/publishing/drivingHabit/css/index.css"> -->
+      
+      <link rel="stylesheet" type="text/css" href="/static/drivingHabit/css_origin/font.css">
+	<link rel="stylesheet" type="text/css" href="/static/drivingHabit/css_origin/common.css">
+	<link rel="stylesheet" href="/static/drivingHabit/css_origin/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/drivingHabit/css_origin/mobileSelect.css">
+	<link rel="stylesheet" type="text/css" href="/static/drivingHabit/css_origin/insurance_companies.css?5">
+	
+	<script src="/static/drivingHabit/js/plugins/jquery-1.11.1.min.js?ver_20181108_1"></script>
+	<script src="/static/drivingHabit/js/plugins/swiper.min.4.1.0.js?ver_20181108_1"></script>
+	<script src="/static/drivingHabit/js/plugins/mobileSelect.js" type="text/javascript"></script>
+	
+	<script src="/static/js/commonUtils.js?ver_20181108_1"></script>
+	<script src="/static/drivingHabit/js/common.js?ver_20181108_1"></script>
+  </head>
+  <body>
+  	<header>
+      <a href="javascript:backFun();" class="backBtn"></a>
+      <a href="javascript:;" class="txt">보험사 정보 등록</a>
+      <a href="javascript:;" class="rightBtn">삭제</a>
+    </header>
+    <section class="wrap">
+    	<ul class="steps">
+    		<li class="first">
+    			<a href="javascript:;">차량 번호<span></span></a>
+    			<div class="carNum">
+    				<input type="text" placeholder="12가1234"  maxlength="9" >
+    				<a href="javascript:;" class="txtClear"></a>
+    				<span>*차량번호가 유효하지 않습니다.</span>
+    			</div>
+    		</li>
+    		<li>
+    			<a href="javascript:;">보험사 선택<span></span></a>
+    		</li>
+    		<li>
+    			<a href="javascript:;">보험 가입 시기<span></span></a>
+    			<div class="dateNum">
+    				<div class="monYear"></div>
+    				<div class="day" ></div>
+    			</div>
+    		</li>
+    	</ul>
+    	<dl>
+    		<dt>정보 수집 안내</dt>
+    		<dd>
+    			안전운전 자동차 보험 혜택 알림 제공<br>
+    			긴급 출동 서비스 사용<br>
+    			*수집 정보 : 차량번호, 보험사, 보험일자<br>
+    			*보유기간 : 운전습관 서비스 사용기간
+    		</dd>
+    	</dl>
+    	<a href="javascript:;">정보 제공 동의 및 등록하기</a>
+    </section>
+    <div class="over">
+    	<div class="comList">
+    		<a class="listClose"></a>
+	    	<ul>
+	    		<li><a href="javascript:;" class="db"></a></li>
+	    		<li><a href="javascript:;" class="kb"></a></li>
+	    		<li><a href="javascript:;" class="samsung"></a></li>
+	    		<li><a href="javascript:;" class="hyundai"></a></li>
+	    		<li><a href="javascript:;" class="hanhwa"></a></li>
+	    		<li><a href="javascript:;" class="lotte"></a></li>
+	    		<li><a href="javascript:;" class="axa"></a></li>
+	    		<li><a href="javascript:;" class="heungkuk"></a></li>
+	    		<li><a href="javascript:;" class="thek"></a></li>
+	    		<li><a href="javascript:;" class="mg"></a></li>
+	    		<li><a href="javascript:;" class="meritz"></a></li>
+	    	</ul>
+    	</div>
+    </div>
+    <div class="confirmDim">
+      <div class="confirm">
+        <h1>보험사 정보 삭제</h1>
+        <div>등록된 보험사 정보가 모두<br>삭제됩니다. 계속 하시겠습니까?</div>
+        <ul>
+          <li><a href="javascript:;">닫기</a></li>
+          <li><a href="javascript:;" class="bold">삭제</a></li>
+        </ul>
+      </div>  
+    </div>
+  </body>
+  <script src="/static/drivingHabit/js/insureCompanies.js?3"></script>
+ </html>

@@ -1,0 +1,146 @@
+/*@charset "utf-8";*/
+@font-face {
+	font-family: 'nanumBarunGothic-light';
+	src: url('../font/NanumBarunGothicLight-subset.eot');
+	src: url('../font/NanumBarunGothicLight-subset.eot?#iefix') format('embedded-opentype'),
+	url('../font/NanumBarunGothicLight-subset.woff') format('woff'),
+	url('../font/NanumBarunGothicLight-subset.woff2') format('woff2'),
+	url('../font/NanumBarunGothicLight-subset.ttf') format('truetype'),
+	url('../font/NanumBarunGothicLight-subset.svg#NanumBarunGothicLight-subset') format('svg');
+}
+@font-face {
+	font-family: 'nanumBarunGothic-regular';
+	src: url('../font/NanumBarunGothic-subset.eot');
+	src: url('../font/NanumBarunGothic-subset.eot?#iefix') format('embedded-opentype'),
+	url('../font/NanumBarunGothic-subset.woff') format('woff'),
+	url('../font/NanumBarunGothic-subset.woff2') format('woff2'),
+	url('../font/NanumBarunGothic-subset.ttf') format('truetype'),
+	url('../font/NanumBarunGothic-subset.svg#NanumBarunGothic-subset') format('svg');
+}
+@font-face {
+    font-family: 'nanumBarunGothic-bold';
+    src: url('../font/NanumBarunGothicBold-subset.eot');
+	src: url('../font/NanumBarunGothicBold-subset.eot?#iefix') format('embedded-opentype'),
+		 url('../font/NanumBarunGothicBold-subset.woff') format('woff'),
+         url('../font/NanumBarunGothicBold-subset.woff2') format('woff2'),
+         url('../font/NanumBarunGothicBold-subset.ttf') format('truetype'),
+         url('../font/NanumBarunGothicBold-subset.svg#NanumBarunGothicBold-subset') format('svg');
+}
+
+@font-face {
+    font-family: 'nanumBarunGothic-ultraLight';
+    src: url('../font/NanumBarunGothicUltraLight-subset.eot');
+    src: url('../font/NanumBarunGothicUltraLight-subset.eot?#iefix') format('embedded-opentype'),
+	url('../font/NanumBarunGothicUltraLight-subset.woff') format('woff'),
+	url('../font/NanumBarunGothicUltraLight-subset.woff2') format('woff2'),
+         url('../font/NanumBarunGothicUltraLight-subset.ttf') format('truetype'),
+         url('../font/NanumBarunGothicUltraLight-subset.svg#NanumBarunGothicUltraLight-subset') format('svg');
+}
+
+
+
+@font-face {
+	font-family: 'notokr-medium';
+	src: url('../font/notokr-demilight.eot');
+	src: url('../font/notokr-medium.eot?#iefix') format('embedded-opentype'),
+	url('../font/notokr-medium.woff2') format('woff2'),
+	url('../font/notokr-medium.woff') format('woff'),
+	url('../font/notokr-medium.ttf') format('truetype'),
+	url('../font/notokr-medium.svg#notokr-medium') format('svg');
+}
+@font-face {
+    font-family: 'notokr-demilight';
+    src: url('../font/notokr-demilight.eot');
+    src: url('../font/notokr-demilight.eot?#iefix') format('embedded-opentype'),
+         url('../font/notokr-demilight.woff2') format('woff2'),
+         url('../font/notokr-demilight.woff') format('woff'),
+         url('../font/notokr-demilight.ttf') format('truetype'),
+         url('../font/notokr-demilight.svg#notokr-demilight') format('svg');
+}
+
+@font-face {
+    font-family: 'notokr-light';
+    src: url('../font/notokr-light.eot');
+    src: url('../font/notokr-light.eot?#iefix') format('embedded-opentype'),
+         url('../font/notokr-light.woff2') format('woff2'),
+         url('../font/notokr-light.woff') format('woff'),
+         url('../font/notokr-light.ttf') format('truetype'),
+         url('../font/notokr-light.svg#notokr-light') format('svg');
+}
+
+@font-face {
+    font-family: 'notokr-bold';
+    src: url('../font/notokr-bold.eot');
+    src: url('../font/notokr-bold.eot?#iefix') format('embedded-opentype'),
+         url('../font/notokr-bold.woff2') format('woff2'),
+         url('../font/notokr-bold.woff') format('woff'),
+         url('../font/notokr-bold.ttf') format('truetype'),
+         url('../font/notokr-bold.svg#notokr-bold') format('svg');
+}
+/*
+@font-face {
+	font-family: 'roboto-bold';
+	src: url('../font/roboto/Roboto-Bold.eot');
+	src: url('../font/roboto/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+	url('../font/roboto/Roboto-Bold.woff2') format('woff2'),
+	url('../font/roboto/Roboto-Bold.woff') format('woff'),
+	url('../font/roboto/Roboto-Bold.ttf') format('truetype'),
+	url('../font/roboto/Roboto-Bold.svg#Roboto-Bold') format('svg');
+}
+
+@font-face {
+	font-family: 'roboto-medium';
+	src: url('../font/roboto/Roboto-Medium.eot');
+	src: url('../font/roboto/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+	url('../font/roboto/Roboto-Medium.woff2') format('woff2'),
+	url('../font/roboto/Roboto-Medium.woff') format('woff'),
+	url('../font/roboto/Roboto-Medium.ttf') format('truetype'),
+	url('../font/roboto/Roboto-Medium.svg#Roboto-Medium') format('svg');
+}
+
+@font-face {
+	font-family: 'roboto-light';
+	src: url('../font/roboto/Roboto-Light.eot');
+	src: url('../font/roboto/Roboto-Light.eot?#iefix') format('embedded-opentype'),
+	url('../font/roboto/Roboto-Light.woff2') format('woff2'),
+	url('../font/roboto/Roboto-Light.woff') format('woff'),
+	url('../font/roboto/Roboto-Light.ttf') format('truetype'),
+	url('../font/roboto/Roboto-Light.svg#Roboto-Light') format('svg');
+}
+
+@font-face {
+	font-family: 'roboto-regular';
+	src: url('../font/roboto/Roboto-Regular.eot');
+	src: url('../font/roboto/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+	url('../font/roboto/Roboto-Regular.woff2') format('woff2'),
+	url('../font/roboto/Roboto-Regular.woff') format('woff'),
+	url('../font/roboto/Roboto-Regular.ttf') format('truetype'),
+	url('../font/roboto/Roboto-Regular.svg#Roboto-Regular') format('svg');
+}
+*/
+ /* Roboto */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap');
+ /* 나눔스퀘어 */
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+.ff-nanumsquare{font-family: 'NanumSquare', sans-serif;}
+.ff-nanumsquare.light{font-weight: 300}
+.ff-nanumsquare.strong{font-family: 'NanumSquare', sans-serif;font-weight: 700 !important}
+
+@font-face {
+  font-family: 'SKPGoMM_subset';
+  src: url('../font/SKPGoMM_subset.eot');
+  src: url('../font/SKPGoMM_subset.eot?#iefix') format('embedded-opentype'), url('../font/SKPGoMM_subset.woff') format('woff'), url('../font/SKPGoMM_subset.woff2') format('woff2'), url('../font/SKPGoMM_subset.ttf') format('truetype'), url('../font/SKPGoMM_subset.svg#SKPGoMM_subset') format('svg')
+}
+
+ /* SKP Gothic */
+@font-face {
+  font-family: 'SKPGoLM_subset';
+  src: url('../font/SKPGoLM_subset.eot');
+  src: url('../font/SKPGoLM_subset.eot?#iefix') format('embedded-opentype'), url('../font/SKPGoLM_subset.woff') format('woff'), url('../font/SKPGoLM_subset.woff2') format('woff2'), url('../font/SKPGoLM_subset.ttf') format('truetype'), url('../font/SKPGoLM_subset.svg#SKPGoLM_subset') format('svg')
+}
+
+@font-face {
+  font-family: 'SKPGoBM_subset';
+  src: url('../font/SKPGoBM_subset.eot');
+  src: url('../font/SKPGoBM_subset.eot?#iefix') format('embedded-opentype'), url('../font/SKPGoBM_subset.woff') format('woff'), url('../font/SKPGoBM_subset.woff2') format('woff2'), url('../font/SKPGoBM_subset.ttf') format('truetype'), url('../font/SKPGoBM_subset.svg#SKPGoBM_subset') format('svg')
+}

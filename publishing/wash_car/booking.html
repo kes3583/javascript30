@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+	<head>
+      <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+  
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+      <link rel="shortcut icon" href="/favicon.ico">
+      <link rel="apple-touch-icon-precomposed" sizes="114×114" href="/share/favicon.png">
+      <title>방문세차 할인 이벤트</title>
+      <meta property="og:title" content="방문세차 할인이벤트">
+      <meta property="og:type" content="website">
+      <meta property="og:image" content="http://event.tmap.co.kr/comm/wash_car/images/thumb.png">
+      <meta property="og:site_name" content="방문세차 할인이벤트">
+      <meta property="fb:app_id" content="">
+      <meta property="og:url" content="http://event.tmap.co.kr/comm/wash_car/index.html">
+      <meta property="og:description" content="방문세차 할인 이벤트">
+
+      <link rel="stylesheet" type="text/css" href="css/reset.css">
+      <link rel="stylesheet" href="css/common_2017.css">
+      <link rel="stylesheet" href="css/style.css">
+
+      <!--GA code-->
+      <script>
+        var pagePath = document.location.pathname;
+        var eventLabel = 'wash_car';
+        
+        (function(i, s, o, g, r, a, m) {
+          i['GoogleAnalyticsObject'] = r;
+          i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+          }, i[r].l = 1 * new Date();
+          a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+          a.async = 1;
+          a.src = g;
+          m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-54798332-7', 'auto');
+        ga('require', 'displayfeatures');
+        ga('send', 'pageview', pagePath);
+      </script>
+  </head>
+  <body>
+    <header id="top" class="sub">
+      <h1 class="title">방문세차 해피콜 예약</h1>
+      <a href="javascript:TmapWebView.closeWebView();" class="back"><span></span><em class="blind">뒤로 가기</em></a>
+      <button type="button" class="information" onclick="location.href='/app/tmap/ubi/setting.do'"><span></span><em class="blind">info</em></button>
+    </header>
+    <div class="contentBody">
+      <div class="bookingContent">
+        <div class="bookingTop"></div>
+        <div class="bookingBody">
+          <dl>
+            <dt>이름</dt>
+            <dd><input type="text" name="" id=""></dd>
+          </dl>
+          <dl>
+            <dt>휴대폰 번호</dt>
+            <dd>
+              <input type="number" id="phoneNumber" name="phoneNumber" value="" maxlength="11" oninput="maxLengthCheck(this)" placeholder="'-'없이 입력하세요" class="phonenumb"  />
+              <span>※ 연락처를 잘못 입력할 경우 원활한 서비스 진행이 어렵습니다.</span>
+            </dd>
+          </dl>
+          <dl>
+            <dt>세차지역</dt>
+            <dd>
+              <div class="selectWrap">
+                <select name="" id="location">
+                  <option value="1">서울</option>
+                  <option value="2">대전</option>
+                  <option value="43">대구</option>
+                  <option value="4">부산</option>
+                  <option value="5">찍고</option>
+                </select>
+              </div>
+              <span class="blue">※ 서울/경기/인천 지역 가능</span>
+            </dd>
+          </dl>
+          <dl>
+            <dt>해피콜 신청 시간(익일 통화 가능 시간)</dt>
+            <dd>
+              <div class="selectWrap">
+                <select name="" id="location">
+                  <option value="1">11:00 ~ 12:00</option>
+                  <option value="2">12:00 ~ 12:00</option>
+                  <option value="43">13:00 ~ 12:00</option>
+                  <option value="4">14:00 ~ 12:00</option>
+                  <option value="5">15:00 ~ 12:00</option>
+                </select>
+              </div>
+              <span>※ 토,일 및 공휴일 신청 시 다음 영업일에 해피콜 드립니다.</span>
+              <span>※ 해피콜번호 : 1800-0206 </span>
+            </dd>
+          </dl>
+          <dl>
+            <dt>개인정보 수집/이용동의 및 취급위탁 안내</dt>
+            <dd>
+              <a href="javascript:;" class="termsBtn">고객정보 수집 및 이용 동의</a>
+              <div class="cnts">
+                <h2 class="hide">개인정보 수집/이용 동의 및 취급위탁 안내</h2>
+               
+                <ul>
+                    <li>- 제공처 : (주)지니웍스</li>
+                    <li class="agr_tx01">- 제공정보 : 이름, 전화번호, 세차지역, 해피콜 요청 시간</li>
+                    <li class="agr_tx01">- 제공 목적 : 방문 세차 예약과 할인 혜택을 위함</li>
+                    <li class="agr_tx01">- 제공기간 : 신청일로부터 15일</li>
+                </ul>
+              </div>
+            </dd>
+          </dl>
+        </div>        
+      </div>
+      <a href="#" class="bottomBtn"><b>방문세차 해피콜 예약</b></a>
+    </div>
+    <!--팝업-->
+    <div class="popupmsg">
+        <div class="pop_content">
+            <h5>알림</h5>
+            <p class="popmessage">내용</p>
+            <div class="pop_btn" onclick="javascript:$('.popupmsg').hide();">확인</div>
+        </div>
+    </div>
+    <!--//팝업-->
+  </body>
+  <script src="../js/libs/jquery-1.11.1.min.js"></script>
+  <script>
+    $(function(){
+      $(".termsBtn").click(function(){
+        $(this).toggleClass("open").next().slideToggle();
+      })
+    })
+    function maxLengthCheck(object){
+        if (object.value.length > object.maxLength){
+            object.value = object.value.slice(0, object.maxLength);
+        }    
+    }
+
+  </script>
+</html>

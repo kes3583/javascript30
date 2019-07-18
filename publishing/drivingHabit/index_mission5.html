@@ -1,0 +1,264 @@
+<!doctype html>
+<html>
+  <head>
+      <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+  
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+  
+      <meta name="apple-mobile-web-app-title" content="index" />
+      <meta name="apple-mobile-web-app-capable" content="yes">
+
+      <link rel="shortcut icon" href="/favicon.ico">
+      <link rel="apple-touch-icon-precomposed" sizes="114×114" href="/share/favicon.png">
+      <title>운전습관</title>
+      <meta property="og:title" content="운전습관">
+      <meta property="og:type" content="website">
+      <meta property="og:image" content="">
+      <meta property="og:site_name" content="운전습관">
+      <meta property="fb:app_id" content="">
+      <meta property="og:url" content="">
+      <meta property="og:description" content="운전습관">
+
+      <!--link rel="stylesheet" type="text/css" href="/publishing/drivingHabit/css/font.css">
+      <link rel="stylesheet" href="/publishing/drivingHabit/css/swiper.min.css"-->
+      <link rel="stylesheet" type="text/css" href="/publishing/drivingHabit/css/index.css">
+      <style>
+      body>header{background:#fff;}
+	  section.wrap .m20180621 { padding: 0 0 50px calc(4.5% + 15px)}
+	  section.wrap .m20180621>span:first-child {position: relative; font-size: 1.4rem;vertical-align: baseline;color: #f0ffb3;display: flex;height: 100%;flex-flow: column;justify-content: center}
+	  section.wrap .m20180621>span:first-child>span {font-size: inherit;color: rgba(11, 94, 127, 0.9);margin-bottom: 8px}
+	  section.wrap .m20180621>span:first-child b { font-size: 1.6rem;color: inherit;letter-spacing: 0; color:#064f6c}
+	  section.wrap .m20180621>span:first-child b:after {display: none}
+	  .ios section.wrap .m20180621>span:first-child {padding-top: 3px}
+      section.wrap .banner .mCount.bLine {border:1px solid #4790ad; color:#4790ad;}
+       section.wrap>.mission.c20180621 a dd span {font-size:2rem;color:#042415;}
+      section.wrap>.mission.c20180621 a dd span em {font-size:2rem;font-style:normal}
+       section.wrap>.mission.c20180621 a dd span em.bold { color:#042415;}
+      section.wrap>.mission.c20180621 a dd span.grayTxt {font-size:1.4rem; color:#808080; margin-top:8px}
+      section.wrap>.mission.c20180621 {background:#fff url(/publishing/drivingHabit/images/index/missions/20180621/missionBg.png) 0 bottom no-repeat;background-size: 100% auto;padding:0}
+      section.wrap>.mission.c20180621 .distance {background:none}
+      section.wrap>.mission.c20180621:after { width:100%;height: 100%; background: url("/publishing/drivingHabit/images/index/missions/20180621/missionRightBg.png") right 0 no-repeat;background-size: auto 100%;content: '';position: absolute;top: 0;right:0 }
+      section.wrap>.mission.c20180621 a {background:none}
+      
+      </style>
+  </head>
+  <body >
+    <header>
+      <a href="javascript:;" class="backBtn"></a>
+      <a href="javascript:;" class="txt">운전습관</a>
+      <a href="setting.html" class="rightBtn settingBtn"></a>
+    </header>
+    <section class="wrap hasBanner"> 
+      <!-- 배너가 있을 경우 wrap에 hasBanner클래스 추가, 없을 경우 삭제-->
+      <a href="javascript:;" class="banner light m20180621 before" style="height:137px; background: #b1eaff url('/publishing/drivingHabit/images/index/missions/20180621/left_bg.jpg')   no-repeat; background-size: auto 100%; color:#fff">
+        <span>
+          <span>~ 7/22 까지 아이를 지키는 </span><b>착한 드라이빙 캠페인에 동참 하세요!</b>
+        </span>
+        <span class="mCount bLine">28,340명 참여</span> 
+        <span class="bannerBg"style="background-image:url('/publishing/drivingHabit/images/index/missions/20180621/right_bg.jpg'); background-size:auto 100%;"></span>
+      </a>
+      <section class="card">
+        <h1>나의 운전 점수<a href="javascript:;" class="infoBtn"></a></h1>
+        <div class="totalScore">
+          <a href="/publishing/drivingHabit/myscore_all.html" class="link"></a>
+          <ul>
+            <li>
+              <div class="upDown blueNoti down">13</div>
+              <div class="circleGragh">
+                <b class="num">94</b>
+                <div class="myPosition">
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <span class="swiper-slide">상위 13%</span>
+                      <span class="swiper-slide">203만 등</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <dl>
+                <dt class="grade3_45deg">
+                  <span class="grade3_color bold">양호</span>
+                </dt>
+                <dd>과속</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt class="grade2_45deg">
+                  <span class="grade2_color bold">주의</span>
+                </dt>
+                <dd>급가속</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt class="grade5_45deg">
+                  <span class="grade5_color bold">모범</span>
+                </dt>
+                <dd>급감속</dd>
+              </dl>
+            </li>
+          </ul>
+        </div>
+        <div class="mainChartWrap">
+          <h1>월별 그래프</h1>
+          <svg class="mainChart"></svg>  
+        </div>
+      </section>
+      <section class="card record">
+        <a href="/publishing/drivingHabit/driving.html" class="link"></a>
+        <div class="mapInfo">
+          <h1>주행 이력 <span>2017.8.13 / 13:30</span></h1>
+          <dl>
+            <dt>파인애비뉴 주차장</dt>
+            <dd>38km <span>|</span> 46분</dd>
+          </dl>          
+        </div>
+        <div class="mapWrap">
+          <!--img src="images/samples/driving.jpg" alt="" class="sample"-->
+          <!-- <div id="map_div"></div> -->
+          <iframe src="http://mstg.tmap.co.kr/comm/dh/mainmap.html" frameborder="0"></iframe>
+        </div>
+      </section>
+      <section class="card insurance">
+        <h1>안전운전 자동차 보험<a href="javascript:;" class="infoBtn"></a></h1>
+        <article>
+          <dl>
+            <dt>
+              <span class="bold">과 안전 운전하면</span><br>
+              자동차 보험료가 내려갑니다.
+            </dt>
+            <dd>자동차 보험 가입 시 T map 안전운전<br>특약에 가입하시면 자동차 보험료를<br>할인받으실 수 있습니다.</dd>
+          </dl>
+          <div class="swiperWrap">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <a href="dbDirect.html" class="swiper-slide db">
+                  <div>DB손해보험</div>
+                  <dl>
+                    <dt class="bold">10% 할인</dt>
+                  </dl>
+                </a>
+                <a href="kb.html" class="swiper-slide kb">
+                  <div>KB손해보험</div>
+                  <dl>
+                    <dt class="bold">10% 할인</dt>
+                  </dl>
+                </a>
+                <!--a href="meritz_index.html" class="swiper-slide meritz">
+                  <div>안전운전 자동차보험</div>
+                  <dl>
+                    <dt class="bold">매월 주유비 지원</dt>
+                    <dd>최대 12만원</dd>
+                  </dl>
+                </a-->
+              </div>
+            </div>  
+          </div>
+          <p>블랙박스나 마일리지 할인처럼<br>T map 안전운전 할인을 꼭 확인하세요.</p>
+          <div class="roundTxt">보험사는 계속 확대됩니다.</div>
+          <div class="car"></div>
+        </article>
+      </section>
+      <section class="card mission c20180621">
+        <a href="javascript:;">
+          <span class="counter">122,354명 참여 중</span>
+          <dl>
+            <dt>미션</dt>
+            <dd>
+              <span><em class="bold">착한 드라이빙 캠페인</em><em>에</em></span>
+              <span>동참하세요!</span>
+              <span class="grayTxt">50km 안전운전!</span>
+            </dd>
+          </dl>
+          <span class="status">미션 도전 중</span>
+          <span class="distance bold">100km</span>
+        </a>
+      </section>
+      <section class="card insuranceBanner">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <a href="http://event.tmap.co.kr/comm/dbdirect/index.html" class="swiper-slide db">
+              <img src="images/index/insuranceBanner/db_content.png" alt="">
+            </a>
+            <a href="http://event.tmap.co.kr/comm/kb_safe/index.html" class="swiper-slide kb">
+              <img src="images/index/insuranceBanner/kb_content.png" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </section>
+      <ul class="etcLink">
+        <li><a href="javascript:;">이용안내</a></li>
+        <li><a href="faq.html">자주하는 질문</a></li>
+      </ul>
+    </section>
+    <div class="popWrap">
+      <div class="popup">
+        <a href="javascript:;" class="close"></a>
+        <dl>
+          <dt class="bold">나의 운전 점수란 무엇인가요?</dt>
+          <dd>나의 운전 방식과 주행 환경을 분석하여<br>안전 운전 수준을 알려주는 점수 입니다.<br>운전 점수는 주행 환경도 함께 고려하므로<br>위반 횟수와 단순 비례하지 않을 수 있습니다.</dd>
+        </dl>
+        <dl class="drivingData">
+          <dt class="bold">나의 운전 점수는 어떻게 계산 하나요?</dt>
+          <dd>
+            <ul>
+              <li>최근 3,000km 의 주행 기록을 기준</li>
+              <li>주행 행태 (과속, 급감속, 급가속) 반영</li>
+              <li>주행 환경 (도로 유형, 주행 시간대) 반영</li>
+            </ul>
+          </dd>
+        </dl>
+        <p>종합 운전 점수는 월별 그래프의 평균과<br>다를 수 있습니다.</p>
+        <div>
+          <h1>주행 행태에 따라 5단계 등급으로 구분됩니다.</h1>
+          <ul>
+            <li>
+              <div class="grade1_45deg grade1_color"></div>
+            </li>
+            <li>
+              <div class="grade2_45deg grade2_color"></div>
+            </li>
+            <li>
+              <div class="grade3_45deg grade3_color"></div>
+            </li>
+            <li>
+              <div class="grade4_45deg grade4_color"></div>
+            </li>
+            <li>
+              <div class="grade5_45deg grade5_color"></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="popWrap">
+      <div class="popup">
+        <a href="javascript:;" class="close"></a>
+        <dl>
+          <dt class="bold">어떻게 하면 보험료 할인을<br>받을 수 있나요?</dt>
+          <dd>보험할인 점수가 61점을 넘으면 할인 대상에 포함 됩니다. 단, 최근 6개월 이내 주행 기록이 있고, 최소 500km 이상 주행하여야 합니다.</dd>
+        </dl>
+        <dl>
+          <dt class="bold">보험 할인 점수는 어떻게 산출되나요?</dt>
+          <dd>보험할인 점수는 500km 주행 시 마다 갱신되며 500km 미만의 최근 주행이력은 반영되지 않습니다. 최대 3,000km 의 주행이력을 대상으로 계산합니다.</dd>
+        </dl>
+        <dl>
+          <dt class="bold">나의 운전 점수랑 왜 다른가요?</dt>
+          <dd>보험 할인점수는 500km (1구간)를 주행했을 때 갱신 됩니다. 나의 운전 점수는 주행 시마다 갱신되기 때문에 점수가 다르게 계산될 수 있습니다.</dd>
+        </dl>
+      </div>
+    </div>
+    <script src="/publishing/drivingHabit/js/plugins/jquery-1.11.1.min.js"></script>
+    <script src="/publishing/drivingHabit/js/plugins/d3.min.js"></script>
+    <script src="/publishing/drivingHabit/js/plugins/swiper.min.4.1.0.js"></script>
+    <script src="https://api2.sktelecom.com/tmap/js?version=1&format=javascript&appKey=91d8433b-370a-4093-a4f5-740facda1ddf"></script>
+    <script src="/publishing/drivingHabit/js/sampleData.js"></script>
+    <script src="/publishing/drivingHabit/js/common.js"></script>
+    <script src="/publishing/drivingHabit/js/index.js"></script>
+  </body>
+</html>

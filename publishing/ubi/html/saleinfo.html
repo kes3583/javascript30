@@ -1,0 +1,94 @@
+ㅁ<ㅁDOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <title>Tmap</title>
+
+    <link rel="stylesheet" href="../css/base.css" media="screen, print">
+    <link rel="stylesheet" href="../css/tmap_ubi.css" media="screen, print">
+    
+    <script src="../../js/libs/jquery-1.11.1.min.js"></script>
+    <script src="../../js/TmapApp.js"></script>
+    <script src="../js/ubiCommonUtils.js?"></script>
+</head>
+
+<body>
+
+<!--  header -->
+<header id="top" class="sub">
+    <h1 class="title">자동차보험 할인 정보</h1>
+    <a href="#" class="back"><span></span><em class="blind">뒤로 가기</em></a>
+</header>
+<!-- header : end  -->
+      
+<!--  contents  -->
+<div id="contents" class="sub-type2 scoreInfoContent">
+    <article class="article-noti insurance-to">
+       <h2 class="tit tc hide"><img src="../images/simbol-T.png" alt="T map">으로 안전 운전하시고<br>자동차 보험료 할인 받으세요!</h2>
+       <h3 class="tit">안전운전 점수가 낮아<br><b>동부화재 자동차보험</b> 할인 대상이 아닙니다.</h3>
+       <div class="visual"><img src="../images/img_saleinfo_02.png" alt=""></div>
+       <!-- 
+안전운전 점수 충족 <div class="visual"><img src="../images/img_saleinfo_01.png" alt=""></div>
+안전운전 점수 낮음 <div class="visual"><img src="../images/img_saleinfo_02.png" alt=""></div>
+누적 주행거리 부족 <div class="visual"><img src="../images/img_saleinfo_03.png" alt=""></div> 
+       -->
+       <div class="box">
+           <p><strong class="type02">25점</strong></p>
+           <!-- 
+class="type01" 0점-19점점
+class="type02" 20점-39점
+class="type03" 40점-59점
+class="type04" 60점-79점
+class="type05" 80점-89점
+class="type06" 90점-100점
+class="type07" 누적 주행거리 부족
+            -->
+           <p>최근 500km 구간까지 획득한 동부화재 안전운전 점수<br>(다음 동부화재 안전운전 점수 갱신까지 남은 주행거리  <b>213km</b>)</p>
+       </div>
+       <div class="subNoti">동부화재 안전운전 점수는 500km 단위로 계산되므로 T map 운전습관 점수와 상이할 수 있습니다. </div>
+       <h4>안전운전 하시고 자동차보험 할인  받으세요!</h4>
+        <ul class="list">
+           <li><b>주행거리 매 500km 시점 마다 산출된 동부화재 안전운전 점수가 61점 이상이면, <span>동부화재 자동차보험료 10%를 할인</span> 받으실 수 있습니다.</b> (smarT UBI 안전운전 특약 가입시 / 2017년 5월 11일 이후 책임개시 계약부터 적용)</li>
+           <li>동부화재 자동차보험 가입고객은 기존 담당자(설계사/상담사) 에게 신청하십시오.</li>
+       </ul>
+       
+       <h4>안전운전 점수가 낮다면?</h4>
+       <ul class="list">
+           <li>자동차보험 가입 시점에 T map 운전습관 점수가 낮더라도, 먼저 동부화재 자동차보험에 가입하시면 향후 동부화재 안전운전 점수를 재산출하여 기준 충족 시 smarT UBI 안전운전 특약 가입이 가능합니다. 가입 시 남은 보험기간에 해당하는 보험료의 10%를 할인해 드립니다.<br>
+            (*세부 가입조건은 약관을 확인하세요.)</li>
+       </ul>
+     </article>
+
+     <article class="insurance-noti">
+        <h3>손해보험협회 심의필 제2016-2841호 (2016.6.20)</h3>
+        <h4>※ 보험가입 시 알아두실 사항</h4>
+        <ul>
+          <li>보험계약을 체결하기 전에 보험약관 및 상품설명서를 반드시 확인하시기 바랍니다.</li>
+          <li>기존에 체결했던 보험계약을 해지하고 다른 보험계약을 체결하는 경우 보험인수조건이 변경되거나 보험료가 인상될 수 있으며 보장내용이 달라질 수 있으니 사전에 충분히 확인하시기 바랍니다.</li>
+          <li>이 계약은 예금자보호법에 따라 예금보험공사가 보호하되, 보호 한도는 본 보험회사에 있는 귀하의 모든 예금보호대상 금융상품의 해약환급금(또는 만기 시 보험금이나 사고보험금)에 기타지급금을 합하여 1인당 &quot;최고 5천만원&quot;이며, 5천만원을 초과하는 나머지 금액은 보호하지 않습니다. (단, 법인계약 및 보험료 납부자가 법인인 경우에는 예금보험공사가 보호하지 않습니다.)</li>
+          <li><a href="https://www.idongbu.com/mall/carinsu/family/MallCarFaSpecial.jsp#empty-anchor" class="linkTxt">꼭 알아두실 사항</a></li>
+        </ul>
+     </article>
+</div>
+<!--  contents :end  -->      
+
+<!-- btmMenu -->
+<div class="btmMenu bgc-fixed singleBtn" id="scoreInfoBtns">
+    <button type="button" class="btnTel initial"  onclick="window.location='tel:16000100';"><span>동부화재 전화 상담</span></button>
+    <button type="button" class="btnTel initial btnWeb"  onclick="window.location='https://goo.gl/2Kmwnm';"><span>인터넷 신청</span></button>
+</div>
+
+</body>
+<script>
+  var target = new Date(2017,5,1)
+
+  $(function(){
+    var now = new Date().getTime();
+    if(now >= target.getTime()){
+      $("#scoreInfoBtns").removeClass("singleBtn")
+    }
+  })
+</script>
+</html>

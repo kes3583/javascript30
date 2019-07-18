@@ -108,7 +108,7 @@ h1 {
   <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script> -->
   <script>
-      function debounce(func, wait=20, immediate=true) {
+      function _debounce(func, wait, immediate=true) {
     	var timeout;
     	return function() {
     		var context = this, args = arguments;

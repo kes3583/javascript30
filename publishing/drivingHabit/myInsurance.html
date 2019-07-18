@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+  <head>
+      <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+  
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+  
+      <meta name="apple-mobile-web-app-title" content="index" />
+      <meta name="apple-mobile-web-app-capable" content="yes">
+
+      <link rel="shortcut icon" href="/favicon.ico">
+      <link rel="apple-touch-icon-precomposed" sizes="114×114" href="/share/favicon.png">
+      <title>운전습관</title>
+      <meta property="og:title" content="운전습관">
+      <meta property="og:type" content="website">
+      <meta property="og:image" content="">
+      <meta property="og:site_name" content="운전습관">
+      <meta property="fb:app_id" content="">
+      <meta property="og:url" content="">
+      <meta property="og:description" content="운전습관">
+      
+      <link rel="stylesheet" type="text/css" href="/static/drivingHabit/css_origin/font.css">
+	<link rel="stylesheet" type="text/css" href="/static/drivingHabit/css_origin/common.css">
+	<link rel="stylesheet" href="/static/drivingHabit/css_origin/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/drivingHabit/css_origin/myInsurance.css?3">
+	
+	<script src="/static/drivingHabit/js/plugins/jquery-1.11.1.min.js?ver_20181108_1"></script>
+	<script src="/static/drivingHabit/js/plugins/swiper.min.4.1.0.js?ver_20181108_1"></script>
+	
+	<script src="/static/js/commonUtils.js?ver_20181108_1"></script>
+	<script src="/static/drivingHabit/js/common.js?ver_20181108_1"></script>
+  </head>
+  <body>
+  	<header>
+      <a href="javascript:backFun();" class="backBtn"></a>
+      <a href="javascript:;" class="txt">나의 자동차 보험</a>
+      <a href="javascript:;" class="rightBtn">수정</a>
+    </header>
+    <section class="wrap">
+    	<section class="myInsur">
+			<div class="myCar"><span>27마2653</span></div>
+			<a href="javascript:;" class="myInsurTxt light">
+				<b>KB손해보험</b><br>
+				갱신일까지 <b>96일</b> 남았습니다.
+			</a>
+			<div class="days">
+				<span>가입 일: 2017.10.20</span><span class="endDay">갱신 일: 2018.10.20</span>
+			</div>
+			<a href="javascript:;" onclick="location.href='/app/dh/insurance/emergency.do'" class="emergencyRequest">긴급출동 신청하기</a>
+		</section>
+		<div class="score">
+	        <h1>나의 보험사 안전운전 점수<a href="javascript:;"></a></h1>
+	        <div class="circle">
+	          <canvas width="175" height="175"></canvas>
+	          <div class="text num bold"></div>
+	          <div class="underDistance bold">주행거리<br>부족</div>
+	        </div>
+	        <div class="distanceComment"></div>
+	        <div class="noti">
+	        	<span><b>보험사 점수와 운전점수가 다른 이유는?</b></span><br>
+	        	보험사 점수는 500km구간을 기준으로<br>갱신되므로 운전점수와 다를 수 있습니다.
+	        </div>
+     	</div>
+     	<div class="banner">
+     		<h1>보험사별 할인 혜택</h1>
+     		<div class="swiperWrap">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<a href="javascript:;" class="swiper-slide db" id="drivinghabit_dbinsure" onclick="openBenefitDetail('DONGBU_INSUR');">
+							<dl>
+								<dd>DB손해보험</dd>
+								<dt><span class="bold">10% </span>할인</dt>
+							</dl>
+						</a> 
+						<a href="javascript:;" class="swiper-slide kb" id="drivinghabit_kbinsure" onclick="openBenefitDetail('KB_INSUR');">
+							<dl>
+								<dd>KB손해보험</dd>
+								<dt><span class="bold">10% </span>할인</dt>
+							</dl>
+						</a>
+						<a href="javascript:;" class="swiper-slide samsung" id="drivinghabit_ssinsure" onclick="openBenefitDetail('SAMSUNG_INSUR');">
+							<dl>
+								<dd>
+									삼성화재
+								</dd>
+								<dt><span class="bold">OPEN</span></dt>
+							</dl>
+						</a>
+					</div>
+				</div>
+			</div>
+     	</div>
+     	<div class="popWrap">
+			<div class="popup">
+				<a href="javascript:;" class="close"></a>
+				<dl>
+					<dt class="bold">
+						어떻게 하면 보험료 할인을<br>받을 수 있나요?
+					</dt>
+					<dd>보험할인 점수(DB손해보험,KB손해보험은 61점, 삼성화재는 71점)을 넘으면 할인 대상에 포함 됩니다. 단, 최근 6개월 이내 주행 기록이 있고, 최소
+						500km 이상 주행하여야 합니다.</dd>
+				</dl>
+				<dl>
+					<dt class="bold">보험 할인 점수는 어떻게 산출되나요?</dt>
+					<dd>보험할인 점수는 500km 주행 시 마다 갱신되며 500km 미만의 최근 주행이력은 반영되지 않습니다.
+						최대 3,000km 의 주행이력을 대상으로 계산합니다.</dd>
+				</dl>
+				<dl>
+					<dt class="bold">나의 운전 점수랑 왜 다른가요?</dt>
+					<dd>보험 할인점수는 500km (1구간)를 주행했을 때 갱신 됩니다. 나의 운전 점수는 주행 시마다 갱신되기
+						때문에 점수가 다르게 계산될 수 있습니다.</dd>
+				</dl>
+			</div>
+		</div>
+    </section>
+   </body>
+   <script src="/static/drivingHabit/js/plugins/jquery-1.11.1.min.js"></script>
+   <script src="/static/drivingHabit/js/plugins/jquery.gauge.js"></script>
+   <script>
+   	$(function(){
+   		var score = 61;
+   		var distance = 700;
+   		var remainDistance = 300;
+   		//var lastDay = new Date();
+   		
+   		var barColor = "#F44336";
+   		var bgColor = "#f7f7f7";
+   		
+   		var notiWord = "갱신";
+   		var calcDistance = "다음 " + notiWord + "까지 남은 거리<br><span>점수 : 500km 마다 " + notiWord + "</span><span class='remain'>" + remainDistance + "km</span>";
+   		
+   		if(distance < 500){
+   			$(".circle").addClass("zero");
+   			barColor = bgColor;
+   			score = 1;
+   			$(".scoreComment").html("안전운전 점수 산정까지<br>" + remainDistance + "km 남았습니다.")
+   			notiWord = "산출"
+   		}else{
+   			barColor = getSolidColor(score);
+   		}
+   		
+   		$(".distanceComment").html(calcDistance);
+   		
+
+   		if(score == 0){
+   			score = 1;
+   			barColor = bgColor;
+   		}
+   		
+   		$(".circle canvas").attr("width", parseInt($(".circle").css("width")) * 2).attr("height", parseInt($(".circle").css("height")) * 2)
+   		$(".circle canvas").gauge(score,{color: barColor, bgcolor: bgColor, lineWidth : 10});
+   		
+   		var swiper = new Swiper('.banner .swiper-container',{
+   			slidesPerView: 'auto',
+   			on: {
+   			    init: function () {
+   			    	$(this.slides).each(function(){
+   			    		var obj = $(this)
+   			    		var height = obj.outerWidth() * 0.69
+   			    		obj.css("height", height);
+   			    		obj.closest(".swiperWrap").height(height).children(".swiper-container").height(height)
+   			    	});
+   			    }
+   			}
+   		});
+   		
+   		$(".score h1 a").click(function(){
+   			$(".popWrap").addClass("open");
+			$("body").addClass("hidden");
+   		})
+   	})
+   </script>
+</html>

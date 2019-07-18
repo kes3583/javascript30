@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+	    <meta name="format-detection" content="telephone=no">
+	    <title>Tmap</title>
+
+	    <link rel="stylesheet" href="../css/base.css" media="screen, print">
+	    <link rel="stylesheet" href="../css/tmap_ubi.css" media="screen, print">
+	    
+	    <script src="../../js/libs/jquery-1.11.1.min.js"></script>
+	</head>
+	<body class="otpContent">
+		<!--  header -->
+		<header id="top" class="sub">
+		    <h1 class="title">OTP 인증번호</h1>
+		    <a href="#" class="back"><span></span><em class="blind">뒤로 가기</em></a>
+		</header>
+		<!-- header : end  -->
+		<div id="contents">
+			<div class="otpWrap">
+				<strong>035 </strong><strong>684</strong><a href="javascript:;" class="refresh"></a>
+				<div class="remainTime">인증번호 유효시간 <span>60</span> 초</div>
+				<div class="gage"><div class="gageAnimate"></div></div>
+			</div>
+		</div>
+	</body>
+	<script>
+		$(function(){
+			countDown();
+
+			$(".refresh").click(function(){
+				countDown();
+			})
+		});
+
+		function countDown(){
+			setOtp();
+			$(".otpWrap").removeClass("under10")
+			$(".otpWrap .remainTime span").text("60");
+			$(".otpWrap .gage .gageAnimate").stop().css("width", "100%").animate({
+				width:0
+			}, {
+				duration: 90000,
+				progress: function(promise, progress, remainingMs) {
+					$(".remainTime span").text(Math.floor(remainingMs/1000))
+			      if(remainingMs < 11000){
+			      	$(".otpWrap").addClass("under10")
+			      }
+			    },
+			    complete: function(){
+			    	$(".refresh").click();
+			    },
+			    easing:"linear"
+			})
+		}
+
+		function setOtp(){
+			var otp1 = validationNum(Math.floor(Math.random() * 999));
+			var otp2 = validationNum(Math.floor(Math.random() * 999));
+			$(".otpWrap strong").eq(0).text(otp1 + " ").next().text(otp2)
+		}
+
+		function validationNum(num){
+			if(num < 10){
+				return "00" + num;
+			}else if(num < 100){
+				return "0" + num;
+			}else{
+				return num;
+			}
+		}
+	</script>
+</html>

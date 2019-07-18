@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <title>Tmap</title>
+    
+    <link rel="stylesheet" href="../css/base.css" media="screen, print">
+	<link rel="stylesheet" href="../css/tmap_ubi.css" media="screen, print">
+
+	<script src="../../js/libs/jquery-1.11.1.min.js"></script>
+	<script src="../../js/TmapApp.js"></script>
+	<script src="../js/ubiCommonUtils.js?"></script>     
+</head>
+
+<body>
+
+<!--  header -->
+<header id="top" style="z-index:1000">
+	<h1 class="title">운전습관</h1>
+	<a href="#" class="back"><span></span><em class="blind">뒤로 가기</em></a>
+</header>
+<!-- header : end  -->
+
+<!--  contents  -->
+<div id="contents" class="sub-type1 landscape">
+    <article class="agreement article-noti">
+        <h2 class="tit tc">고객정보 보호를 위한 <img src="../images/simbol-T.png" alt="T">의 약속</h2>
+        <p class="img-block"><img src="../images/auto-custom.png" alt=""></p>
+       	<dl class="explain-list">
+       
+	        <dt>고객님의 주행 기록은 외부에 제공되지 않고 안전하게 보호 됩니다.</dt>
+	        <dd>고객님의 GPS 주행 기록은 보험사 등 제3자에게 제공되지 않으며, 기술적/법적인 보호조치를 통해 보관되고 관리됩니다. 자동차보험료 할인을 신청하시는 고객에 한해, 보험사에서 할인 가능 여부만 조회합니다.</dd>
+	        <dt>고객님의 주행 기록은 운전성향 분석을 위해서 사용되며, 고객님 요청 시 언제든 삭제 가능합니다.</dt>
+	        <dd>고객님의 GPS 주행 기록은 운전성향을 분석하고 안전지수의 근거를 표시하는 용도에 한해 고객님께만 제공되며, 서비스 해지 시 운전습관 관련 모든 정보는 즉시 삭제 됩니다.</dd>
+	        <dt>T map은 고객정보 보호를 위해 항상 최선을 다합니다.</dt>
+	        <dd>T map은 단 한 건, 단 한 분의 고객정보도 소홀히 관리하지 않으며, 모든 고객들이 안심하고 서비스를 사용할 수 있도록 더욱 노력 하겠습니다.
+	        	<span class="block">T map을 신뢰하신다면, 고객님의 주행 데이터를 수집하는데 동의하시고 [이용하기] 버튼을 눌러 주세요.</span>
+	        </dd>
+	        
+	        
+	        <dt>수집 정보</dt>
+	        <dd>
+	        	T map 길안내 이용 시간<br>
+	        	T map 길안내 받는 동안의 GPS 기록
+	        </dd>
+	        	        
+	        <dt>보관 기간</dt>
+	        <dd>1년 (단, 서비스 해지하는 경우 즉시 삭제)</dd>
+       </dl>
+    </article>
+</div>
+<!--  contents :end  -->
+
+<div class="btmFlex">
+	<!-- 주행이력동의 -->
+	<div class="agBox flexItem" style="display:">
+		<span class="inBlock"><label for="chk-ag">주행 이력 데이터가 저장되는 것에 동의합니다.</label><input type="checkbox" id="chk-ag" name="chk-ag"></span>
+	</div>
+
+	<!-- btmMenu -->
+	<div class="btmMenu flexItem">
+		<!-- <button type="button" class="initial" onclick="TmapWebView.closeWebView();">취소</button> -->
+		<button type="button" class="initial wid-100" onclick="registAgreement()">이용하기</button>
+	</div>
+</div>
+  
+<script>
+window.onload= function() {
+
+	/*
+	*  fixedMenu 
+	*/
+	function setFixedMenu() {
+		'use strict'; 
+
+		var $btmNav = $('.btmMenu');
+
+		$(window).scroll(function() {
+			var wHei = $(window).height();
+			var dHei = $(document).height();
+			var hei = dHei - wHei -10; // 12
+
+			if($(window).scrollTop() >= hei) {
+				$btmNav.addClass('flow');
+			} else {
+				$btmNav.removeClass('flow');
+			}
+		});
+	}
+}
+
+function registAgreement(){
+	if(!$('#chk-ag').is(':checked')){
+		TmapApp.makeToast('주행 이력 데이터가 저장되는 것에 동의해 주시기 바랍니다');
+		return;
+	}
+	
+}
+</script>
+  
+</body>
+</html>

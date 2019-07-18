@@ -1,0 +1,706 @@
+@charset "utf-8";
+
+/*
+======================
+   *    common  *
+ =====================
+ */
+.blind {display: inline-block; width: 0; height: 1px; overflow: hidden; opacity: 0;}
+.fl {float: left;}
+.fr {float: right;}
+.block {display: block;}
+.inBlock {display: inline-block;}
+.tc {text-align: center;}
+.mB-25 {margin-bottom: 25px;}
+
+
+* {outline: none;}
+
+/*
+==========================
+   *    btn style  *
+ =========================
+ */
+.btns {text-align: center;}
+.btns.wid80 > * {width: 80%}
+.btn-type1 {width: 100%; height: 36px; line-height: 35px; font-size: 12px; font-family: Noto Sans; font-weight: bold; text-align: center; border-radius: 50px; border: 1px solid #e4e4e4; background: #fff;}
+.btn-type1.red {color: #e84c35;}
+
+/*
+========================
+   *    header   *
+ =======================
+ */
+/* #top {position: fixed; left: 0; top: 0; width: 100%; height: 58px; background: #fff;} */
+#top {position: fixed; left: 0; top: 0; width: 100%; height: 49px; background: #fff; border-bottom:1px solid #ccc;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+/* #top .back {position: absolute; left: 14px; top: 50%; margin-top: -21px; padding: 10px;} */
+#top .back {position: absolute; left: 7px; top: 50%; margin-top: -21px; padding: 10px;}
+/* #top .back > span {display: inline-block; width: 15px; height: 23px; background: url(../images/ico_back.png) left top no-repeat; background-size: 15px 23px;} */
+#top .back > span {display: inline-block; width: 13px; height: 21px; background: url(../images/ico_back.png) left top no-repeat; background-size: 13px 21px;}
+/* #top .information {position: absolute; right: 10px; top: 50%; margin-top: -20px; padding: 10px; background-color: transparent;} */
+#top .information {position: absolute; right: 7px; top: 50%; margin-top: -23px; padding: 10px; background-color: transparent;}
+#top .information > span {display: inline-block; width: 22px; height: 23px; background: url(../images/ico_set.png) left top no-repeat; background-size:22px 23px;}
+#top .logo {width: 93px; margin: 0 auto; padding-top: 13px;}
+#top .logo a {display: block; width: 100%; padding: 5px;}
+/* #top.sub {box-shadow: 0 0 2px 3px rgba(230, 230, 230, .5); z-index: 51;} */
+#top.sub {border-bottom:1px solid #ccc;z-index: 51;}
+/*
+=======================
+   *    navi  *
+ ======================
+ */
+#nav {overflow: hidden; z-index: 100;}
+#nav li {position: relative; float: left; width: 50%;}
+#nav li a {display: block; height: 50px; line-height: 53px; text-align: center; color: #bababc; font-size: 16px; font-weight: bold; letter-spacing: -1px; background: #5e5f64;}
+#nav li.on a {color: #fff; }
+#nav li.on a:after {content: ""; display: block; clear: both; position: absolute; bottom: 0; left: 50%; margin-left: -4px; width: 0; height: 0;
+border-color: transparent transparent #fff transparent; border-left-width:7px; border-right-width: 7px; border-bottom-width: 8px; border-style:solid;
+}
+
+/*
+=======================
+   *   btmMenu  *
+ ======================
+ */
+.btmMenu {position: fixed; left: 0; bottom: 0; width: 100%; height: 50px; z-index: 100; box-sizing: border-box; border-top: 1px solid #43474a;}
+.btmMenu.flow {-webkit-transform: translateY(100%);}
+.btmMenu > button {float: left; width: 50%; height: 100%; box-sizing: border-box;}
+.btmMenu .initial {color: #fff; font-size: 15px; font-weight: bold; letter-spacing: -1px; background-color: #51565a;}
+.btmMenu > button:first-child {border-right: 1px solid #8c8c8d;}
+.btmMenu .wid-100 {width: 100% !important;}
+.btmMenu.bgc-fixed {border-top: 0;}
+.btmMenu.bgc-fixed .initial {border: 0; background-color: #009881; letter-spacing: 0;}
+
+.btmMenu .btnTel {display:block;width:100%;height:50px;line-height:50px;text-align:center;}
+.btmMenu .btnTel span{display:inline-block;padding-left:30px;background: url(../images/ico_tel.png) left center no-repeat; background-size: 24px 24px;font-size:14px;}
+
+.btmMenu .wid-100.link{display:block;height:50px;font-weight:bold;font-size:15px;line-height:50px;text-align:center;}
+.btmMenu .samsungCard{background-color:#0A6FB3;color:#fff;}
+.btmMenu .skencar{background-color:#F15E42;color:#fff;}
+.btmMenu .cyauto{background-color:#2085E3;color:#fff;}
+
+/*
+============================
+   *   안전운전 점수   *
+ ===========================
+ */
+
+
+/* #contents {position: relative; padding-top: 58px; z-index: 50; font-family: Noto Sans;} */
+#contents {position: relative; padding-top: 50px; z-index: 50; font-family: Noto Sans;}
+#contents.bg-fix {background: #fff;}
+#contents.sub-type1 {padding-bottom: 115px;}
+#contents.sub-type2 {padding-bottom: 50px;}
+
+#patternGrid .grid-type1 {padding: 30px 0;}
+#patternGrid .grid-type2 {padding: 0 30px 15px; text-align: center;}
+
+#contents .speedPanel {padding-top: 20px; text-align: center;}
+.driving-info {position: relative; margin: 10px 30px 15px; border-top: 1px solid #e5e5e5;}
+.driving-info .outer {margin-top: 15px; text-align: center; letter-spacing: -1px;}
+/*.driving-info .outer .inner {display: inline-block; background: url(../images/ico_trophy.png) left 20% no-repeat; background-size: 28px 27px;}*/
+.driving-info .outer .inner {display: inline-block;}
+.driving-info .outer .i01 {display: inline-block; background: url(../images/icon_ubi_01.png) left 20% no-repeat; background-size: 35px 34px;}
+.driving-info .outer .i02 {display: inline-block; background: url(../images/icon_ubi_02.png) left 20% no-repeat; background-size: 35px 34px;}
+.driving-info .outer .i03 {display: inline-block; background: url(../images/icon_ubi_03.png) left 20% no-repeat; background-size: 35px 34px;}
+.driving-info .outer .i04 {display: inline-block; background: url(../images/icon_ubi_04.png) left 20% no-repeat; background-size: 35px 34px;}
+.driving-info .outer .i05 {display: inline-block; background: url(../images/icon_ubi_05.png) left 20% no-repeat; background-size: 35px 34px;}
+.driving-info .outer .inner .ex {position: relative; display: inline-block; width: 90%; margin-top: 20px; text-align: left;  font-size: 14px; line-height: 1.3em; letter-spacing: -1px; color: #404040;}
+.driving-info .outer .inner > span {padding-left: 41px; text-align: left; font-size: 15px; line-height: 19px; color: #404040;}
+.driving-info .outer .inner.default > span {padding-left: 0; text-align: center;}
+.driving-info .outer .inner .ex img {width: 9%; position: absolute; left: 0; top: 50%; margin-top: -10px;}
+.driving-info .outer .inner .light {font-size: 14px; color: #a5a5a6;}
+.driving-info .outer .inner .thin {margin-top: 8px; font-size: 9px; letter-spacing: -2px;}
+#pop-wrap {position: absolute; left: 50%; top: 0; margin-left: -120px; width: 240px; background-color: #2d7eeb; z-index: 50;}
+#pop-wrap-empty {position: absolute; left: 50%; top: 0; margin-left: -120px; width: 240px; background-color: #2d7eeb; z-index: 50;}
+#pop-wrap-detail {position: absolute; left: 50%; top: 0; margin-left: -120px; width: 240px; background-color: #2d7eeb; z-index: 50;}
+.pop-info {position: relative; padding: 15px 15px 10px 15px;}
+.pop-info:after {content: ''; display: block; clear: both; position: absolute; left: 50%; top: -20px; margin-left: -10px; border: 12px solid #2d7eeb; border-left: 8px solid transparent; border-right: 8px solid transparent; border-top: 10px solid transparent}
+#pop-wrap-detail.majorItem {top: -42px;}
+.majorItem .pop-info:after {top: auto; bottom: -20px; border-top: 12px solid #2d7eeb; border-bottom: 10px solid transparent}
+
+.pop-info > p { font-size: 12px; line-height: 17px; color: #fff; letter-spacing: -1px;}
+.pop-info .pop-close {position: absolute; right: 0px; top: 0px; padding: 10px; }
+.pop-info .pop-close .icon {display: inline-block; width: 10px; height: 10px; background: url(../images/pop-close.png) no-repeat; background-size: 100%;}
+
+
+
+/* 주요항목 */
+#patternGrid .hd-tit, .benefitArea header, .lastSection p {position: relative; padding-top: 15px; background: #f1f1f1; box-shadow: 0px 1px 3px #e8e8e8 inset;  border-top: 1px solid #dfdfdf;}
+#patternGrid .hd-tit > h3, .benefitArea header h3 {padding: 12px 0 10px; border-top: 1px solid #dfdfdf;  border-bottom: 1px solid #dfdfdf; background: #fff;}
+#patternGrid .hd-tit > h3 > span, .benefitArea header h3 span {display: inline-block; padding-left: 15px; color: #818181; font-size: 13px; line-height: 13px; /* letter-spacing: -1px; */}
+#patternGrid .hd-tit .history {position: absolute; right: 15px; top: 28px; display: inline-block; padding-left: 17px; background: url(../images/ico-sim.png) left 1px no-repeat; background-size: 13px 10px;}
+#patternGrid .hd-tit .notice-txt {position: absolute; right: 15px; top: 27px; font-size: 11px; font-weight: bold; color: #818181; letter-spacing: -1px;}
+.hd-tit > h3 > var {display: inline-block; width: 15px; margin-left: 4px; vertical-align: 4px;}
+.hd-tit .notice-txt > span {color: #2d7eeb;}
+.hd-tit .notice-txt > var {margin: 0 3px; font-style: normal;}
+/* .major-wrap {padding: 30px 0; text-align: center;} 2016.10.13 before */
+.major-wrap {padding: 20px 0; text-align: center;} 
+.major-wrap .canvasList {display: inline-block; width: auto; overflow: hidden; }
+.major-wrap .canvasList li {position: relative; float: left; margin-right: 25px; width: 85px; height: 85px; border-radius: 50%;}
+.major-wrap .canvasList li:last-child {margin-right: 0;}
+.major-wrap .canvasList button {width: 100%; height: 100%; }
+.major-wrap .canvasList .canvasDIV {position: relative; left: 0; top: 0; width: 100%; height: 100%;}
+.major-wrap .canvasList .canvasDIV > img {vertical-align: middle;}
+.hd-tit .history {font-size: 13px; color: #818181; letter-spacing: -1px;}
+.major-wrap .canvasList .sort-circle {position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: table;}
+.major-wrap .canvasList .sort-circle .tbl-out {display: table-cell; vertical-align: middle;}
+.major-wrap .canvasList .sort-circle .tbl-out > * {display: block;}
+.sort-circle .tbl-out .headline {margin: 1px 0 4px 1px; font-size: 16px; font-weight: bold; color: #404040;}
+.sort-circle .tbl-out .thing {margin-top: -2px; font-size: 12px; color: #818181;}
+.sort-circle .tbl-out .headline .ico {display: inline-block; width: 4px; height: 6px; margin: 0 0 0 2px; vertical-align: 2px; background: url(../images/ico-circle-arrow.png) left top no-repeat; background-size: 100%;}
+
+
+/* 메인운전습관 상세페이지 */
+.driving-info.details {margin-top: 25px;}
+.driving-info.details .outer {margin-top: 20px;}
+.driving-info.details .outer .inner > span {padding-left: 0; text-align: center;}
+.statusOBJ {position: relative; display: inline-block; text-align: center; width: 127px; height: 127px;}
+.statusOBJ .status-txt {position: absolute; left: 0; top: 0; width: 100%; height: 100%; font-size: 21px; font-family: NotoSansCJKkr; font-weight: bold; line-height: 125px;}
+
+
+.safeDriving-wrap .pdGuide {padding: 0 30px;}
+.pdGuide .ratioParagraph > li {padding: 20px 0; border-bottom: 1px solid #dfdfdf;}
+.pdGuide .ratioParagraph > li:last-child {border-bottom: 0;}
+.pdGuide .ratioParagraph > li .roadName {margin-bottom: 15px; font-size: 14px; color: #404040; text-align: center;}
+.pdGuide .ratioParagraph .summary { font-size: 11px; font-weight: normal; color: #a5a5a6; font-family: NotoSansCJKkr; letter-spacing: -1px; line-height:15px;}
+.pdGuide .ratioParagraph .webkit-box {display: -webkit-box;}
+.webkit-box.mB-15 {margin-bottom: 15px;}
+.pdGuide .ratioParagraph .webkit-box > * {vertical-align: middle; height: 13px; line-height: 13px;}
+.pdGuide .ratioParagraph .webkit-box .tit {width: 72px; font-size: 12px; color: #404040; font-family: NotoSansCJKkr; letter-spacing: -1px;}
+
+.pdGuide .ratioParagraph .webkit-box .mark {width: 56px; text-align: right; font-size: 14px; color: #404040;}
+.pdGuide .ratioParagraph .webkit-box .mark .rank.fc-fixed {color: #2d7eeb}
+.pdGuide .ratioParagraph .webkit-box .flex {-webkit-box-flex: 1;}
+.pdGuide .ratioParagraph .webkit-box .flex .above {position: relative; display: inline-block; width: 100%; height: 13px; border-radius: 6px; background: #e7e7e7;}
+.pdGuide .ratioParagraph .webkit-box .flex .above .bar {position: absolute; left: 0; top: 0; display: inline-block; height: 13px; width: 0px; border-radius: 6px; -webkit-transition: width 1s ease-out; transition: width 1s ease-out;}
+.safeDriving-wrap .item-pre00  {background: #5da1fd;}
+.safeDriving-wrap .item-pre01 {background: #b1b1b1; }
+.safeDriving-wrap .item-pre02  {background: #f28d4f;}
+.safeDriving-wrap .item-pre03  {background: #e5d208;}
+.safeDriving-wrap .item-pre04  {background: #b7d167;}
+.safeDriving-wrap .item-pre05  {background: #17ae87;}
+
+.average-disk {overflow: hidden; margin-top: -10px;}
+.average-disk li {position: relative; float: left; width: 50%; box-sizing: border-box; text-align: center;}
+.average-disk li:after {content: ''; display: block; clear: both;}
+.average-disk .line:after {position: absolute; right: 0; top: 20%; width: 1px; height: 60%; background: #e4e4e4;}
+.average-disk .score-N {font-size: 33px; font-weight: bold; color: #404040;}
+.average-disk .score-N.blue {color: #2d7eeb;}
+.average-disk .score-N > span {font-size: 15px;}
+.average-disk .disk-etc {margin-top: -3px; font-size: 12px; color: #a5a5a6; letter-spacing: -1px;}
+
+/* 이벤트 배너 */
+.bannerEvent {padding-top:15px;background:#f1f1f1;border-top:1px solid #dfdfdf;box-shadow:0px 1px 3px #e8e8e8 inset;text-align:center;}
+.bannerEvent p{background-color:#65BDBE;}
+.bannerEvent img{max-width:360px;}
+
+/* 자동차 보험 할인 정보 */
+.motor-insurance {position: relative; padding-bottom: 15px;}
+.motor-insurance .ins-column {margin: 20px 0 20px; padding: 0 15px; text-align: center; letter-spacing: -.5px;}
+.motor-insurance .ins-column .txt {font-size: 15px; color: #404040; font-weight: bold; line-height: 1.2em; }
+.motor-insurance .ins-column .txt em {color: #2276e6;}
+.motor-insurance .ins-column .txt-etc {margin-top: 10px; padding: 0 10px; font-size: 13px; color: #a5a5a6; letter-spacing: -.5px; line-height: 1.2em;}
+.linkTxt,.linkTxt:hover,.linkTxt:active,.linkTxt:focus{text-decoration:underline;}
+
+/* 혜택 */
+.benefitArea .benefitHeader{position:relative;bottom:-8px;z-index:2;margin-top:-8px;background:url(../images/main_benefit_header_bg.png) repeat-x;background-size:auto 87px;text-align:center;}
+.benefitArea .benefitHeader p{display:block;max-width:360px;height:87px;margin:0 auto;padding:26px 53px 0 50px;background:url(../images/main_benefit_header_img.png) no-repeat left top;background-size:360px auto;color:#404040;font-size:12px;line-height:15px;text-align:center;white-space:nowrap;box-sizing:border-box;-webkit-box-sizing:border-box;}
+.benefitArea .cont{padding:20px;text-align:center;}
+.benefitArea .cont .img{margin-top:-3px;}
+.benefitArea .cont .img img{width:auto;height:40px;margin-bottom:4px;}
+.benefitArea .cont .img .skencar{width:auto;height:44px;margin-top:-4px;}
+.benefitArea .cont h4{color:#404040;font-size:17px;letter-spacing:-1px;}
+.benefitArea .cont p{margin-top:4px;color:#818181;font-size:12px;line-height:15px;}
+.benefitArea .cBlue{color:#2276e6;}
+.benefitArea .cRed{color:#f15e42;}
+.benefitArea .benefitHeader + section header{padding-top:0;border-top:0;}
+.benefitArea .benefitHeader + section header h3{border-top:0;}
+.benefitArea article + article{border-top:1px solid #dfdfdf;}
+
+/*
+========================
+   *   운전 행태   *
+ =======================
+ */
+.drivingPattern {padding: 30px 0;}
+.drivingPattern .dateExg {position: relative; height: 35px; text-align: center; line-height: 37px;}
+.drivingPattern .inp-date {position: relative; display: inline-block; width: 40%; border: 0; font-size: 20px; font-weight: bold; color: #1a70e6; text-align: center;} 
+.drivingPattern .inp-date > select {position: absolute; left: 0; top: 0; opacity: 0;}
+.drivingPattern .dateExg > button { padding: 10px; position: absolute; top: 50%; margin-top: -16px; background-color: transparent; }
+.drivingPattern .dateExg > button > span {display: inline-block; width: 8px; height: 12px; background-image: url(../images/ico_arrow-set.png); background-repeat: no-repeat; background-size: 8px 28px;}
+.drivingPattern .dateExg .prev {left: 20%;}
+.drivingPattern .dateExg .next {right: 20%;}
+.drivingPattern .dateExg .prev span {background-position: left top; }
+.drivingPattern .dateExg .next span {background-position: left bottom;}
+.drivingPattern .dateExg .off {opacity: 0; display: none;}
+
+.drivingPattern .dateReg {margin-top: 20px;}
+.drivingPattern .dateReg li {padding: 0 0 0 22%;}
+.drivingPattern .dateReg li .drive {display: inline-block; margin-right: 13px; font-size: 15px; color: #a5a5a6; letter-spacing: -1px; vertical-align: middle;}
+.drivingPattern .dateReg li .drive-txt {font-size: 19px; color: #404040; vertical-align: middle;}
+
+
+/*  도로 운전별 운전비율 차트  */
+.chartGroupList li {position: relative; margin-bottom: 25px;}
+.chartGroupList li:last-child {margin: 0;}
+.chartGroupList li > .chartItem {display: block; margin: 0 auto;}
+.chartGroupList li .ratio {display: inline-block; position: absolute; top: 50%; left: 50%; width: 100px; margin-left: -35px; margin-top: -20px; text-align: center;}
+.ratio.pos-lt .pos {position: absolute; display: block; margin-left: -130%; width: 100%;}
+.ratio.pos-rt .pos { position: absolute; display: block; margin-left: 100%; width: 90%;}
+.chartGroupList .ratio .pos > strong {display: block; color: #404040; font-size: 20px;}
+.chartGroupList .ratio .pos > var {color: #a5a5a6; font-size: 15px; font-style: normal;}
+.chartGroupList .chart-name {position: absolute; left: 50%; top: 50%; width: 100px; height: 100px; margin: -50px 0 0 -50px; }
+.chartGroupList .chart-name strong { display: -webkit-flex; height: inherit; -webkit-align-items: center; font-size: 20px; line-height: 1.2em; color: #4b5054;}
+.chartGroupList .chart-name strong > var {display: block; width: 100%; font-style: norma; text-align: center;}
+
+/*  계기판 이미지 정렬 및 점수  */
+.dashboard {display: inline-block; position: relative; width: 50%; text-align: center;}
+.dashboard > span {position: absolute; bottom: -5px; width: 30px; display: inline-block; font-size: 9px; color: #aaa; vertical-align: bottom;}
+.dashboard .score-lt {left: -40px; text-align: right;}
+.dashboard .score-rt {right: -40px; text-align: left;}
+.speedPanel .safe-score {margin-top: 10px; font-size: 17px; font-weight: bold; color: #404040; }
+.speedPanel .safe-score #total-score {font-size: 33px; line-height: 39px;}
+.speedPanel .safe-score .lh-fixed {display: inline-block; vertical-align: 2px;}
+.speedPanel .safe-score .grade { font-weight: normal; font-size: 14px; line-height: 18px; color: #404040;}
+.speedPanel .safe-score .grade .inBlock {margin-left: 7px; color: #a5a5a6;}
+.speedPanel .safe-score .miles {margin-top: 2px; font-size: 12px; line-height: 16px; color: #a5a5a6;}
+.speedPanel .safe-score .miles > var {display: inline-block; width: 15px;}
+
+
+/*
+====================
+   *   FAQ  *
+ ===================
+ */
+/*  #top .title {text-align: center; color: #4b5054; font-size: 17px; line-height: 60px;} header관련 before */
+ #top .title {text-align: center; color: #4b5054; font-size: 17px; line-height: 50px;}
+/* .carFaq { font-size: 14px; overflow: hidden;} header관련 before */
+.carFaq { margin-top:-1px; font-size: 14px; overflow: hidden;}
+.carFaq li  {}
+.carFaq button {position: relative; display: -webkit-flex !important; width: 100%; height: 62px; -webkit-align-items: center; text-align: left; background-color: #fafafa; border-bottom: 1px solid #dfdfdf;}
+.carFaq button > p {width: 80%; padding-left: 15px; line-height: 1.2em; color: #4b5054; font-family: Roboto; font-weight: bold; overflow: hidden; text-overflow: ellipsis; white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+.carFaq button:after {content: ""; position: absolute; width: 15px; height: 9px; right: 5%; top: 50%; margin-top: -4.5px;
+background: url(../images/ico_arrow-set1.png) left top no-repeat; background-size: 15px 19px; }
+.carFaq .on button:after {background: url(../images/ico_arrow-set1.png) left bottom no-repeat; background-size: 15px 19px; }
+.carFaq .answer {display: none; padding: 15px 18px 0 18px; color: #a5a5a6; letter-spacing: -1px; line-height: 1.2em; border-bottom: 1px solid #dfdfdf;}
+.carFaq .on .answer {display: block;}
+.carFaq .answer .block {margin-bottom: 15px;}
+
+
+
+/*
+=====================
+   *   환경설정  *
+ ====================
+ */
+.set-type-tit {padding: 10px 0; border-top: 1px solid #dfdfdf; border-bottom: 1px solid #dfdfdf; background: #ebebeb;}
+.set-type-tit:first-child {margin-top:-1px;border-top: 1px solid #ebebeb; }/* header관련 added */
+.set-type-tit > span {display: inline-block; padding-left: 14px; padding-right: 14px; color: #818181; font-size: 13px; line-height: 13px; letter-spacing: -.5px;}
+.setList li {position: relative; border-bottom: 1px solid #dfdfdf;}
+.setList li.bg-none {border-bottom: 0;}
+.setList li:after {content: ""; display: block; clear: both; position: absolute; width: 10px; height: 16px; top: 50%; margin-top: -8px; right: 5%;
+background: url(../images/ico_arrow-right.png) left top no-repeat; background-size: 10px 16px; } 
+.setList button {padding: 20px 0; width: 100%; text-align: left;}
+.setList button > span {display: block; padding: 0 15% 0 15px; font-size: 17px; font-family: Roboto; font-weight: bold; color: #4b5054;}
+.setList button > .etc {display: block; padding-top: 2px; font-size: 13px; line-height: 15px; color: #a5a5a6;}
+
+ 
+/*
+========================================
+   *   운전 습관 최초 진입 플리킹   *
+========================================
+ */ 
+
+/* swiper 2016.11.09 */
+.swiper-container{margin-top: 50px;}
+.swiper-slide {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+   -webkit-flex-wrap: wrap; 
+   flex-wrap: wrap;
+}
+/* .swiper-slide .visual {width: 325px; height: 219px; margin: 0 auto;} */
+.swiper-slide .visual{width:100%;}
+.swiper-slide .visual img{width: 325px; height: 219px; margin: 0 auto; }
+.swiper-slide .comment {width: 100%; letter-spacing: -1px; }
+.swiper-slide .comment > h2 {font-size: 18px; color: #4b5054; }
+.swiper-slide .comment > p {padding-top: 25px; color: #aaaaaa; font-size: 14px; }
+.swiper-pagination-bullet-active{opacity: 1; background: #4b5054; }
+.swiper-pagination{position:static; width:100%; padding-top:73px; text-align:center; transition:none; -webkit-transition:none; transform:none; -webkit-transform:none; }
+
+@media all and (orientation:landscape) {
+	.swiper-container{margin-top:0;}
+	/* .swiper-slide {-webkit-flex-wrap: nowrap; flex-wrap: nowrap;} */
+	.swiper-slide .visual{width:50%;}
+	/* .swiper-slide .comment {display: table-cell; width:50%; text-align:center; vertical-align: middle;} */
+	.swiper-slide .comment {width:50%;}
+	/* .swiper-slide .comment h2, .swiper-slide .comment p{padding-right:40px; } */
+	.swiper-slide .comment h2, .swiper-slide .comment p{padding-left:20px;padding-right:40px;}
+	.swiper-pagination{position:absolute; left:0; bottom:7%;}
+}
+
+/*
+=============================
+   * 안전운전 점수안내  *
+ ============================
+ */
+.article-noti {margin: 40px 0 35px; padding: 0 20px; font-size: 14px; line-height: 1.3em; color: #888; text-align: left;}
+.article-noti > .tit {margin-bottom: 20px; padding-top: 7px; font-size: 18px; color: #404040; line-height: 1.3em;letter-spacing:-1px;}
+.article-noti > .tit > img {width: 77px; vertical-align: top; margin-top: -13px; margin-left:-8px;}
+.agreement.article-noti > .tit > img {margin-left:0;}
+.article-noti > .block {margin-bottom: 8px; }
+.article-noti > .list li {padding-left: 10px; margin-bottom: 10px; background: url(../images/ico-dot.png) 1px 5px no-repeat; background-size: 3px;}
+.article-noti.insurance-to .list {font-size: 12px;}
+.article-noti.insurance-to .list b{color:#454545;}
+.article-noti > .list li > p {padding-top: 15px;}
+.article-noti > .list li:last-child {margin-bottom: 0;}
+.article-noti > .list li span {color:#fb6341;}
+.article-noti > .list.no-bg li {padding-left: 0; background: none;}
+.article-noti > .notice-out {margin: 18px 0; text-align: center;}
+.article-noti h3.tit{text-align:center;}
+.article-noti h3.tit b{color:#009881;}
+.article-noti .visual{width:325px;margin:25px auto 30px;}
+.article-noti h4{margin:25px 0 12px;color:#404040;font-size:16px;}
+.article-noti .box{padding: 17px 0 20px; margin-bottom: 3px; border: 1px solid #dfdfdf; background: #fafafa; text-align: center;  font-size: 14px; letter-spacing: -1px;}
+.article-noti .box .logo {margin-bottom: 10px; width: 80px; height: 20px;}
+.article-noti .subNoti {padding-left:15px; position: relative; font-size: 11px; line-height: 13px; color:#888888;}
+.article-noti .subNoti:before {position:absolute; left:0px;content:'※';}
+.box > h3 { color: #4b5054;}
+.box > h3 .color {color: #009881}
+.box > h3 > * {vertical-align: middle;}
+.box > h3 > i {display: inline-block; padding-left: 23px; height: 19px; background: url(../images/ico-icon.png) no-repeat; background-size: 19px;}
+.box p{font-size:12px;}
+.box p b{color:#404040;}
+.box p strong{display:inline-block;margin-bottom:8px;padding-left:30px;color:#404040;font-size:20px;background-repeat:no-repeat;background-position:left center;}
+.box p strong.type01{background-image:url(../images/ico_saleinfo_01.png);background-size:auto 16px;}
+.box p strong.type02{background-image:url(../images/ico_saleinfo_02.png);background-size:auto 16px;}
+.box p strong.type03{background-image:url(../images/ico_saleinfo_03.png);background-size:auto 16px;}
+.box p strong.type04{background-image:url(../images/ico_saleinfo_04.png);background-size:auto 16px;}
+.box p strong.type05{background-image:url(../images/ico_saleinfo_05.png);background-size:auto 16px;}
+.box p strong.type06{background-image:url(../images/ico_saleinfo_06.png);background-size:auto 16px;}
+.box p strong.type07{padding-left:23px;background-image:url(../images/ico_saleinfo_07.png);background-size:auto 16px;}
+.box .chk-txt {padding-top: 3px; color: #2276e6; font-weight: bold; line-height: 1.3em;}
+.box .chk-txt > i {padding-left: 17px; background: url(../images/ico-chk.png) left 2px no-repeat; background-size: 13px 10px;}
+
+.insurance-noti {margin: 30px; padding: 15px; border: 1px solid #dfdfdf; font-size: 12px; background-color: #fafafa; color: #818181;}
+.article-noti+.insurance-noti{margin-top:-15px;}
+.insurance-noti > h3 {padding-bottom: 13px; margin-bottom: 12px; border-bottom: 1px solid #dfdfdf; font-weight: normal;}
+.insurance-noti h4{margin-bottom:12px;font-weight:normal;}
+.insurance-noti li {padding-left: 7px; margin-bottom: 12px; background: url(../images/ico-notice.png) left 7px no-repeat; background-size: 2px;font-size:12px;line-height:16px;}
+.insurance-noti li:last-child {margin-bottom: 0;}
+#scoreInfoBtns {font-size: 0px;}
+#scoreInfoBtns .btnTel {display: inline-block;width:40%;}
+#scoreInfoBtns .btnTel:first-child {width:60%;}
+#scoreInfoBtns .btnWeb {background: #4084dd}
+#scoreInfoBtns .btnWeb span {background-image:url(../images/ico_web.png);}
+#scoreInfoBtns.singleBtn .btnTel {width:100%;}
+
+.agBox {position: fixed; left: 0; bottom: 45px; width: 100%; height: 70px; text-align: center; background: #ebebeb; z-index: 100;}
+.agBox .inBlock {padding-top: 24px;}
+.agBox.line-2 .inBlock {padding: 18px 0;}
+.agBox .inBlock > * {vertical-align: middle;}
+.agBox .inBlock > label {display: inline-block; margin-right: 7px; font-size: 13px; color: #54585c; letter-spacing: -1px; font-weight: bold; text-align: left;}
+.agBox .inBlock input[type="checkbox"] {width: 22px; height: 22px; background-image: url(../images/ico_chk_set.png); background-color: transparent; background-position: left top; background-repeat: no-repeat; background-size: 100%; border: none; -webkit-appearance: none;}
+.agBox .inBlock input[type="checkbox"]:checked {background-position: left bottom; background-color: transparent;}
+.agBox .inBlock .pos {position: absolute; right: 5%; top: 50%; margin-top: -11px;}
+
+.guide-m1{margin-top:-2px;}/* header관련 added */
+.guide-m1 > img {border-top: 1px solid #dfdfdf; border-bottom: 1px solid #dfdfdf;}
+.guide-m1 .article-box {padding: 25px 30px 0;}
+.guide-m1 .article-box .tit {margin-bottom: 6px; font-size: 17px; color: #4b5054; line-height: 1.3em; letter-spacing: -1px;}
+.guide-m1 .article-box .block {margin-bottom: 23px; font-size: 14px; color: #aaa; line-height: 1.3em;}
+
+
+/* 이용 동의  */
+.agreement {position: relative; margin: 40px 0 25px; overflow: hidden;}
+.img-block {margin:0 auto 30px auto;width: 320px; height: 158px;}
+.explain-list {padding: 0 10px;}
+.explain-list dt {margin-bottom: 8px; font-size: 15px; color: #404040;}
+.explain-list dd {margin-bottom: 30px; font-size: 12px; color: #888888;}
+.explain-list dd .block { margin-top: 10px; }
+.explain-list dd:last-child {margin-bottom: 0;}
+
+/*
+=============================
+   * 동부화재 전화상담 모바일웹  *
+ ============================
+ */
+.insurance-tel{font-family:Roboto,'Droid Sans',AppleSDGothicNeo,Helvetica,sans-serif;text-align:center;}
+.insurance-tel .tit{margin:60px 0 50px;color:#404040;font-weight:bold;font-size:15px;}
+.insurance-tel .tit em{color:#2276e6;}
+.insurance-tel a.btn{display:inline-block;width:80%;height:36px;border-radius:50px;background-color:#009881;color:#fff;font-weight:bold;font-size:16px;line-height:35px;text-align:center;}
+.insurance-tel .noti{margin-top:10px;color:#a5a5a6;font-size:12px;}
+.insurance-tel .back-tmap{position:fixed;left:0;bottom:100px;width:100%;}
+.insurance-tel .btn-tmap img{width:118px;}
+
+@media all and (orientation:landscape) {
+      #contents.sub-type1.landscape {padding-bottom: 50px;}
+      .agreement {padding: 0; display: -webkit-box; margin: 40px 0 0;}
+      .agreement .img-block {width:50%;margin:0;}
+      .agreement .explain-list { -webkit-box-flex:1; padding: 50px 10px 20px 0;}
+      .agreement .tit {position: absolute; right: 0; width: 50%;}
+      .agBox.landscape {width: 50%; height: 50px; bottom: 0;}
+      .agBox.landscape .inBlock {padding-top: 15px;}
+      .btmMenu.landscape {width: 50%; left: auto; right: 0 !important;}
+      .insurance-tel .back-tmap{position:static;margin-top:50px;}
+
+	/* 2016.10.31 added */
+      .btmFlex{position:fixed;left:0;bottom:0;z-index:100;display:flex;display: -webkit-flex; width:100%;}
+      .flexItem{position:static;flex:1;-webkit-box-flex:1; height:50px;}
+      .agBox.flexItem .inBlock {padding-top: 15px;}
+} 
+
+/*
+============================
+   * 혜택 상세 페이지  *
+ ============================
+*/
+.benefitDetail {margin:30px auto; padding:0 30px 70px; font-size: 14px; line-height: 1.3em; color: #888; text-align: left;}
+.benefitDetailFull {margin:30px auto; padding:0; font-size: 14px; line-height: 1.3em; color: #888; text-align: left;}
+
+.benefitDetail .topArea{text-align:center;}
+/* .benefitDetail .topArea .txtArea{margin-top:25px;color:#818181;font-size:12px;text-align:left;text-indent:-11px;padding-left:11px;} */
+.benefitDetail .topArea .txtArea{margin-top:25px;color:#818181;font-size:12px;text-align:left;}
+.benefitDetail .topArea .listArea{margin-top:25px;text-align:center;}
+.benefitDetail .topArea .listArea ul{display:inline-block;width:auto;margin:0 auto;text-align:left;}
+.benefitDetail .topArea .listArea ul li{color:#404040;font-size:13px;line-height:14px;letter-spacing:-1px;}
+.benefitDetail h2{padding:20px 0 25px;font-size: 18px; color: #404040; line-height: 1.3em;letter-spacing:-1px;}
+.benefitDetail dl{margin-top:30px;}
+.benefitDetail dl dt{margin-bottom:8px;color:#303030;font-size:15px;}
+.benefitDetail dl dd{margin-bottom:30px;color:#818181;font-size:12px;}
+.benefitDetail dl dd p{padding-left:10px;background:url(../images/ico_bl.png) no-repeat 2px 7px;background-size:3px;}
+.benefitDetail ol{padding-left:10px;}
+.benefitDetail ol li{margin-left:10px;list-style-type:decimal;}
+.benefitDetail ul li, .benefitDetail p.li{padding-left:10px;background:url(../images/ico_bl.png) no-repeat 2px 7px;background-size:3px;font-size:12px;line-height:18px;}
+.benefitDetail li{margin-bottom:6px;font-size:12px;line-height:18px;}
+
+.benefitDetail .tableType{margin-top:10px;border-left:1px solid #E5E5E5;border-top:1px solid #E5E5E5;background-color:#fff;}
+.benefitDetail .tableType th, .benefitDetail .tableType td{padding:7px 0 6px;border-right:1px solid #E5E5E5;border-bottom:1px solid #E5E5E5;font-size:12px;text-align:center;}
+.benefitDetail .tableType thead th{background-color:#FAFAFA;color:#101010;}
+.benefitDetail .tableType tbody td{color:#818181;}
+.benefitDetail .boxType{padding:15px;border:1px solid #E5E5E5;}
+
+.benefitDetail .boxType.notice{color:#818181;font-size:12px;line-height:16px;}
+.benefitDetail .boxType.notice li{padding-left: 7px; margin-bottom: 12px; background: url(../images/ico-notice.png) left 7px no-repeat; background-size: 2px;}
+.benefitDetail .boxType.notice p{margin-top:15px;padding:15px 4px 0;border-top:1px solid #E5E5E5;}
+
+.benefitDetail strong{font-weight:normal;}
+.benefitDetail .cRed{color:#f15e42;}
+.benefitDetail .cBlue{color:#2276e6;}
+.benefitDetail .tBold{font-weight:bold;}
+.benefitDetail .blStar{position:relative;padding-left:11px;}
+.benefitDetail .blStar:after{position:absolute;left:0;top:0;content:"*"}
+
+/* .benefitDetail .scoreBoxType{padding: 17px 5px 20px; margin-bottom: 20px; border: 1px solid #dfdfdf; background: #fafafa;text-align:center;} */
+.benefitDetail .scoreBoxType{padding: 22px 5px 20px; margin-bottom: 20px; border: 1px solid #dfdfdf; background: #fafafa;text-align:center;}
+.benefitDetail .scoreBoxType .scoreArea{display:inline-block;margin:0 auto;}
+.benefitDetail .scoreBoxType .scoreArea .score strong{display:inline-block;margin-bottom:8px;padding-left:30px;color:#404040;font-weight:bold;font-size:20px;background-repeat:no-repeat;background-position:left center;}
+.benefitDetail .scoreBoxType .scoreArea .score strong.type01{background-image:url(../images/ico_saleinfo_01.png);background-size:auto 16px;}
+.benefitDetail .scoreBoxType .scoreArea .score strong.type02{background-image:url(../images/ico_saleinfo_02.png);background-size:auto 16px;}
+.benefitDetail .scoreBoxType .scoreArea .score strong.type03{background-image:url(../images/ico_saleinfo_03.png);background-size:auto 16px;}
+.benefitDetail .scoreBoxType .scoreArea .score strong.type04{background-image:url(../images/ico_saleinfo_04.png);background-size:auto 16px;}
+.benefitDetail .scoreBoxType .scoreArea .score strong.type05{background-image:url(../images/ico_saleinfo_05.png);background-size:auto 16px;}
+.benefitDetail .scoreBoxType .scoreArea .score strong.type06{background-image:url(../images/ico_saleinfo_06.png);background-size:auto 16px;}
+.benefitDetail .scoreBoxType .scoreArea .score strong.type07{padding-left:23px;background-image:url(../images/ico_saleinfo_07.png);background-size:auto 16px;}
+.benefitDetail .scoreBoxType .scoreArea .desc{font-size:11px;}
+.benefitDetail .scoreBoxType .tipArea{width:100%;padding:20px 15px 0 15px;box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box;}
+.benefitDetail .scoreBoxType .tipArea .header{margin-bottom:10px;padding-left:6px;color:#404040;font-size:15px;text-align:left;letter-spacing:-1px;}
+.benefitDetail .scoreBoxType .tipArea ol + .header{margin-top:30px;}
+.benefitDetail .scoreBoxType .tipArea li{color:#818181;font-size:12px;text-align:left;}
+.benefitDetail .scoreBoxType .tipArea li .txtS{font-size:11px;}
+.benefitDetail .tipBlock{margin-top:25px;}
+.benefitDetail .tipBlock h3{color:#404040;font-size:15px; margin-bottom: 10px;}
+.benefitDetail .tipBlock h3 strong{font-weight:bold;}
+.benefitDetail .tipBlock p{color:#818181;font-size:13px;}
+.benefitDetail .tipBlock p.benefit {margin-bottom: 10px;}
+/* .benefitDetail .tipBlock p.str{text-indent:-12px;padding-left:12px;} */
+.benefitDetail .btnUrl{display:block;height:40px;margin:15px 0;border:1px solid #e4e4e4;border-radius:20px;color:#4d4d4d;font-size:15px;line-height:42px;overflow:hidden;text-align:center;}
+.benefitDetail .btnUrl span{padding-right:12px;background:url(../images/ico_url.png) no-repeat right 4px;background-size:5px auto;}
+/* 삼성카드*/
+.benefitDetail.samsungCard .header.img{text-align:center;}
+.benefitDetail.samsungCard .header.img img{max-width:360px;}
+
+/* sk 렌터카 & sk 엔카*/
+.benefitDetail.skcarrental .scoreBoxType .scoreArea{display:inline-block;margin:0 auto;padding-bottom:15px;border-bottom:1px solid #E5E5E5;}
+.benefitDetail.skcarrental{margin-bottom:0;}
+.benefitDetail.skcarrental .goApply{display:block;width:100%;margin:25px 0 20px;padding:12px 0;background:#5A5C62;border-radius:4px;color:#fff;font-weight:bold;font-size:15px;line-height:1.2;text-align:center;}
+/* .benefitDetail.skcarrental .visual img{width:205px;} */
+.benefitDetail.skcarrental .visual img{width:195px;}
+.benefitDetail.skcarrental .tBold{color:#404040;font-weight:normal;}
+
+.benefitDetail.skcarrental .scoreBoxType.type2{margin-top:25px;}
+.benefitDetail.skcarrental .scoreBoxType.type2 .scoreArea{padding-bottom:0;border-bottom:0;}
+.benefitDetail.skcarrental .scoreBoxType.type2 .scoreArea .score strong{margin-bottom:0;}
+.benefitDetail.skcarrental .scoreBoxType.type2 .item{display:inline-block;width:45%;margin-bottom:8px;}
+.benefitDetail.skcarrental .scoreBoxType.type2 .item:first-child{border-right:1px solid #e5e5e5;}
+.benefitDetail.skcarrental .scoreBoxType.type2 .rangeNotice {margin:5px 0; color:#38a98c;}
+.benefitDetail.skcarrental .scoreBoxType.type2 .rangeNotice.cRed {color:#f15e42;}
+.benefitDetail.skcarrental .scoreBoxType.type2 .rangeNotice strong {font-weight: bold;}
+.benefitDetail.skcarrental .scoreBoxType.type2 .desc{margin:0 10px;}
+/*
+.benefitDetail.skencar .visual img{width:184px;margin-bottom:30px;}
+.benefitDetail.skencar h3{margin-top:30px;margin-bottom:8px;color:#404040;font-weight:normal;font-size:15px;}
+.benefitDetail.skencar h3 + p{margin-bottom:8px;font-size:12px;line-height:18px;}
+.benefitDetail.skencar p.li + table.tableType{margin-top:8px;}
+*/
+/* #skcarrentalInput{margin-top:-50px;padding-top:48px;} */
+/*#skcarrentalInput{margin-top:-30px;padding-top:48px;}
+.benefitDetail.skcarrentalInput{margin:0;padding:30px;background:#ececec;border-top:1px solid #D5D5D5;}*/
+.benefitDetail.skcarrentalInput{margin:0;padding-top:20px;background:#ececec;}
+.benefitDetail.skcarrentalInput h3{color:#4d4d4d;font-weight:normal;font-size:15px;}
+/* .benefitDetail.skcarrentalInput h3 + p{margin-top:10px;color:#818181;font-size:13px;} */
+.benefitDetail.skcarrentalInput h3 + p, .benefitDetail.skcarrentalInput h3 + ul{margin-top:10px;color:#818181;font-size:12px;}
+.benefitDetail .agreementBlock+ h3{margin-top:20px;}
+.benefitDetail.skcarrentalInput .inputBlock{margin-top:20px;}
+.benefitDetail.skcarrentalInput .inputBlock label{display:block;color:#4d4d4d;font-weight:normal;font-size:15px; position: relative; text-indent: 11px;}
+.benefitDetail.skcarrentalInput .inputBlock label:after {position:absolute; top:5px; left:0px; width:3px; height:3px; background: #6a6a6a; content:'';}
+/* .benefitDetail.skcarrentalInput .inputBlock input{width:100%;height:32px;line-height:32px;margin-top:10px;padding:32px5px;border:1px solid #c8c8c8;border-radius:4px;background:#fff;color:#393B3C;font-size:17px;text-align:center;box-sizing:border-box;-webkit-appearance:none;} */
+.benefitDetail.skcarrentalInput .inputBlock input{width:100%;margin-top:10px;padding:11px 5px 9px;border:1px solid #c8c8c8;border-radius:4px;background:#fff;color:#393B3C;font-size:17px;line-height:1.2;text-align:center;box-sizing:border-box;-webkit-appearance:none;}
+.benefitDetail.skcarrentalInput .inputBlock input[disabled],.benefitDetail.skcarrentalInput .inputBlock input:disabled{background:transparent;color: rgba(57, 59, 60, 1);-webkit-text-fill-color: rgba(57, 59, 60, 1);-webkit-opacity:1; }
+.benefitDetail.skcarrentalInput .inputBlock input:focus{border-color:#F15E42;}
+.benefitDetail.skcarrentalInput .checkBlock{position:relative;margin-top:15px;padding-left:28px;}
+.benefitDetail.skcarrentalInput .checkBlock input[type="checkbox"]{position:absolute;left:0;top:0;width:18px;height:18px;margin-right:10px;border:none;border-radius:0;-webkit-appearance:none;background:url(../images/ico_checkbox.png) no-repeat 0 0;background-size:18px auto;}
+.benefitDetail.skcarrentalInput .checkBlock input[type="checkbox"]:checked{background-position:0 100%;}
+/* .benefitDetail.skcarrentalInput .checkBlock label{font-size:13px;color:#818181;} */
+.benefitDetail.skcarrentalInput .checkBlock label{font-size:12px;color:#818181;}
+.benefitDetail.skcarrentalInput .btnApply{display:block;width:100%;height:50px;line-height:50px;overflow:hidden;background:#F15E42;color:#fff;font-weight:bold;font-size:15px;text-align:center;}
+.benefitDetail.skcarrentalInput .agreementBlock{margin-top:7px;text-align:center;}
+.benefitDetail.skcarrentalInput .agreementBlock a{color:#818181;font-size:13px;text-decoration:underline;}
+.benefitDetail.skcarrentalInput .agreementBlock .agreementBox{margin-top:12px;padding:15px;border:1px solid #e5e5e5;background:#fff;color:#818181;font-size:12px;line-height:1.3em;text-align:left;}
+.benefitDetail.skcarrentalInput .agreementBlock .agreementBox.on{display:none;}
+.benefitDetail.skcarrentalInput .agreementBlock .agreementBox li{padding-top:2px;}
+#skcarrentalInput .btnApply{display:block;width:100%;height:50px;line-height:50px;overflow:hidden;background:#F15E42;color:#fff;font-weight:bold;font-size:15px;text-align:center;}
+#skcarrentalInfo_btn .btnApply,
+#skcarrentalRegist_btn .btnApply{position:fixed; bottom:0px; left:0px; right:0px;display:block;width:100%;height:50px;line-height:50px;overflow:hidden;background:#F15E42;color:#fff;font-weight:bold;font-size:15px;text-align:center;}
+
+/* 싸이오토*/
+.benefitDetail.cyauto{text-align:center;}
+.benefitDetail.cyauto h2{padding:15px 0 35px;font-size:17px;}
+.benefitDetail.cyauto .cBlue{color:#2085e3;}
+.benefitDetail.cyauto .visual img{width:181px;margin-bottom:37px;}
+.benefitDetail.cyauto .midArea .flow img{width:274px;margin-bottom:20px;}
+.benefitDetail.cyauto .midArea .txt{text-indent:-8px;padding-left:8px;font-size:13px;line-height:15px;text-align:left;}
+.benefitDetail.cyauto .midArea .txt .cBlue{font-weight:bold;color:#2085e3;}
+.benefitDetail.cyauto .btmArea{margin-top:25px;}
+.benefitDetail.cyauto .btmArea .tip{font-weight:bold;color:#404040;font-size:15px;text-align:left;}
+.benefitDetail.cyauto .btmArea .tip .cRed{font-weight:bold;}
+.benefitDetail.cyauto .btmArea .scoreBoxType{margin-top:7px;}
+.benefitDetail.cyauto .btmArea .scoreBoxType .scoreArea .score strong{margin-bottom:0;}
+.benefitDetail.cyauto .btmArea .scoreBoxType .item{display:inline-block;width:45%;margin-bottom:8px;}
+.benefitDetail.cyauto .btmArea .scoreBoxType .item:first-child{border-right:1px solid #e5e5e5;}
+.benefitDetail.cyauto .btmArea .scoreBoxType .desc{margin:0 10px;}
+
+/* 렌터카 리뉴얼 */
+.grayBg {height:100%;background: #ececec; box-sizing:border-box;}
+
+/* OTP */
+.otpContent { background: #efefef;}
+.otpContent #contents {padding-top:90px;}
+.otpWrap {background:#fff; padding:35px; text-align: center;}
+.otpWrap strong {font-size: 45px; font-family:Roboto,'Droid Sans',AppleSDGothicNeo,Helvetica,sans-serif;}
+.otpWrap a.refresh {display: inline-block; width:22px; height: 22px; background: url(../images/refresh.png) 0 0 no-repeat; background-size: 100%; margin-left: 10px; position: relative; bottom:6px;}
+.otpWrap .remainTime {line-height: 25px; font-size: 14px; vertical-align: top; margin-top:50px;}
+.otpWrap .remainTime span {font-size: 20px; line-height: 25px; color:#7eb7cc; position: relative;top:2px;}
+.otpWrap.under10 .remainTime span {color:#fa5439;}
+.otpWrap .gage {margin-top:20px; background: #eceeef; height: 9px; border-radius: 6px; width: 100%; position: relative;;}
+.otpWrap .gage .gageAnimate {background: #7eb7cc; position: absolute;top:0px; left: 0px; width: 100%; height: 9px; border-radius: 6px;}
+.otpWrap.under10 .gage .gageAnimate {background: #fa5439}
+
+/* parkingOn */
+
+#parkingOn {padding:49px 0 65px;}
+#parkingOn.fixed {width: 100%; height: 100%; box-sizing:border-box; padding-bottom: 0px; background:#c4d9f7 url(../images/parkingon_bottomBg.png) 0 bottom no-repeat; background-size: 100% auto;}
+
+#parkingOn .pointContent {padding:14.3% 0 43.5%;background: url(../images/parkingon_pointBg.jpg) 0 0 no-repeat; background-size: 100% auto; margin-bottom: 20px;}
+#parkingOn .pointContent.fail {background-image:url(../images/parkingon_pointBgFail.jpg);}
+#parkingOn .pointContent .pointTitle {width: 70%; padding-top: 18.4%; background:url(../images/parkingon_pointSuccess.png) center 0 no-repeat; background-size:auto 100%; margin:0 auto 18%;}
+#parkingOn .pointContent.fail .pointTitle {background-image:url(../images/parkingon_pointFail.png); padding-top: 25.6%; margin-bottom: 20%;}
+#parkingOn .pointContent .score {font-size: 16px; text-align: center;}
+#parkingOn .pointContent .score b {font-size: 18px; position: relative;top:-3px;}
+#parkingOn .pointContent .gage {display: inline-block; width:28px; height:16px; background:url(../images/parkingon_gage.png) 0 0 no-repeat; background-size: 100% 100%; position: relative;}
+#parkingOn .pointContent .gage .niddle{position: absolute;width:7px; height: 4px; bottom:-2px; left:50%; background: url(../images/parkingon_niddle.png) 0 0 no-repeat; background-size: 100% 100%;}
+
+#parkingOn .bookingContent .bookingTop {padding-top:87%; margin-bottom: 40px; background:url(../images/parkingon_booking.jpg) 0 0 no-repeat; background-size: 100% auto;}
+#parkingOn .bookingContent .bookingBody {padding:0 30px;}
+#parkingOn .bookingContent .bookingBody .infoImg {display: block; margin-bottom: 28px;}
+#parkingOn .bookingContent .bookingBody dl {margin-bottom: 18px;}
+#parkingOn .bookingContent .bookingBody dt {font-size: 13px; text-indent: 6px; color:#a3a3a3;}
+#parkingOn .bookingContent .bookingBody dd {position: relative;}
+#parkingOn .bookingContent .bookingBody dd input {width:100%; height:45px; font-size: 18px; color:#505050; text-align:center; background:#fafbfe;border:1px solid #d4d5d9; box-sizing:border-box; border-radius: 0px;-webkit-appearance: none;}
+#parkingOn .bookingContent .bookingBody dd input::-webkit-input-placeholder { color: #babbbd; }
+#parkingOn .bookingContent .bookingBody dd span {color:#ee6a63; text-indent: 5px; display: block; margin-top:3px;}
+#parkingOn .bookingContent .bookingBody dd span.blue {color:#5685e0;}
+#parkingOn .bookingContent .bookingBody dd select {display:block; line-height:45px;width:100%; height:45px; font-size: 18px; color:#505050; text-align:center; background:#fafbfe;border:1px solid #d4d5d9; border-radius: 0px;box-sizing:border-box; text-align-last:center;-webkit-appearance: none; position: relative;}
+#parkingOn .bookingContent .bookingBody dd .selectWrap:after {position: absolute; top:18px; right:10px;width:18px; height:10px; background:url(../images/parkingon_selectArrow.gif) 0 0 no-repeat; background-size:100% 100%; content:'';}
+#parkingOn .bookingContent .bookingBody dd a.termsBtn {display:block;width:100%; height:45px; line-height: 45px; text-indent: 35px; font-size: 15px; color:#61666a; text-align:center; background:#e8ebf1;border:1px solid #d4d5d9; box-sizing:border-box; border-radius: 0px; text-align: left; position: relative;}
+#parkingOn .bookingContent .bookingBody dd a.termsBtn:before {position: absolute; width:18px; height:18px; top:12px; left:10px; background:url(../images/parkingon_check_off.png) 0 0 no-repeat; background-size:100% 100%; content:'';}
+#parkingOn .bookingContent .bookingBody dd a.termsBtn:after {position: absolute; width:49px; height:20px; top:12px; right:10px; background:url(../images/parkingon_show.png) 0 0 no-repeat; background-size:100% 100%; content:'';}
+#parkingOn .bookingContent .bookingBody dd a.termsBtn.open:before {background-image:url(../images/parkingon_check_on.png)}
+#parkingOn .bookingContent .bookingBody dd a.termsBtn.open:after {background-image:url(../images/parkingon_hide.png)}
+#parkingOn .bookingContent .bookingBody dd .cnts{padding:10px; padding-bottom: 0; margin-top: -5px; background:#f7f7f7; border: 1px solid #c8c8c8; border-top: none; font-size:11px;line-height:16px; display: none;}
+#parkingOn .bookingContent .bookingBody dd table {border-collapse:collapse; border-spacing:0}
+#parkingOn .bookingContent .bookingBody dd table caption {text-align:justify; padding: 0.5em 0; font-size:12px; font-family:'notokr-medium'; color:#61666a;}
+#parkingOn .bookingContent .bookingBody dd thead th {height:20px; background: #e8e8e8; color:#444; font-size:11px;line-height:20px; border: 1px solid #c8c8c8; text-align: center;}
+#parkingOn .bookingContent .bookingBody dd tbody td {padding: 5px; background:#fff; border: 1px solid #c8c8c8;color:#666;font-size:11px;line-height:16px; text-align: center; vertical-align: middle;}
+#parkingOn .bookingContent .bookingBody dd ul {padding: 5px 5px 10px 5px; text-align: justify;}
+#parkingOn .bookingContent .bookingBody dd ul li {color: #73787b; font-size:11px;line-height:15px;}
+
+#parkingOn .couponContent {padding:10.2% 0 46.5%;background: url(../images/parkingon_coupon.jpg) 0 0 no-repeat; background-size: 100% auto; margin-bottom: 20px;}
+#parkingOn .couponContent .couponTitle {width: 68.7%; padding-top: 22.7%; background:url(../images/parkingon_couponComplete.png) center 0 no-repeat; background-size:auto 100%; margin:0 auto 28.5%;}
+#parkingOn .couponContent .couponDate {height:20px; width:30%; background:#c2c2c4; margin-left: 46.5%; color:#fff; text-align: center; line-height: 20px; font-size: 14px; border-radius: 10px;}
+#parkingOn.fixed {min-height: 630px;}
+#parkingOn.fixed .couponContent {padding-top:40px; background:none;}
+#parkingOn.fixed .couponContent .couponTitle {width:62.5%; padding-top:7.5%; margin:0 auto 23px; background: url(../images/parkingon_coupon_used.png) 0 0 no-repeat; background-size: 100% auto;}
+#parkingOn.fixed .couponContent .couponSubTitle {text-align: center; color:#5e779c; font-size: 14px; line-height: 18px; letter-spacing: -1px; margin-bottom: 13px;}
+#parkingOn.fixed .couponContent .couponSubTitle span {color:#e55658; font-size: 14px;}
+#parkingOn.fixed .couponContent .couponNotice {font-size: 12px; color:#4a7cdc; text-align: center; letter-spacing: -1px; margin-bottom: 30px;}
+#parkingOn.fixed .couponContent .couponUsed {width:200px; height:52px; border-radius: 7px; text-align: center;box-sizing:border-box; margin:0 auto; background: #7d9ecd; color:#fff; font-size: 15px; line-height: 18px; padding-top:7px; margin-bottom: 34px;}
+#parkingOn.fixed .couponContent .couponUsed b {font-size: 15px;}
+#parkingOn.fixed .couponContent .usedImage {width:83.8%; margin:0 auto;}
+#parkingOn.fixed .bottomBg {padding-top:44%; position: fixed;bottom:0px; left:0px; right:0px; background: url(../images/parkingon_bottomBg.png) 0 0 no-repeat; background-size: 100% auto;}
+
+#parkingOn .discription {font-size: 14px; color:#86888a; line-height: 19px; text-align: center; margin-bottom: 17px; letter-spacing: -1px;}
+
+#parkingOn .salePoint {width:76.3%; border-radius: 5px; background: #eee; padding:13px; margin:0 auto 30px; display: block;}
+#parkingOn .salePoint li {color:#989898; font-size: 13px; letter-spacing: -1px; position: relative;padding-left: 9px;}
+#parkingOn .salePoint li:before {position: absolute; width:5px; height: 1px; background:#989898; content:''; left: 0px; top:7px;}
+
+#parkingOn .serviceBtn {width:230px; height:40px; border:1px solid #67c1be; border-radius: 20px; display: block; margin:0 auto 13px; text-align: center; text-indent: 20px;}
+#parkingOn .serviceBtn b {line-height: 40px; font-size: 14px; color:#67c1be; position: relative;}
+#parkingOn .serviceBtn b:before {position: absolute; width:17px; height: 17px; left:-20px; top:-1px; content:''; background: url(../images/parkingon_info.png) 0 0 no-repeat; background-size: 100% 100%;}
+ 
+#parkingOn .bottomBtn {position: fixed;left:0px; right:0px; bottom:0px; height:58px; background: #5685e0; text-align: center; z-index: 2;}
+#parkingOn .bottomBtn b {line-height: 58px; color:#fff; font-size: 17px; }
+
+#parkingOn .localNotice {text-align: center; color:#8f9193; letter-spacing: -1px; font-size: 14px;}
+
+#parkingOn.txtWrap {padding:85px 30px 30px;}
+#parkingOn.txtWrap h1 {font-size: 15px; letter-spacing: -1px; color:#333333; margin-bottom: 5px;}
+#parkingOn.txtWrap p {margin-bottom: 30px; }
+#parkingOn.txtWrap p span {color:#666; font-size: 13px; letter-spacing: -1px;}
+#parkingOn.txtWrap p > span {display: block; margin-bottom: 7px; text-align: justify;}
+#parkingOn.txtWrap p b {font-size: 13px;}
+#parkingOn.txtWrap .red {color:#e55658 !important;}
+#parkingOn.txtWrap .black {color:#333;}
+#parkingOn.txtWrap .bullet {position: relative; padding-left:6px;line-height: 16px;}
+#parkingOn.txtWrap .bullet:before {position: absolute;top:6px; left:0px; width:3px; height:3px; background:#666; border-radius: 50%; content:'';}
+#parkingOn.txtWrap .bullet.dotLine {background: url(../images/parkingon_dotLine.gif) 0 7px repeat-x; background-size: 3px 1px; }
+#parkingOn.txtWrap .black span {color:#666; text-indent: 5px;}
+#parkingOn.txtWrap .bullet b {color:#333; line-height: 16px;}
+#parkingOn.txtWrap .dotLine {color:#999; font-size: 12px;}
+#parkingOn.txtWrap .dotBg {background: #fff; display: inline-block;margin-bottom:3px; padding-right: 5px;}
+#parkingOn.txtWrap .dotCost {position: absolute;right:0px; top:0px; padding-left: 5px; background: #fff; }
+#parkingOn.txtWrap .lineThrough {text-decoration: line-through; position: relative; display: inline-block; margin-right:15px; color:#999;}
+#parkingOn.txtWrap .lineThrough:after {position: absolute;width:10px; height:7px; top:4px; right:-12px; background:url(../images/parkingon_arrow.gif) 0 0 no-repeat; background-size:100% 100%;content:'';}

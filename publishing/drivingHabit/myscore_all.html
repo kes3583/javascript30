@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+  <head>
+      <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+  
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+  
+      <meta name="apple-mobile-web-app-title" content="myscore_all" />
+      <meta name="apple-mobile-web-app-capable" content="yes">
+
+      <link rel="shortcut icon" href="/favicon.ico">
+      <link rel="apple-touch-icon-precomposed" sizes="114×114" href="/share/favicon.png">
+      <title>운전습관</title>
+      <meta property="og:title" content="운전습관">
+      <meta property="og:type" content="website">
+      <meta property="og:image" content="">
+      <meta property="og:site_name" content="운전습관">
+      <meta property="fb:app_id" content="">
+      <meta property="og:url" content="">
+      <meta property="og:description" content="운전습관">
+
+      <link rel="stylesheet" type="text/css" href="/publishing/drivingHabit/css/myscore.css">
+  </head>
+  <body>
+    <header>
+      <a href="javascript:;" class="backBtn"></a>
+      <a href="javascript:;" class="txt">나의 운전 점수</a>
+    </header>
+    
+    <section class="wrap">
+      <div class="topHover">
+        <ul class="myscoreTab">
+          <li><a href="javascript:;" class="selected">종합</a></li>
+          <li><a href="/publishing/drivingHabit/myscore_month.html">월별</a></li>
+        </ul>
+      </div>
+      <section class="totalScore">
+        <div class="upDown blueNoti">3</div>
+        <div class="circleGragh">
+          <b class="num">0</b>
+        </div>
+        <div class="myPosition">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <span class="swiper-slide">상위 13%</span>
+              <span class="swiper-slide">9999 등</span>
+            </div>
+          </div>
+          
+        </div>
+        <div class="distanceStandard">
+          최근 2,682km 기준<a href="javascript:;" class="infoBtn"></a>
+        </div>
+        <div class="noRank">
+          500km이상 주행 시, 등수 확인 가능
+        </div>
+      </section>
+      <section class="chart">
+        <div class="nonChart">나의 안전운전 점수가 어떻게<br>변화했는지 그래프로 알려드립니다.</div>
+        <svg class="mainChart"></svg>
+      </section>
+      <section class="reports">
+        <h1 class="bold">종합 안전운전 리포트<a href="javascript:;" class="infoBtn">기준</a></h1>
+        <dl>
+          <dd class="speed bold">과속<span></span><span class="result">25회</span><span>(25.5km)</span></dd>
+          <dd>가끔 과속을 하시네요.</dd>
+          <dd>경제속도를 준수하여 연비와 안전을 모두 챙겨보세요.</dd>
+          <dt>
+            <div class="grade1_45deg">
+              <span class="bold grade1_color">주의</span>  
+            </div>
+          </dt>
+        </dl>
+        <dl>
+          <dd class="acc bold">급가속<span></span><span class="result">45회</span></dd>
+          <dd>가끔 과속을 하시네요.</dd>
+          <dd>티맵의 제한속도 안내에 귀를 기울여보세요.</dd>
+          <dt>
+            <div class="grade3_45deg"><span class="bold grade3_color">양호</span></div>
+          </dt>
+        </dl>
+        <dl>
+          <dd class="stop bold">급감속<span></span><span class="result">12회</span></dd>
+          <dd>가끔 과속을 하시네요.</dd>
+          <dd>티맵의 제한속도 안내에 귀를 기울여보세요.</dd>
+          <dt>
+            <div class="grade5_45deg"><span class="bold grade5_color">모범</span></div>
+          </dt>
+        </dl>
+      </section>
+      <section class="distance">
+        <h1>운전습관 가입 이후 현재까지의 총 주행</h1>
+        <ul>
+          <li>
+            <h2>주행거리</h2>
+            <span>2,819km</span>
+          </li>
+          <li>
+            <h2>주행시간</h2>
+            <span>12시간38분</span>
+          </li>
+        </ul>
+      </section>
+    </section>
+    <div class="popWrap">
+      <div class="popup scoreStd">
+        <a href="javascript:;" class="close"></a>
+        <dl>
+          <dt class="scoreStandard bold">나의 운전점수는 어떻게 산출되나요?</dt>
+          <dd>최근 주행한 3,000km 의 기록을 기준으로 계산됩니다.</dd>
+        </dl>
+        <dl>
+          <dt class="scoreStandard bold">안심주행도 포함 되나요?</dt>
+          <dd>나의 운전점수는 목적지를 설정하고 주행한 경우에만 기록 됩니다. 안심주행의 경우 대상에서 제외되오니, 꼭 참고해주세요.</dd>
+        </dl>
+        <dl>
+          <dt class="scoreStandard bold">나의 운전점수는 어떻게 산출되나요?</dt>
+          <dd>오늘 주행한 이력은 내일 반영 됩니다.</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="popWrap">
+      <div class="popup">
+        <a href="javascript:;" class="close"></a>
+        <dl>
+          <dt class="speed bold">과속</dt>
+          <dd class="stdNoti">주행한 도로의 제한속도를 15km/h 이상<br>초과하는 경우</dd>
+        </dl>
+        <dl>
+          <dt class="acc bold">급가속</dt>
+          <dd class="stdNoti">
+            속도가 1초 이내 10km/h 이상 증가하는 경우
+          </dd>
+        </dl>
+        <dl>
+          <dt class="stop bold">급감속</dt>
+          <dd class="stdNoti">
+            속도가 1초 이내 10km/h 이상 감소하는 경우
+          </dd>
+        </dl>
+        <div>
+          <h1>주행 행태에 따라 5단계 등급으로 구분됩니다.</h1>
+          <ul>
+            <li>
+              <div class="grade1_45deg grade1_color"></div>
+            </li>
+            <li>
+              <div class="grade2_45deg grade2_color"></div>
+            </li>
+            <li>
+              <div class="grade3_45deg grade3_color"></div>
+            </li>
+            <li>
+              <div class="grade4_45deg grade4_color"></div>
+            </li>
+            <li>
+              <div class="grade5_45deg grade5_color"></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="blueNoti">
+      종합 운전점수는 월별 주행패턴을<br>알려드리는 점수와 다를 수 있습니다.
+    </div>
+  </body>
+  <script src="/publishing/drivingHabit/js/plugins/jquery-1.11.1.min.js"></script>
+  <script src="/publishing/drivingHabit/js/plugins/circle-progress.min.js"></script>
+  <script src="/publishing/drivingHabit/js/plugins/d3.min.js"></script>
+  <script src="/publishing/drivingHabit/js/plugins/swiper.min.4.1.0.js"></script>
+  <script src="/publishing/drivingHabit/js/sampleData.js"></script>
+  <script src="/publishing/drivingHabit/js/common.js"></script>
+  <script src="/publishing/drivingHabit/js/myscore.js"></script>
+</html>

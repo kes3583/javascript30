@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+	<meta name="format-detection" content="telephone=no">
+	<title>Tmap</title>
+
+	<link rel="stylesheet" href="../css/base.css" media="screen, print">
+	<link rel="stylesheet" href="../css/tmap_ubi.css" media="screen, print">
+	
+	<script src="../../js/libs/jquery-1.11.1.min.js"></script>
+	<script src="../../js/TmapApp.js"></script>
+	<script src="../js/ubiCommonUtils.js?"></script>
+	
+</head>
+
+<body>
+
+<!--  header -->
+<header id="top" class="sub">
+	<h1 class="title">자주하는 질문</h1>
+	<a href="#" class="back"><span></span><em class="blind">뒤로 가기</em></a>
+</header>
+<!-- header : end  -->
+
+
+
+
+<!--  contents  -->
+<div id="contents">
+	<!-- FAQ -->
+	<ul class="carFaq toggleMenu">
+      	<li>
+      		<button type="button"><p>운전습관 서비스는 어떤 서비스인가요?</p></button>
+      		<div class="answer">
+      			<p class="block">운전습관 서비스는 고객이 잘 인지하지 못하는 운전습관을 데이터를 통해 확인하게 해줍니다.</p>
+      			<p class="block">이를 통해 자신의 운전습관 개선 및 안전운전, 경제운전을 할 수 있게 도와줍니다. 또한 안전하게 운전하시는 고객들을 대상으로 자동차 보험(동부화재) 가입시 할인을 받을 수 있는 혜택을 제공하고 있습니다.</p>
+      		</div>
+      	</li>
+      	<li>
+      		<button type="button"><p>운전습관 서비스를 이용하기 위해 별도의 등록 절차가 필요한가요?</p></button>
+      		<div class="answer">
+      			<p class="block">최초 서비스 이용 동의를 하신 후, 별도의 등록이나 장비 없이 평소대로 T map 의 길안내 를 받고 주행하시기만 하면 됩니다. T map 길안내를 받지 않고 안전운전모드로만 사용시는 주행거리 및 운전습관 분석 데이터에 반영되지 않습니다.</p>
+      		</div>
+      	</li>
+      	<li>
+      		<button type="button"><p>개인 주행 관련 데이터는 안전하게 관리되나요?</p></button>
+      		<div class="answer">
+      			<p class="block">운전습관 데이터는 강력한 암호화 모듈을 활용하여 안전하게 보관되고 있습니다.</p>
+      			<p class="block">또한 고객이 원할시 운전습관 > 설정 > 서비스 해지하기를 통해 언제든지 개인 주행 이력 삭제가 가능합니다.</p>
+      		</div>
+      	</li>
+      	<li>
+      		<button type="button"><p>주행관련 정보가 보험사나 다른 기관에 전달되는 것인가요?</p></button>
+      		<div class="answer">
+      			<p class="block">주행관련 정보는 전혀 제공되지 않습니다.</p>
+      			<p class="block">보험 할인 혜택을 위해서는 보험사에서 고객 동의 절차를 진행한 후 T map 서버에서 보험 할인을 위한 유효한 안전운전 점수만을 확인합니다. 주행 관련  개인 정보는 절대 전달되지 않습니다.</p>
+      		</div>
+      	</li>
+      	<li>
+      		<button type="button"><p>주행관련 정보는 어떻게 만들어지는 것인가요?</p></button>
+      		<div class="answer">
+      			<p class="block">실제 주행한 GPS 기반의 주행 이력을 통계 데이터로 생성합니다.</p>
+      			<p class="block">T map이 보유한 독자적인 알고리즘을 통해 정밀하게 주행 데이터를 분석하여 운전습관을 파악합니다.</p>
+      		</div>
+      	</li>
+      	<li>
+      		<button type="button"><p>안전운전 점수는 주행 후 바로 생성이 되는 것인가요?</p></button>
+      		<div class="answer">
+      			<p class="block">그렇지 않습니다. 오늘 오전에 주행하시면 안전운전 점수는 다음날 오전 6시경에 반영이 됩니다.</p>
+      			<p class="block">오늘 오후에 주행하시면 안전운전 점수는 내일 오후 6시 경에 반영이 됩니다. 데이터 처리를 위해 하루 2차례 서버에서 안전운전 점수를 반영하고 있습니다.</p>
+      		</div>
+      	</li>
+      	<li>
+      		<button type="button"><p>안전운전 점수의 순위는 언제 표출이 되나요?</p></button>
+      		<div class="answer">
+      			<p class="block">최소 50Km 이상 주행한 고객을 대상으로 안전운전 점수에 대한 순위를 제공하고 있습니다.</p>
+      		</div>
+      	</li>
+      	<li>
+      		<button type="button"><p>실제 주행거리와 운전습관의 주행거리가 차이가 나는 것은 왜 그런가요?</p></button>
+      		<div class="answer">
+      			<p class="block">운전습관은 GPS 기반의 주행 이력을 활용합니다.</p>
+      			<p class="block">긴터널이나 지하도로에 있는 경우 GPS 수신이 되지 않는 구간에서는 주행거리가 배제됩니다. 또한 실제 도로상이 아닌 곳에서 T map을 활용하여 주행한 경우도 자체 알고리즘에 의해 주행거리에서 배제가 됩니다. 따라서 실제 T map의 주행거리와 운전습관의 주행거리는 차이가 있을 수 있습니다.</p>
+      		</div>
+      	</li>
+      	<li>
+      		<button type="button"><p>T map을 삭제하고 다시 설치하면 데이터는 사라지나요?</p></button>
+      		<div class="answer">
+      			<p class="block">T map을 다시 구동하면 데이터는 사라지지 않고 다시 정상적으로 표출됩니다.</p>
+      			<p class="block">운전습관 서비스를 해지하지 않으면 데이터는 서버에 저장되어 삭제되지 않습니다. 다만 운전습관 서비스를 해지하시거나 T map 서비스 자체를 탈퇴하면 주행 이력 데이터는 모두 삭제가 됩니다.</p>
+      		</div>
+      	</li>
+      	<li>
+      		<button type="button"><p>보험 할인을 받기 위해 어떻게 해야하는 것인가요?</p></button>
+      		<div class="answer">
+      			<p class="block">평소와 다름없이 T map을 사용하시기만 하면 됩니다.</p>
+      			<p class="block">안전하게 운전하면 할 수록 안전 점수가 높아지고 동부화재 자동차보험 할인 가능 표시가 보이면, 언제든 동부화재에 연락하여 자동차 보험료를 할인 받으실 수 있습니다.</p>
+      		</div>
+      	</li>
+      	<li>
+      		<button type="button"><p>보험료는 어느정도 할인되고, 할인받지 못하면 할증되나요?</p></button>
+      		<div class="answer">
+      			<p class="block">할인율은 초기 5% 할인이 가능합니다.</p>
+      			<p class="block">서비스를 운영하면서 할인율은 더 늘리고자 합니다. 보험료는 할증되는 것은 전혀 없고 할인만 되는 상품입니다.</p>
+      		</div>
+      	</li>
+      	<li>
+      		<button type="button"><p>자동차 보험의 주행거리특약, 블랙박스 특약과는 중복할인이 되나요?</p></button>
+      		<div class="answer">
+      			<p class="block">네 다른 특약과 중복할인이 됩니다.</p>
+      		</div>
+      	</li>
+      	<li>
+      		<button type="button"><p>타인명의 휴대폰을 사용하는 경우 혜택을 받을 수 있나요?</p></button>
+      		<div class="answer">
+      			<p class="block">본인명의 휴대폰을 사용하여야 보험 할인 혜택이 가능합니다.</p>
+      			<p class="block">기명 피보험자의 T map 운행정보 기준으로 할인여부가 결정이 됩니다.</p>
+      		</div>
+      	</li>
+      	<li>
+      		<button type="button"><p>일정거리만 안전하게 운전하고, 이후 T map을 이용하지 않아도 계속 할인을 받을 수 있나요?</p></button>
+      		<div class="answer">
+      			<p class="block">그렇지 않습니다.</p>
+      			<p class="block">보험가입시점 이전 6개월 이내에 보험할인에 유효한 안전점수를 획득해야 할인을 받으실 수 있습니다.</p>
+      		</div>
+      	</li>
+      	<li>
+      		<button type="button"><p>보험 할인을 받기 위해 필요한 최소 운행 거리는 얼마인가요?</p></button>
+      		<div class="answer">
+      			<p class="block">T map 안전운전 운행거리를 최소 500Km를 주행하시면 보험할인을 받기 위한 유효점수가 계산됩니다.</p>
+      			<p class="block">매 500Km 마다 유효한 점수를 산출하고, 각 500Km씩 6개 구간(최근 3000Km)의 점수의 평균을 제공하고 있습니다.</p>
+      		</div>
+      	</li>
+       </ul>
+	
+</div>
+
+<!--  contents :end  -->
+
+
+
+<script>
+$(document).ready(function() {
+
+	/*
+	*  FAQ 
+	*/
+	function toggleSlideMenu() {
+		'use strict';
+
+		var $wrap = $('.toggleMenu');
+
+		$wrap.each(function() {
+			var $btn = $(this).find('li > button');
+			$btn.on('click', function(e) {
+				$(this).parents('li').toggleClass('on');
+				/* $('html, body').animate({
+			        scrollTop: $(this).offset().top-58
+			    }, 1200); */
+			});
+		});
+	}
+
+	toggleSlideMenu();
+
+});
+</script>
+</body>
+</html>

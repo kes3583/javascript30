@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+	<meta name="format-detection" content="telephone=no">
+	<title>Tmap</title>
+	
+	<link rel="stylesheet" href="../css/swiper.min.css">
+	<link rel="stylesheet" href="../css/base.css" media="screen, print">
+	<link rel="stylesheet" href="../css/tmap_ubi.css" media="screen, print">
+	
+	<script src="../../js/libs/jquery-1.11.1.min.js"></script>
+	<script src="../../js/TmapApp.js"></script>
+	<script src="../js/ubiCommonUtils.js?"></script>
+
+	<script src="https://apis.skplanetx.com/tmap/js?version=1&format=javascript&appKey=c0e83049-344e-37b9-af0c-f0dec57d1e4a"></script>
+    <style>
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-container {
+        width: 100%;
+        height: 200px;
+        margin: 20px auto;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        width: 60%;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .swiper-slide:nth-child(2n) {
+        width: 40%;
+    }
+    .swiper-slide:nth-child(3n) {
+        width: 20%;
+    }
+
+.wrapLeft,.wrapRight{position:absolute;top:0;width:25%;height:200px;background:transparent;z-index:2;}
+.wrapLeft{left:0;}
+.wrapRight{right:0;}
+    </style>
+</head>
+
+<body>
+	<header id="top" style="z-index:1000">
+		<h1 class="title">운전습관</h1>
+		<a href="#" class="back"><span></span><em class="blind">뒤로 가기</em></a>
+	</header>
+
+	<div id="contents">
+	    <!-- Swiper -->
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+<div class="swiper-slide"><div id="map_div1"></div></div>
+<div class="swiper-slide"><div id="map_div2"></div></div>
+<div class="swiper-slide"><div id="map_div3"></div></div>
+<div class="swiper-slide"><div id="map_div4"></div></div>
+			</div>
+
+
+
+			<!-- Navigation -->
+			<div class="swiper-button-next swiper-button-white"></div>
+			<div class="swiper-button-prev swiper-button-white"></div>
+<!--
+<div class="wrapLeft"></div>
+<div class="wrapRight"></div>
+-->
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript">
+
+function initialize() {
+  //맵 객체 생성
+   var map1 = new Tmap.Map ({div : 'map_div1',width : '200px',height : '200px'});
+   var map2 = new Tmap.Map ({div : 'map_div2',width : '200px',height : '200px'});
+   var map3 = new Tmap.Map ({div : 'map_div3',width : '200px',height : '200px'});
+   var map4 = new Tmap.Map ({div : 'map_div4',width : '200px',height : '200px'});
+}
+
+window.onload = function() {
+    initialize();
+}
+	
+</script>
+
+<script src="../js/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+		nextButton: '.swiper-button-next',
+		prevButton: '.swiper-button-prev',
+		pagination: '.swiper-pagination',
+		slidesPerView: 2,
+		centeredSlides: true,
+		paginationClickable: true,
+		spaceBetween: 30
+    });
+</script>
+
+
+</html>

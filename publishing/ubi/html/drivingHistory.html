@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+	<meta name="format-detection" content="telephone=no">
+	<title>Tmap</title>
+      
+	<link rel="stylesheet" href="../css/base.css" media="screen, print">
+	<link rel="stylesheet" href="../css/tmap_ubi.css" media="screen, print">
+	<link rel="stylesheet" href="../css/tmap_go.css" media="screen, print">
+	
+	<script src="../../js/libs/jquery-1.11.1.min.js"></script>
+	<script src="../../js/TmapApp.js"></script>
+	<script src="../js/ubiCommonUtils.js?"></script>
+	
+</head>
+
+<body>
+
+<!--  header -->
+<header id="top" class="sub">
+    <h1 class="title">주행 이력</h1>
+    <a href="#" class="back"><span></span><em class="blind">뒤로 가기</em></a>
+</header>
+<!-- header : end  -->
+
+<!--  contents  -->
+<div id="contents">
+	<div class="record-content">
+		<div class="record-view">
+			<div class="group">
+				<time>
+					<span class="year">0000년</span> <span class="month">00월</span>
+				</time>
+				<button type="button" id="prevMonth" class="to-month prev on" onclick="#">이전달</button>
+				<button type="button" id="nextMonth" class="to-month next" >다음달</button>
+			</div>
+			<ul>
+				<li>
+					<span>주행거리</span>
+					<em>1566km</em>
+				</li>
+				<li>
+					<span>주행시간</span>
+					<em>12시간 22분</em>
+				</li>
+			</ul>
+		</div>
+            
+        <div id="recordTable" class="record-table">
+	        <table id="listTable">
+	            <caption>기록표</caption>
+	            <thead>
+	                <tr>
+	                    <th scope="col">날짜</th>
+	                    <th scope="col">주행거리</th>
+	                    <th scope="col">주행시간</th>
+	                    <th scope="col">과속주행<br>거리</th>
+	                    <th scope="col">급가속<br>횟수</th>
+	                    <th scope="col">급감속<br>횟수</th>
+	                </tr>
+	            </thead>
+	                <tbody id = "recordTBody">
+		                <tr>
+							<td>03/31<br>15:21</td>
+							<td>102.4km</td>
+							<td>1시간<br>4분</td>
+							<td>76.5km</td>
+							<td>0회</td>
+							<td>2회</td>
+						</tr>
+		                <tr>
+							<td>03/31<br>15:21</td>
+							<td>0.2km</td>
+							<td>4분</td>
+							<td>0.0km</td>
+							<td>0회</td>
+							<td>2회</td>
+						</tr>
+		                <tr>
+							<td>03/31<br>07:01</td>
+							<td>0.2km</td>
+							<td>0분</td>
+							<td>0.0km</td>
+							<td>0회</td>
+							<td>0회</td>
+						</tr>
+		                <tr>
+							<td>03/31<br>15:21</td>
+							<td>102.4km</td>
+							<td>1시간<br>4분</td>
+							<td>76.5km</td>
+							<td>0회</td>
+							<td>2회</td>
+						</tr>
+		                <tr>
+							<td>03/31<br>15:21</td>
+							<td>0.2km</td>
+							<td>4분</td>
+							<td>0.0km</td>
+							<td>0회</td>
+							<td>2회</td>
+						</tr>
+		                <tr>
+							<td>03/31<br>07:01</td>
+							<td>0.2km</td>
+							<td>0분</td>
+							<td>0.0km</td>
+							<td>0회</td>
+							<td>0회</td>
+						</tr>
+		                <tr>
+							<td>03/31<br>15:21</td>
+							<td>102.4km</td>
+							<td>1시간<br>4분</td>
+							<td>76.5km</td>
+							<td>0회</td>
+							<td>2회</td>
+						</tr>
+		                <tr>
+							<td>03/31<br>15:21</td>
+							<td>0.2km</td>
+							<td>4분</td>
+							<td>0.0km</td>
+							<td>0회</td>
+							<td>2회</td>
+						</tr>
+		                <tr>
+							<td>03/31<br>07:01</td>
+							<td>0.2km</td>
+							<td>0분</td>
+							<td>0.0km</td>
+							<td>0회</td>
+							<td>0회</td>
+						</tr>
+		                <tr>
+							<td>03/31<br>15:21</td>
+							<td>102.4km</td>
+							<td>1시간<br>4분</td>
+							<td>76.5km</td>
+							<td>0회</td>
+							<td>2회</td>
+						</tr>
+		                <tr>
+							<td>03/31<br>15:21</td>
+							<td>0.2km</td>
+							<td>4분</td>
+							<td>0.0km</td>
+							<td>0회</td>
+							<td>2회</td>
+						</tr>
+		                <tr>
+							<td>03/31<br>07:01</td>
+							<td>0.2km</td>
+							<td>0분</td>
+							<td>0.0km</td>
+							<td>0회</td>
+							<td>0회</td>
+						</tr>
+		                <tr>
+							<td>03/31<br>15:21</td>
+							<td>102.4km</td>
+							<td>1시간<br>4분</td>
+							<td>76.5km</td>
+							<td>0회</td>
+							<td>2회</td>
+						</tr>
+		                <tr>
+							<td>03/31<br>15:21</td>
+							<td>0.2km</td>
+							<td>4분</td>
+							<td>0.0km</td>
+							<td>0회</td>
+							<td>2회</td>
+						</tr>
+		                <tr>
+							<td>03/31<br>07:01</td>
+							<td>0.2km</td>
+							<td>0분</td>
+							<td>0.0km</td>
+							<td>0회</td>
+							<td>0회</td>
+						</tr>
+		                <tr>
+							<td>03/31<br>15:21</td>
+							<td>102.4km</td>
+							<td>1시간<br>4분</td>
+							<td>76.5km</td>
+							<td>0회</td>
+							<td>2회</td>
+						</tr>
+		                <tr>
+							<td>03/31<br>15:21</td>
+							<td>0.2km</td>
+							<td>4분</td>
+							<td>0.0km</td>
+							<td>0회</td>
+							<td>2회</td>
+						</tr>
+		                <tr>
+							<td>03/31<br>07:01</td>
+							<td>0.2km</td>
+							<td>0분</td>
+							<td>0.0km</td>
+							<td>0회</td>
+							<td>0회</td>
+						</tr>
+	                </tbody>
+	        </table>
+        </div>
+        
+		<div id="pop-wrap" class="recode-data">
+	        <div class="pop-info">
+				<p class="tc">* 오늘 주행한 이력은 내일 표시됩니다.<br>(향후 주행경로 상 운전습관 주요 항목의 <br>위치 정보도 제공될 예정입니다.)</p>
+	        </div>
+        </div>
+	</div>
+	
+</div>
+<!--  contents :end  -->
+
+<script>
+
+var $win = $( window );
+var $view = $( '.record-view' );
+var $notice = $( '.record-notice' );
+var $tablespan = $( '.record-table td[colspan="6"]' );
+var $tablecell = $( '.record-table th, .record-table td' );
+var $tablebody = $( '.record-table tbody' );
+var $pop = $('.recode-data');
+
+$(function(){
+	
+	recordTableFix();
+	noticeBtmFix();
+	
+});
+
+// 테이블 고정형
+function recordTableFix(){
+	  var winWid = $win.width();
+      var winHei = $win.height();
+      var headHei = $view.height()+1;
+      // var footHei = $notice.height()+2;
+      var etcHei = 24 + 47 + 58;
+      var hei = (winHei-headHei-etcHei);
+
+      
+      if ( $tablespan.length > 0 ){
+    	  $( '.record-table th, .record-table td' ).width(winWid+'px');
+              $tablespan.css('line-height', hei+'px');
+        } else {
+        	$( '.record-table th, .record-table td' ).width((winWid/6)+'px');                             
+        }
+      $tablebody.height(hei+'px');
+
+      if( $tablebody.height() <= 20 ) {
+            $tablebody.height(200+'px');
+      }
+      
+}
+
+ function noticeBtmFix() {
+	 $tablebody.on('click touchstart touchmove touchend', function() {
+         $pop.fadeOut(500);
+    })
+}
+
+
+$( window ).resize(recordTableFix);
+</script>
+
+</body>
+</html>

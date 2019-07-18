@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+	<meta name="format-detection" content="telephone=no">
+	<title>Tmap</title>
+
+	<link rel="stylesheet" href="../css/base.css" media="screen, print">
+	<link rel="stylesheet" href="../css/tmap_ubi.css" media="screen, print">
+
+	<script src="../../js/libs/jquery-1.11.1.min.js"></script>
+</head>
+
+<body>
+
+<!--  header -->
+<header id="top" class="sub">
+	<h1 class="title">장기렌터카 지원 혜택</h1>
+	<a href="#" class="back"><span></span><em class="blind">뒤로 가기</em></a>
+</header>
+<!-- header : end  -->
+		
+<!--  contents  -->
+<div id="contents">
+	<article class="benefitDetail skcarrental">
+		<div class="topArea">
+			<h2 class="tit">SK장기렌터카 신청하고 <b class="cRed">OK캐쉬백<br>30만 포인트</b> 를 지원 받으세요.</h2>
+			<div class="visual"><img src="../images/img_skcarrental.png" alt=""></div>
+			<!-- 2017.03.08 수정 --><p class="txtArea blStar">SK장기렌터카에서 새 차 계약시, 출고 익월 OK캐쉬백 포인트로 지급합니다.</p>
+			<a href="#" class="btnUrl"><span>SK장기렌터카 상품 더보기</span></a>
+		</div>
+		<div class="scoreBoxType type2">
+			<div class="scoreArea">
+				<div class="score">
+					<p class="item"><strong class="type04">67점</strong></p>
+					<p class="item"><strong class="type07">213km</strong></p>
+				</div>
+           <!-- 
+class="type01" 0점-19점점
+class="type02" 20점-39점
+class="type03" 40점-59점
+class="type04" 60점-79점
+class="type05" 80점-89점
+class="type06" 90점-100점
+class="type07" 누적 주행거리 부족
+            -->
+				<p class="desc">높은 안전운전 점수와 주행거리를 기록할수록 내 차 가치를 많이 올릴 수 있습니다.</p>
+			</div>
+		</div>
+
+		<div class="tipBlock">
+			<h3><strong class="cRed">Tip!</strong> 상담만 받아도 다양한 혜택이 나옵니다.</h3>
+			<p>상담만 받아도 주유 할인, 세차, 정비 할인, 단기렌탈 할인, 월장기 할인을 받을 수 있는 SK렌터카 프리멤버십이 발급됩니다.</p>
+			<!-- 2017.03.08 수정 --><p class="blStar">기간: 2017. 2. 1 ~ 4. 30 (매월 1, 15일 문자 발송)</p>
+		</div>
+
+		<a href="#" class="btnUrl"><span>자세히 보기</span></a>
+
+	</article>
+	<div id="skcarrentalInput">
+		<article class="benefitDetail skcarrentalInput">
+			<h3>SK장기렌터카 상담 신청</h3>
+			<p>아래 정보로 SK렌터카에서 고객님에게 상담 전화가 갑니다.</p>
+			<div class="inputBlock">
+				<label for="mobile">연락처</label>
+				<input type="text" id="mobile" disabled="disabled" maxlength="11" value="010-1***0-000">
+				<input type="number" id="phoneNum" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' value="" placeholder="'-' 없이 입력하세요" maxlength="11" oninput="maxLengthCheck(this)" pattern="[0-9]*">
+			</div>
+			<div class="inputBlock">
+				<label for="name">성명 (필수입력)</label>
+				<input type="text" id="name">
+			</div>
+			<div class="checkBlock"><input type="checkbox" id="agrmt"><label for="agrmt">개인정보 수집 및 마케팅 활용 개인정보 취급 위탁 동의</label></div>
+			<div class="agreementBlock">
+				<a href="#agreementBox" class="cntl">약관 자세히 보기</a>
+				<div class="agreementBox on" id="agreementBox">
+					<ul>
+						<!-- 
+						<li>제공처: SK네트웍스㈜, SK플래닛㈜</li>
+						<li>제공정보: 전화번호</li>
+						<li>제공목적: OK캐시백 미리줌 포인트 제공 및 관리</li>
+						<li>제공기간: 3개월</li>
+						-->
+						<!-- 2017.03.08 수정 -->
+						<li>제공처 : SK네트웍스(주), SK플래닛(주), CM마케팅</li>
+						<li>제공정보 : 연락처, 성명, 운전습관 점수, 주행거리, 계약시 혜택 금액</li>
+						<li>제공목적 : SK장기렌터카 상담,  계약시 OK캐시백 포인트 제공 및 관리</li>
+						<li>제공기간 : 상담 신청일로 부터 3개월</li>
+						<!-- //2017.03.08 수정 -->
+					</ul>
+				</div>
+			</div>
+			
+			<!-- 2017.03.08 추가 -->
+			<h3>유의사항</h3>
+			<ul>
+				<li>해당 제휴 혜택은 "SK장기렌터카 상담 신청하기"를 통해 신청을 하셔야만 참여 가능 합니다.</li>
+				<li>SK장기렌터카 상담 후 계약시, 출고 익월 OK캐시백 포인트로 지급되며 상담 신청시의 혜택 금액으로 지급됩니다.</li>
+				<li>SK장기렌터카 관련 문의 : 1600-3586 (월~일: 09:30 ~ 18:30)</li>
+				<!-- <li>상담 신청 관련 문의 : 1600-5110 (T map 고객센터)</li> -->
+			</ul>
+			<!-- //2017.03.08 추가 -->
+			
+		</article>
+		<div class="btn"><a href="#" class="btnApply">SK장기렌터카 상담 신청하기</a></div>
+	</div>
+
+</div>
+<!--  contents :end  -->
+
+<script>
+
+function onlyNumber(event){
+	event = event || window.event;
+	var keyID = (event.which) ? event.which : event.keyCode;
+	if ( (keyID >= 48 && keyID <= 57) || (keyID >= 96 && keyID <= 105) || keyID == 8 || keyID == 46 || keyID == 37 || keyID == 39 ) 
+		return;
+	else
+		return false;
+}
+function removeChar(event) {
+	event = event || window.event;
+	var keyID = (event.which) ? event.which : event.keyCode;
+	if ( keyID == 8 || keyID == 46 || keyID == 37 || keyID == 39 ) 
+		return;
+	else
+		event.target.value = event.target.value.replace(/[^0-9]/g, "");
+}
+
+function maxLengthCheck(object){
+   if (object.value.length > object.maxLength){
+    object.value = object.value.slice(0, object.maxLength);
+   }    
+}
+
+    $(document).ready(function() {
+        $("[href='#skcarrentalInput']").click(function() {
+            $("html, body").animate({
+                scrollTop: $("#skcarrentalInput").offset().top
+            }, "slow");
+            return false;
+        });
+
+      $(".cntl").click(function() {
+    	  	if($(".cntl").text() == '약관접기') $(".cntl").text('약관 자세히 보기');
+  	  		else $(".cntl").text('약관접기')
+  	  		
+            $("#agreementBox").toggleClass('on');
+            $(this).toggleClass('on');
+            // $("html, body").animate({
+            //     scrollTop: $("#agreementBox").offset().top
+            // }, "slow");
+            // return false;
+      });
+
+    });
+</script>     
+
+</body>
+</html>

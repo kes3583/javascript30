@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+	<head>
+      <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+  
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+      <link rel="shortcut icon" href="/favicon.ico">
+      <link rel="apple-touch-icon-precomposed" sizes="114×114" href="/share/favicon.png">
+      <title>방문세차 할인 이벤트</title>
+      <meta property="og:title" content="방문세차 할인 이벤트">
+      <meta property="og:type" content="website">
+      <meta property="og:image" content="http://event.tmap.co.kr/comm/wash_car/images/thumb.png">
+      <meta property="og:site_name" content="방문세차 할인이벤트">
+      <meta property="fb:app_id" content="">
+      <meta property="og:url" content="http://event.tmap.co.kr/comm/wash_car/index.html">
+      <meta property="og:description" content="방문세차 할인 이벤트">
+
+      <link rel="stylesheet" href="../css/base.css" media="screen, print">
+      <link rel="stylesheet" href="../css/tmap_ubi.css" media="screen, print">
+
+      <!--GA code-->
+      <script>
+        var pagePath = document.location.pathname;
+        var eventLabel = 'wash_car';
+        
+        (function(i, s, o, g, r, a, m) {
+          i['GoogleAnalyticsObject'] = r;
+          i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+          }, i[r].l = 1 * new Date();
+          a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+          a.async = 1;
+          a.src = g;
+          m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-54798332-7', 'auto');
+        ga('require', 'displayfeatures');
+        ga('send', 'pageview', pagePath);
+      </script>
+  </head>
+  <body>
+    <header id="top" class="sub">
+      <h1 class="title">방문세차 할인 이벤트</h1>
+      <a href="javascript:TmapWebView.closeWebView();" class="back"><span></span><em class="blind">뒤로 가기</em></a>
+      <button type="button" class="information" onclick="location.href='/app/tmap/ubi/setting.do'"><span></span><em class="blind">info</em></button>
+    </header>
+    <div class="contentBody" id="parkingOn">
+      <div class="pointContent fail">
+        <div class="pointTitle"></div>
+        <div class="score">
+          <div class="gage"><div class="niddle"></div></div>&nbsp;<b>&nbsp;&nbsp;</b>점
+        </div>
+      </div>
+      <a href="#" class="serviceBtn"><b>방문세차 서비스 안내</b></a>
+      <div class="localNotice">※ 서울시 전역, 경기.인천 일부 지역 가능</div>
+    </div>
+  </body>
+  <script src="../../js/libs/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="../js/jQueryRotate.js"></script>
+  <script>
+    var score = 40;
+    $(function(){
+      $(".score b").text(score);
+      var bgColor = "";
+
+      if(score == 0){
+        bgColor = "#a5a5a6"
+      }else if(score>0 && score <= 20){
+        bgColor = "#e84c35"
+      }else if(score > 20 && score <= 40){
+        bgColor = "#f28d4f"
+      }else if(score > 40 && score <= 60){
+        bgColor = "#ffba00"
+      }else if(score > 60 && score <= 80){
+        bgColor = "#b7d167"
+      }else if(score > 80 && score <= 100){
+        bgColor = "#17ae87"
+      }
+
+      $(".gage").css("background-color", bgColor)
+      $(".niddle").rotate({
+          center: ["0px","2px"],
+          angle: 180,
+          animateTo: Math.floor(180 * (score / 100)) + 180,
+          duration:1500
+      });
+
+      $(".termsBtn").click(function(){
+        $(this).toggleClass("open").next().slideToggle();
+      })
+    });
+
+    function maxLengthCheck(object){
+        if (object.value.length > object.maxLength){
+            object.value = object.value.slice(0, object.maxLength);
+        }    
+    }
+  </script>
+</html>

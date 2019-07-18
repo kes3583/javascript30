@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+	<meta name="format-detection" content="telephone=no">
+	<title>Tmap</title>
+	<link rel="stylesheet" href="../css/base.css" media="screen, print">
+	<link rel="stylesheet" href="../css/tmap_ubi.css" media="screen, print">
+	<link rel="stylesheet" href="../css/tmap_go.css" media="screen, print">
+	
+	<script src="../../js/libs/jquery-1.11.1.min.js"></script>
+	<script src="../../js/libs/counter.min.js"></script>
+	<script src="../../js/libs/Chart.min.js"></script>
+	<script src="../../js/TmapApp.js"></script>
+	
+	<script src="../js/ubiChart.js?"></script>
+	<script src="../js/ubiCommonUtils.js?"></script>
+	
+</head>
+
+<body class="mainBg-fix">
+
+<!--  header -->
+<header id="top" class="sub">
+	<h1 class="title">운전습관</h1>
+	<a href="#" class="back"><span></span><em class="blind">뒤로 가기</em></a>
+	<button type="button" class="information" onclick="#"><span></span><em class="blind">info</em></button>
+</header>
+<!-- header : end  -->
+
+<!--  contents  -->
+<div id="contents" class="bg-fix">
+
+	<div class="cnt-nav">
+		<!-- 과속 계기판  -->
+		<div class="speedPanel">
+			<div class="dashboard">
+				<span class="score-lt"><em class="blind">안전운전점수</em>0</span>
+				<div class="panel">
+
+					<img id="dashboardImg" src="../images/@dashboard_02.png" alt="계기판" />
+
+					<span class="arrow ico"></span>
+					
+				</div>
+				<span class="score-rt"><em class="blind">안전운전점수</em>100</span>
+			</div>
+			<div class="safe-score">
+				<span id="total-score">0</span><span class="lh-fixed">점</span>
+				<p class="grade">상위 11%<em class=""> (4만 등)</em></p>
+				<p class="miles">
+					주행거리 1,219km 
+				</p>
+			</div>
+		</div>
+
+		<!-- 안전운전 정보  -->
+		<div class="driving-info">
+			<div class="outer">
+				<div id="drivingIcon" class="inner i02">
+					<span class="block">스피드를 즐기는 당신 위험합니다.</span>
+					<span class="block light">속도를 줄여주세요.</span>
+				</div>
+			</div>
+		</div>
+<!-- 주요항목  -->
+		<section id="patternGrid" class="safeDriving-wrap">
+			<header class="hd-tit">
+				<h3>
+					<span>주요 항목</span>
+					<var onclick="openCallOutDetailPopup();">
+						<img src="../images/ico-mileage.png" alt="">
+					</var>
+				</h3>
+					
+				<a href="#"><span class="history">주행이력</span></a>
+				<div id="pop-wrap-detail" class="majorItem pop-wrap" style="display: none">
+					<div class="pop-info">
+						<p>안전운전 점수를 구성하는 주요 항목들 입니다.<br>각 항목을 선택하시면 상세 정보가 제공됩니다.</p>
+						<button type="button" class="pop-close" onclick="closeDetailPopUp()"><span class="icon"></span><span class="blind">팝업닫기</span></button>
+					</div>
+				</div>
+			</header>
+			<div class="major-wrap">
+				<ul class="canvasList">
+					<li><button type="button" onclick="#">
+						<div class="canvasDIV">
+							<canvas id="chart-doughnut-0" width="85px" height="85px" style="color:#e84c35"></canvas>
+						</div>
+						<div class="sort-circle">
+							<div class="tbl-out">
+								<span class="headline">조심
+									<var></var>
+								</span>
+								<span class="thing">속도준수</span>
+							</div>
+						</div>
+					</button></li>
+					<li><button type="button" onclick="#">
+						<div class="canvasDIV">
+							<canvas id="chart-doughnut-1" width="85px" height="85px" style="color:#17ae87"></canvas>
+						</div>
+						<div class="sort-circle">
+							<div class="tbl-out">
+								<span class="headline">모범
+									<var></var>
+								</span>
+								<span class="thing">여유가속</span>
+							</div>
+						</div>
+					</button></li>
+					<li><button type="button" onclick="#">
+						<div class="canvasDIV">
+							<canvas id="chart-doughnut-2" width="85px" height="85px" style="color:#ffba00"></canvas>
+						</div>
+						<div class="sort-circle">
+							<div class="tbl-out">
+								<span class="headline">양호
+									<var></var>
+								</span>
+								<span class="thing">안전감속</span>
+							</div>
+						</div>
+					</button></li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- 혜택 -->
+		<div class="benefitArea">
+			<section class="benefitHeader">
+				<p>T map 운전습관과 함께 안전하게 운전하고<br>다양한 혜택을 누리세요.</p>
+			</section>
+			<!-- 동부화재 자동차 보험 할인 가능한 경우 -->
+			<section>
+				<header><h3><span>세차할 때 혜택</span></h3></header>
+				<article class="cont">
+					<a href="#">
+					<div class="img"><img src="../images/main_benefit_img06.png" alt=""></div>
+					
+					<h4>방문세차 <strong class="cBlue">10% 할인</strong> 받기 </h4>
+					<p><strong class="cRed">tip!</strong> 안전운전 점수가 61점 이상일 경우,<br>방문세차 10% 할인 혜택을 받으실 수 있습니다.</p>
+					</a>
+				</article>
+			</section>
+			<!-- 동부화재 자동차 보험 할인 가능한 경우 -->
+			<section>
+				<header><h3><span>자동차 유지비 아끼는 혜택</span></h3></header>
+				<article class="cont">
+					<a href="#">
+					<div class="img"><img src="../images/main_benefit_img03.png" alt=""></div>
+					<!-- 혜택 가능
+					<h4>자동차보험 <strong class="cBlue">5% 할인</strong> 받기</h4>
+					<p><strong class="cRed">tip!</strong> 지속적으로 안전운전 하셔서 자동차보험<br>갱신할 때 보험료 할인 혜택을 받으세요.</p> -->
+					
+					<!-- 혜택 불가 -->
+					<h4><strong class="cRed">도전!</strong> 자동차보험 <strong class="cRed">5% 할인</strong> 받기</h4>
+					<p>자동차보험 할인을 위한 안전운전 점수가 낮습니다.</p>
+					</a>
+				</article>
+			</section>
+			<!-- 싸이오토 -->
+			<section>
+				<header><h3><span>내 차 종합정보 조회 혜택</span></h3></header>
+				<article class="cont">
+					<a href="benefit_cyauto.html">
+					<div class="img"><img src="../images/main_benefit_img02.png" alt=""></div>
+					<!-- 혜택 가능 -->
+					<h4>내 차의 정확한 시장가격 <strong class="cBlue">무료</strong>로 알아보기</h4>
+					<p><strong class="cRed">tip!</strong> 안전운전 점수와 주행거리에 따라 내 차 가치를<br>5~50만원 추가로 올릴 수 있습니다.</p>
+					
+					<!-- 혜택 불가
+					<h4><strong class="cRed">도전!</strong> 내 차 가치  <strong class="cRed">5~50만원</strong> 올리기</h4>
+					<p>159km 추가 주행하시고 내 차 가치를<br>높이는 혜택을 받아보세요</p> -->
+					</a>
+				</article>
+			</section>
+			<!-- //싸이오토 -->
+			<!-- SK 렌터카 -->
+			<section>
+				<header><h3><span>렌터카 필요할 때 혜택</span></h3></header>
+				<article class="cont">
+					<a href="https://www.m-skrentcar.com/benecar/benecar.php?c=tmap">
+					<div class="img"><img src="../images/main_benefit_img04.png" alt=""></div>
+
+					<h4>장기렌터카 이용 시 <strong class="cBlue">30만 포인트</strong> 지원</h4>
+					<p>안전운전 점수가 41점 이상일 경우<br>장기렌터카 할인 혜택을 받을 수 있습니다.</p> 
+					</a>
+				</article>
+			</section>
+			<!-- //SK 렌터카 -->
+			<!-- SK엔카 -->
+			<section>
+				<header><h3><span>내 차 팔 때 혜택</span></h3></header>
+				
+				<article class="cont">
+					<a href="#">
+					<div class="img"><img src="../images/main_benefit_img05.png" alt="" class="skencar"></div><!-- edit 2016.12.05 -->
+
+					<h4>내 차 팔때 <strong class="cBlue">5~20만원</strong> 추가 인정 받기</h4>
+					<p><strong class="cRed">tip!</strong> 안전운전 점수가 91점 이상일 경우,<br>20만원 추가 인정 받을 수 있습니다.</p>
+
+					<!-- <h4><strong class="cRed">도전!</strong> 내 차 팔때<strong class="cRed">5~20만원</strong> 추가 인정 받기</h4>
+					<p>159km 추가 주행하시고 내 차 팔때 추가로<br>가치를 인정받는 혜택을 누려보세요.</p> -->
+					</a>
+				</article>
+			</section>
+			<!-- //SK엔카 -->
+			<!-- 삼성카드 다이렉트 오토 -->
+			<section>
+				<header><h3><span>신차 구입할 때 혜택</span></h3></header>
+				<article class="cont">
+					<a href="#">
+					<div class="img"><img src="../images/main_benefit_img01.png" alt=""></div>
+					<h4>신차 할부 이용 시 <strong class="cBlue">7~10만 포인트</strong> 적립</h4>
+					<p><strong class="cRed">tip!</strong> T map 운전습관 서비스 이용고객<br>누구에게나 혜택을 드립니다.</p>
+					</a>
+				</article>
+			</section>
+			
+		</div>
+		<!-- //혜택 -->
+
+		<!-- 이벤트 배너 -->
+		<section class="bannerEvent">
+			<p><a href="#"><img src="../images/drive_161013_01.png" alt="T map 얼마나 알고 있니? 정답을 맞추면 영화 예매권, 편의점 상품권 증정!"></a></p>
+		</section>
+		<!-- //이벤트 배너 -->
+
+		<!-- 자동차 보험 할인 정보
+		<section id="patternGrid" class="motor-insurance">
+			<header class="hd-tit"><h3><span>자동차 보험 할인 정보</span></h3></header>
+			<div class="ins-column">
+				<p class="txt">아쉽네요. 보험 할인을 위한 안전 운전 점수가 낮아<br>자동차 보험료 할인 혜택 대상이 아닙니다.<p class='txt-etc'>자동차 보험 먼저 가입 후, 보험할인이 가능한 안전 운전 점수를 획득하셔도 남은 보험 기간 동안 할인 혜택을 받을 수 있습니다.</p></p>
+			</div>
+			<div class="btns wid80">
+				<button type="button" class="btn-type1 red">자세히 보기</button>
+			</div>
+		</section> -->
+
+		<!-- 회색 그라데이션 여백 : 항상 맨 아래에 위치 -->
+		<section class="lastSection">
+			<p></p>
+		</section>
+		
+	</div>
+</div>
+<!--  contents :end  -->
+
+<script>
+var errcode = "000000"
+var totDistance = 1219;
+var scoreValue = 31;
+var doughnuts = new Array();
+var doughnutsVal = [
+		40
+		,100
+		,60
+];
+//페이지 로드 시
+$(function(){
+	init();
+});
+
+function init(){
+	var $arrow = $('.dashboard .panel .arrow');
+	$arrow.css('transition', '1200ms');
+	$arrow.css('-webkit-transition', '1200ms');
+	$arrow.css('transform', 'rotate(' + (scoreValue*180/100) + 'deg)');
+	/* 
+	 * Count Up 
+	 */
+	$('#total-score').counter({
+		autoStart : true,
+		duration : 1000,
+		countTo : 31,
+		placeholder : 0,
+		easing : 'linear',// easeOutQuart
+		onStart : function() {		},
+		onComplete : function() {	}
+	});
+	
+	if(totDistance==0){
+		setEmptyCallOutPopUP();
+	}
+	
+	if(errcode != "000000"){
+		var $dashboard = $('.df_Img');
+		var $dashboard1 = $('.db_Img');
+
+		$dashboard1.css('opacity', 0);
+
+		$dashboard.stop().animate({
+			opacity : 0
+		}, 2000);
+		$dashboard1.stop().delay(800).animate({
+			opacity : 1
+		}, 1000);
+	}
+	
+	drawDoughnuts();
+	setTimeout(updateDoughnuts, 300);
+}
+
+function drawDoughnuts() {
+	var i, canvasId;
+	for (i=0; i<3; i++) {
+		canvasId='chart-doughnut-'+i;
+		
+		doughnutData[0].color = $('#'+canvasId).css('color'); //TODO 각각 색 설정
+		doughnuts[i] = drawDoughnutChart(canvasId, [0, 100]);
+	}
+}
+function updateDoughnuts(){
+	for (var i=0; i<3; i++) {
+		var val = doughnutsVal[i];
+		doughnuts[i].segments[0].value = val;
+		doughnuts[i].segments[1].value = 100-val;
+		doughnuts[i].update();
+	}
+}
+
+function moveMainDetail(detailType){
+	$("#detailType").val(detailType);
+	$("#mainDetailForm").submit();
+}
+
+function openCallOutPopup(){
+	$('.pop-wrap').fadeOut(300);
+	$('#pop-wrap').fadeIn(300);
+}
+
+function openEmptyCallOutPopUP(){
+	$('.pop-wrap').fadeOut(300);
+	$('#pop-wrap-empty').fadeIn(300);
+}
+
+function openCallOutDetailPopup(){
+	$('.pop-wrap').fadeOut(300);
+	$('#pop-wrap-detail').fadeIn(300);
+}
+
+function openEmptyFirstCallOutPopUP(){
+	$('#pop-wrap-empty').show();
+}
+
+function setEmptyCallOutPopUP(){
+	//EMPTYCOPU 쿠키 있는지 확인
+	var EMPTY_COPU = getCookie('EMPTY_COPU'); 
+	
+	
+	if(EMPTY_COPU == '' || EMPTY_COPU == null){
+		openEmptyFirstCallOutPopUP();		
+		setCookie('EMPTY_COPU', 'DPNONE', 365)
+	}
+}
+
+function closeEmptyPopUp(){
+	$('#pop-wrap-empty').fadeOut(300);
+}
+
+function closeDetailPopUp(){
+	$('#pop-wrap-detail').fadeOut(300);
+}
+
+function closePopUp(){
+	$('#pop-wrap').fadeOut(300);
+}
+</script>
+
+</body>
+</html>
+
+
+

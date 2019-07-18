@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+	<meta name="format-detection" content="telephone=no">
+	<title>Tmap</title>
+	
+	<link rel="stylesheet" href="../css/swiper.min.css">
+	<link rel="stylesheet" href="../css/base.css" media="screen, print">
+	<link rel="stylesheet" href="../css/tmap_ubi.css" media="screen, print">
+	
+	<script src="../../js/libs/jquery-1.11.1.min.js"></script>
+	<script src="../../js/TmapApp.js"></script>
+	<script src="../js/ubiCommonUtils.js?"></script>
+
+</head>
+
+<body>
+
+<!--  header -->
+<header id="top" style="z-index:1000">
+	<h1 class="title">운전습관</h1>
+	<a href="#" class="back"><span></span><em class="blind">뒤로 가기</em></a>
+</header>
+<!-- header : end  -->
+
+<!--  contents  -->
+<div id="contents" class="sub-type2">
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" data-swiper-autoplay="1">
+                           <div class="visual"><img src="../images/img_start_01.png" alt=""> </div>
+                           <div class="comment">
+                                 <h2>나의 안전운전 수준을 확인하세요</h2>
+                                 <p>T map 운전습관은 나의 운전 행태를 분석하여<br>안전운전 하도록 도와주는 서비스입니다.</p>
+                           </div>
+            </div>
+            <div class="swiper-slide">
+                           <div class="visual"><img src="../images/img_start_02.png" alt=""> </div>
+                           <div class="comment">
+                                 <h2>T map이 안전운전을 도와드립니다.</h2>
+                                 <p>T map으로 주행한 데이터 기반으로<br>맞춤형 운전 Tip을 제공합니다.</p>
+                           </div>
+            </div>
+            <div class="swiper-slide">
+                           <div class="visual"><img src="../images/img_start_03.png" alt=""> </div>
+                           <div class="comment">
+                                 <h2>안전운전 하고 보험료 할인 받으세요</h2>
+                                 <p>T map과 함께 안전운전 하시면<br>자동차 보험료 할인을 받을 수 있습니다.</p>
+                           </div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="../js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        loop: true
+    });
+    </script>
+
+</div>
+<!--  contents :end  -->
+
+<!-- btmMenu -->
+<div class="btmMenu">
+	<button type="button" class="initial wid-100" onclick="">시작하기</button>
+</div>
+
+
+</body>
+</html>

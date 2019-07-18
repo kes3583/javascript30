@@ -1,0 +1,241 @@
+@import "font.css";
+@import "common.css";
+@import "swiper.min.css";
+
+*{line-height:140%;}
+body, body>header {background:#fff; border-bottom:1px solid #ebebeb}
+body>header a.settingBtn {background: url("../images/mission/20180621/shareBtn.png") 0 0 no-repeat;background-size: 100% auto;width:39px;height:39px;position:absolute;top:3px;right:15px;}
+.mt3 {margin-top:3rem}
+
+.bannerArea{ background:#5792ea;position:relative}
+
+.swiperWrap {position:relative;height:190px; background:#5792ea;margin-top:-2px; padding-top:36px;  }
+.swiperWrap .swiper-container {position: absolute;left:0; right:0px; padding:0 0 35px 0;}
+.swiperWrap .swiper-slide:first-child { background:#8fb8ff; margin-left:-10px}
+.swiperWrap .swiper-slide {width:295px; margin-right:8px;border-radius: 10px; overflow: hidden;box-shadow: 0px 5px 15px 3px rgba(0,0,0,0.1)}
+.swiperWrap .btn {position: absolute; width:30px; height: 30px; top:50%; margin-top:-15px; left:1.3%; background: url("../images/leftBtn.png") 0 0 no-repeat; background-size: 100% 100%; z-index: 2;}
+.swiperWrap .btn.right {background-image: url("../images/rightBtn.png"); left: auto; right:1.3%;;}
+.myPosition {height:50px; overflow:hidden;width:80%;}
+.myPosition .swiperWrap { height:50px}
+.myPosition .swiperWrap .swiper-container {height:50px}
+
+.aniImg {position:relative; z-index:1;background:url("../images/mission/20181015/main_ani_bg.gif") 0 0 no-repeat; background-size:100% auto;}
+
+ .score{ position:relative; width:100%; }
+ .score:before { display:block; content:'';width:100%; z-index:0; height: 130px; position:absolute;top:12px; left:0;background: url("../images/mission/20181015/bg_circle.png") top center no-repeat; background-size:100% auto;}
+ .score .circle {z-index:1;width:250px; height: 133px; margin:14px auto 30px auto; display: block;position: relative; margin-bottom: 35px;}
+
+ .score .circle .text {position: absolute; text-align: center; top:53px; font-weight:bold; left:0px; right:0px;font-size: 4.3rem; letter-spacing: -1px; text-indent: 5px;}
+ .score .circle .text:after {font-size: 2.5rem; content:'%'; color:#000;font-family: 'AppleSDGothicNeo-Medium', 'nanumBarunGothic-medium'; display: inline-block; margin-left: 3px; text-indent: 0px;}
+  .score .circle .text.col0 {color:#000}
+ .score .circle .text.col0:after {color:#000}
+  .score .circle .text.col01{color:#fa5653}
+ .score .circle .text.col01:after { color:#fa5653}
+  .score .circle .text.col02 { color:#ebba2d}
+ .score .circle .text.col02:after { color:#ebba2d}
+ .score .circle .text.col03 { color:#24c89f}
+ .score .circle .text.col03:after { color:#24c89f}
+ .score .circle .underDistance {position: absolute; left:0px; right: 0px; text-align: center; top:112px; font-size: 1.5rem; line-height: 120%;}
+ .score .circle.zero:before,
+ .score .circle.zero .text {}
+ .score .circle.zero .underDistance {display: block;}
+ .score .scoreComment {font-size: 1.8rem; text-align: center}
+
+.wrap {padding-top:50px}
+.index {padding-bottom:70px;}
+
+.shareBtn {width: 39px; height: 39px; background: url("../images/mission/20180514/shareBtn.png") 0 0 no-repeat;background-size: 100% 100%;position: fixed;top: 61px;right: 11px;z-index: 12}
+
+.top{position:relative;background:url("../images/mission/20181015/main_bg.gif") 0 0 no-repeat;background-size: 100% auto; height:245px}
+.topLogo{padding-left:32px; width:220px; margin-top:18px}
+.titTxt,.titTxt span{ font-size:3.1rem; color:#242424; line-height:120%; }
+.titTxt { margin-left:32px; margin-bottom:13px;margin-top:2.7rem}
+.subtitTxt { margin-left:32px; margin-bottom:12px;}
+.subtitTxt,.subtitTxt span{ font-size:1.6rem; color:#808080; }
+
+.countJoin {position:relative; z-index:10; border-radius:50px;padding:0 15px; height:33px;line-height:33px;font-size: 1.5rem; color:#a6a6a6; display:inline-block; background:#fff;border: 1px solid #a6a6a6;  margin-left:3rem;}
+
+
+.subTxt { text-align:center; color:#1d1d1d; font-size:1.6rem; padding-bottom:18px; background:url("../images/mission/20180821/bg_join.gif") 0 0 no-repeat; background-size:100% auto; margin-top:-4px}
+.subTxt p {font-size:1.9rem;}
+.subTxt span{ background:#1788ca; display:inline-block; font-size:1.6rem; padding:0 6px; position:relative}
+.subTxt span:after { display:block; content:''; border-bottom:1px solid #fff; position:absolute;left:0; bottom:0; width:100%;}
+
+.mid {overflow:hidden; background:url("../images/mission/20181015/box_mid.gif") 0 0 repeat-y; background-size:100%; text-align:center; }
+.missionTxt {font-size:2.4rem;text-align:center;font-weight:bold;}
+.distance {width:84%; margin:15px auto 15px auto}
+.distance:after {display:block; content:''; clear:both;}
+.distance li{font-size: 1.7rem;color: #858585;letter-spacing: 0;display:inline-block; width:49.5%;box-sizing:border-box; position:relative;text-align:center;}
+.distance li span em { font-style:normal;}
+.distance li span.tit em {background:#f5f5f5; border-radius:50px; padding:2px 10px;margin-bottom:10px;display:inline-block; font-size:1.5rem; color:#737373;}
+.distance li.rLine:after{display:block; content:''; position:absolute;top:10px;bottom:10px;right:-1px;border-right:1px solid #e1e1e1; width:1px; }
+.distance li:last-child {margin-right: 0}
+.distance li span { font-size: 2.3rem;color: #333; letter-spacing: inherit;display:block;}
+.distance li span em.unit { font-size:1.6rem; display:inline-block; vertical-align:bottom; margin-left:3px; margin-bottom:3px}
+
+.qTxt { position:relative;color:#368ff3;font-size:1.6rem;display:inline-block; text-align:center; margin-bottom:3.4rem}
+.qTxt:after {display:block; content:""; position:absolute; bottom:0;left:0; width:100%; height:100%; border-bottom:1px solid #368ff3;}
+.giftNum  { position:relative;padding-left:12rem; padding-top:1.4rem;font-size:1.8rem; color:#1d1d1d; margin-bottom:1rem; text-align:left; background:url("../images/mission/20181015/box_bot.gif") 0 bottom no-repeat; width:100%; height:155px; background-size:100% auto}
+.giftNum div { font-size:1.6rem}
+.giftNum:before { display:block; content:"";position:absolute;width:40px; height:40px;  background:url("../images/mission/20181015/ico_gift.gif") 0 0 no-repeat; background-size:100% auto; top:13px; left:60px}
+.giftNum .bold{ font-size:1.8rem}
+.giftNum p{ font-size:1.9rem; color:#1d1d1d; text-align:center; margin-bottom:1.7rem; margin-top:2.5rem}
+.giftNum p span{ display:inline-block; width:24px; height:24px; vertical-align:middle;margin-top:-2px; margin-left:8px}
+.zeroTxt { display:none;}
+
+.eventRecom{ margin-bottom:20px; padding-top:2.3rem; font-size:1.6rem; text-align:center}
+.eventRecom span{ font-size:1.6rem;}
+.eventInfo {text-align:center; }
+.eventTit{ font-size:1.4rem; display:inline-block; border-radius:50px; color:#333; border:1px solid  #333;padding:0.1rem 1.5rem}
+.eventCopy {font-size:2.5rem; color:#000; margin-bottom:2.6rem}
+.eventCopy .bold{ font-size:2.6rem}
+.eventSub {color:#000; text-align:center;font-size:1.7rem; margin-bottom:3rem;}
+
+.eventDate {margin:35px auto 0 auto; padding:2rem 1.2rem 2rem 2.8rem;  text-align:left; background:#e8e9f1; width:88%;box-sizing:border-box; }
+.eventDate li, .eventDate li span{ font-size:1.5rem; letter-spacing: -0.02em;}
+.eventDate li { color:#000}
+.eventDate li span {color:#000}
+.eventDate li{ margin-bottom:2px; }
+.eventDate li span {position:relative;display:inline-block; text-align:left; }
+.eventDate li span.dash:before { display:block; content:'';position:absolute; left:-8px;top:27%;height:4px; width:4px;background: url(../images/mission/20180821/bullet.gif)0 0 no-repeat; background-size:100% auto; }
+.eventDate li span.right { text-align:left;}
+.eventDate li:last-child {color:#727272}
+.dirTxt { font-size:1.4rem; text-align:center; color:#333}
+.btnMission { color:#5a46f2; font-size:1.9rem; text-align:center; font-weight:bold; line-height:60px;display:inline-block; margin-top:7.4rem; border-radius:50px; border:2px solid #5a46f2; box-shadow:0 4px 10px rgba(0,0,0,.2); width:300px; height:60px; }
+.present {font-size:2rem; font-weight:bold;color:#0b2756}
+
+
+.footer {background: #404040;border:1px solid #404040; margin-bottom:-1px } 
+.footer a {display: block; height: 63px; border-bottom: 1px solid #404040; font-size: 1.5rem; color: #fff; text-indent: 32px; line-height: 65px; background:url("../images/mission/20180514/noticeClose.png") center right 30px no-repeat; background-size: 15px 9px;} 
+.footer a.open {background-image:url("../images/mission/20180514/noticeOpen.png")}
+.footer > ul {padding:35px 30px; display: none;}
+.footer > ul li {font-size: 1.22rem; color: #c8cbce; line-height: 140%; margin-bottom: 5px; position: relative; padding-left: 8px;}
+.footer > ul li.nonBullet {padding-left: 0px;}
+.footer > ul li.nonBullet:before {display: none;}
+.footer > ul li:before {width:3px; height:3px; border-radius: 50%; background:#8d8e96; position: absolute; top:5px; left:0px; content:''}
+.footer > ul li:last-child {margin-bottom: 0px;}
+
+.missionBtn {height: 70px; bottom:0px; left:0px; right:0px; position: fixed;z-index: 5; background:#299682; text-align: center; line-height: 72px; font-size: 2rem; color:#fff;}
+.shareBtns {position: fixed; top:0px; left:0px; right:0px; bottom:0px; z-index: 10; background:rgba(0,0,0,0.8); display: none;}
+.shareBtns.show {display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex; /* Safari */
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column; align-items: center; justify-content: center;}
+.shareBtns ul {text-align: center; font-size: 0px; line-height: 0px;}
+.shareBtns ul li {width:48px; height: 48px; margin-right: 15px; display: inline-block;}
+.shareBtns ul li:last-child {margin-right: 0px;}
+.shareBtns ul li a {display: block; background-size: 100% auto; background-repeat: no-repeat; height: 100%;}
+.shareBtns ul li a.kakao {background-image: url("../images/mission/btnKakao.png")}
+.shareBtns ul li a.facebook {background-image: url("../images/mission/btnFacebook.png")}
+.shareBtns ul li a.line {background-image: url("../images/mission/btnLine.png")}
+.shareBtns ul li a.msg {background-image: url("../images/mission/btnMsg.png")}
+
+.resultBtn {display:block; height:7rem; line-height:7rem; text-align:center; background:#aab1b7; font-size:2rem; color:#888d92}
+.resultBtn.resultChk {background:#299682; color:#fff}
+
+.blueNoti {bottom:-100px; width:73%;margin-left:-36.5%; border-radius:20px; text-align:center;box-shadow:0px 10px 15px 4px rgba(0,0,0, 0.3);}
+.blueNoti.pop {animation:blueNotiPop linear 0.3s forwards;}
+.blueNoti.hide {animation:blueNotiHide ease-out 0.3s forwards;}
+.blueNoti:after{background:rgba(51,56,67,0.96);}
+iframe#address {display:none; width:100%; height:100%; position:absolute; top:0px; left:0px; right:0px; bottom:0px;}
+.contents {background:#53b36e url("../images/mission/20180514/successBg.jpg") 0 0 repeat-x; background-size:auto 100%; padding:0 2rem 5.4rem;}
+.contentBox {background:#fff; border-radius:15px; padding:3.3rem 3rem;}
+.contentBox dl {margin-bottom:1.7rem;}
+.contentBox dt {font-size:1.4rem; color:#b1b3b6; margin-bottom:4px;}
+.contentBox dd {font-size:0px; line-height:0px;}
+.contentBox dd input {font-size:1.8rem; text-indent:0.8rem; height:3.8rem; border-bottom:1px solid #dcdcdc; width:100%;  box-shadow:none; border-radius:0;-webkit-appearance: none;-moz-appearance: none;}
+.contentBox dd input.boxType {border:1px solid #dcdcdc; background:#f8f8f8;}
+.contentBox dd input[type=number].boxType {width:calc(100% - 8rem); margin-right:0.5rem; display:inline-block;} 
+.contentBox dd input::placeholder {color:#e0e0e0} 
+.contentBox dd textarea, .contentBox dd input{outline: none;}
+.contentBox dd .fill {background:#fff !important}
+.contentBox dd a {display:inline-block; width:7.5rem; height:3.8rem; background:#a5a9af; color:#fff; text-align:center; font-size:1.5rem; line-height:4rem;}
+.contentBox textarea {border:1px solid #dcdcdc; background:#f8f8f8; width:100%; resize:none; height:6.5rem;font-size:1.6rem; padding:1rem 0.8rem; line-height:150%;border-radius:0;-webkit-appearance: none;-moz-appearance: none;}
+.contentBox > span {font-size:1.4rem;color:#b1b3b6; display:block; margin-bottom:4px;}
+.contentBox .chk {display:block; height:2rem; text-indent:2.7rem; color:#333; font-size:1.6rem; position:relative; line-height:2.3rem; margin-bottom:2.1rem;}
+.contentBox .chk:before {height:2rem; width:2rem; background:url("../images/mission/20180514/chkOff.gif") 0 0 no-repeat; background-size:100% 100%; position:absolute; top:0px; left:0px; content:''; }
+.contentBox .checked:before {background-image:url("../images/mission/20180514/chkOn.gif")}
+.contentBox .submit {width:60%; height:5rem; background:#129b5c; color:#fff; font-size:1.8rem; display:block; margin:0 auto; text-align:center; line-height:5.3rem;}
+
+
+.popWrap .popup {width:calc(100% - 5rem);border-radius:5px; padding:0px; overflow:hidden;}
+.popWrap .rule h1 {height:5.5rem;font-size:1.5rem; color:#000;line-height:5.5rem; text-align:center;}
+.popWrap .rule .popContent {padding:1.7rem 2rem;}
+.popWrap .rule .popContent div {font-size:1.2rem; color:#000; line-height:155%; margin-bottom:1rem;}
+.popWrap .rule .popContent table {width:100%;border-collapse: collapse; margin-bottom:1.5rem;}
+.popWrap .rule .popContent table th {width:9rem;background:#f3f4f5; vertical-align:middle; text-align:center; font-size:1.1rem; color:#666; border:1px solid #a8a9ad; font-weight:normal;}
+.popWrap .rule .popContent table td {font-size:1.1rem; color:#000; vertical-align:middle; width:calc(100% - 9rem); padding:0.7rem 0.5rem 0.5rem 1.1rem; border:1px solid #a8a9ad; }
+.popWrap .rule .popContent ul,
+.popWrap .rule .popContent li {display:block; width:100%;}
+.popWrap .rule .popContent li {padding-left:5px; font-size:1.1rem; color:#666; position:relative; line-height:140%; margin-bottom:0.9rem;}
+.popWrap .rule .popContent li:before {width:2px; height:2px; background:#999; border-radius:50%; position:absolute; top:6px; left:0px; content:''}
+.popWrap .rule > a {display:block; position:static; width:100%; height:5rem; background:#a5a9af; line-height:5.3rem; color:#fff; text-align:center;font-size:1.5rem; border-radius:0 0 5px 5px;}
+
+.messageWrap {position: fixed; top:0px; bottom: 0px; left: 0px; right: 0px; background: rgba(0,0,0,0.6); display: flex; align-items:center;justify-content:center; display: none; z-index: 1011}
+.messageWrap .message {width:calc(100% - 5rem); background: #fff; border-radius: 10px; position: relative; box-shadow: 0px 10px 18px 3px rgba(0, 0, 0, 0.36);overflow:hidden;}
+.messageWrap .message h1 {background:#129b5c; color:#fff; text-align:center; font-size:1.8rem; line-height:5rem; height:5rem;}
+.messageWrap .message .popContent {padding:0.6rem 2.3rem 3.1rem;}
+.messageWrap .message .popContent .msgBox { text-align:center; font-size:1.5rem; color:#333; line-height:150%; padding:2.3rem 0 1.8rem;}
+.messageWrap .message .popContent dl {width:100%;border-top:1px solid #d7d7d7; border-bottom:1px solid #d7d7d7; font-size:0px; flex-wrap:wrap; align-content:stretch; display:flex;padding:1rem 0;}
+.messageWrap .message .popContent dl dt {width:5.4rem; color:#999999; font-size:1.4rem; font-weight:normal; text-align:left; display:flex; line-height:3.2rem;min-height:3.2rem; margin-bottom:0px;}
+.messageWrap .message .popContent dl dd {width:calc(100% - 5.4rem); color:#000; font-size:1.4rem; min-height:3.2rem; display:flex; align-items:center; line-height:3.3rem;}
+.messageWrap .message .popContent dl dd:last-child {padding:0.4rem 0; line-height:145%;}
+.messageWrap .message .popContent .confirmBox {padding-top:1.5rem; font-size:0px;}
+.messageWrap .message .popContent .confirmBox.allGreen {padding-top:2.5rem;}
+.messageWrap .message .popContent .confirmBox a {display:inline-block; width:calc(50% - 0.25rem); height:4.5rem; background:#eaeaea; text-align:center; line-height:4.5rem; color:#333; font-size:1.7rem;}
+.messageWrap .message .popContent .confirmBox a.btnOk {background:#129b5c; color:#fff; margin-left:0.5rem}
+.messageWrap .message .popContent .confirmBox.addr {text-align:center;}
+.messageWrap .message .popContent .confirmBox.addr a.btnCancel {display:none;}
+
+.etc {background:#d3f1f4;}
+.etc .content{ width:calc(100% - 4rem); background:#fff; border-radius:0.5rem; margin:0 auto; padding:3.2rem 3rem 4.5rem; box-shadow:5px 5px 29px rgba(0,0,0,0.15);}
+.etc .content h1 {text-align:center; font-size:1.8rem; color:#4d4d4d; line-height:150%}
+.etc .content h1 b {color:#f26e4a; line-height:inherit; font-size:inherit;}
+.etc .content img {height:10rem; width:auto; display:block; margin:2.5rem auto 0;}
+.etc .content ul {margin-top:2.7rem;}
+.etc .content li {font-size:1.4rem; color:#999; padding-left:0.8rem; position:relative; line-height:150%; margin-bottom:0.6rem;}
+.etc .content li:before{width:0.3rem; height:0.3rem; background:#999; border-radius:50%; position:absolute; top:7px; left:0px; content:''}
+.etc .content li:last-child {margin-bottom:0px;}
+.etc .content a {display:block; height:5rem; width:70.6%; text-align:center; line-height:5.2rem; color:#fff; background:#129b5c; margin:2.5rem auto 0; font-size:1.8rem;}
+.etc .lastImg {position:relative; }
+.etc .lastImg img:first-child {position:absolute; left:0px; z-index:3;}
+.etc .messageWrap .message .popContent .confirmBox {text-align:center;}
+
+.delivery .content {padding:3.2rem 2.5rem 4.5rem; }
+.delivery .content h1 {text-align:left; margin-bottom:2.8rem}
+.delivery .content dl {width:100%; font-size:0;}
+.delivery .content dl > *{display:inline-block; margin-bottom:1.5rem;}
+.delivery .content dt {border-radius:2px; width:4.9rem; height:2rem; margin-right:1rem; background:#adbcbd; text-align:center; line-height:2.2rem; color:#fff; font-size:1.4rem;}
+.delivery .content dd {font-size:1.6rem; color:#333333; width:calc(100% - 5.9rem); line-height:2.2rem; height:2rem;}
+.delivery .content dd:last-child {height:auto; line-height:160%; margin-bottom:0px; word-break:keep-all;}
+
+
+ @media all and (orientation:landscape) {
+	.swiperWrap {height:260px}
+	.giftNum { background-size: 100% 100%}
+	
+}
+
+_::-webkit-full-page-media, _:future, :root .contentBox .submit {line-height:5rem}
+_::-webkit-full-page-media, _:future, :root .popWrap .rule>a {line-height:5rem;}
+_::-webkit-full-page-media, _:future, :root .contentBox dd a {line-height:3.6rem}
+
+@keyframes distancePop{
+	0% {top:0}
+	70% {top:-47px;}
+	100% {top: -40px;}
+}
+
+@keyframes blueNotiPop{
+	0% {bottom:-100px;}
+	70% {bottom:30px;}
+	100% {bottom:20px;}
+}
+
+@keyframes blueNotiHide{
+	0% {bottom:20px;}
+	60% {bottom:30px;}
+	100% {bottom:-150px;}

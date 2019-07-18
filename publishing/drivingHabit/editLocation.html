@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+  <head>
+      <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+  
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+  
+      <meta name="apple-mobile-web-app-title" content="index" />
+      <meta name="apple-mobile-web-app-capable" content="yes">
+
+      <link rel="shortcut icon" href="/favicon.ico">
+      <link rel="apple-touch-icon-precomposed" sizes="114×114" href="/share/favicon.png">
+      <title>운전습관</title>
+      <meta property="og:title" content="운전습관">
+      <meta property="og:type" content="website">
+      <meta property="og:image" content="">
+      <meta property="og:site_name" content="운전습관">
+      <meta property="fb:app_id" content="">
+      <meta property="og:url" content="">
+      <meta property="og:description" content="운전습관">
+
+      <!--link rel="stylesheet" type="text/css" href="/publishing/drivingHabit/css/font.css">
+      <link rel="stylesheet" href="/publishing/drivingHabit/css/swiper.min.css"-->
+      <!-- <link rel="stylesheet" type="text/css" href="/publishing/drivingHabit/css/index.css"> -->
+      
+		<link rel="stylesheet" type="text/css" href="/static/drivingHabit/css_origin/font.css">
+		<link rel="stylesheet" type="text/css" href="/static/drivingHabit/css_origin/common.css">
+		<link rel="stylesheet" type="text/css" href="/static/drivingHabit/css_origin/editLocation.css">
+		
+		<script src="/static/drivingHabit/js/plugins/jquery-1.11.1.min.js?ver_20181108_1"></script>
+		
+		<script src="/static/js/commonUtils.js?ver_20181108_1"></script>
+		<script src="/static/drivingHabit/js/common.js?ver_20181108_1"></script>
+  </head>
+  <body>
+  	<section class="wrap">
+  		<div class="mapArea" id="map_div">
+  			<a href="javascript:;" class="btn backBtn"></a>
+  			
+  		</div>
+  		<div class="contentArea">
+  			<a href="javascript:;" class="btn naviBtn"></a>
+  			<ul>
+  				<li>[현위치] 서울특별시 강남구 테헤란로 34길 40</li>
+  				<li class="gray">위치 수정</li>
+  			</ul>
+  			<a href="javascript:;" class="modify">수정하기</a>
+  		</div>
+  	</section>
+  </body>
+  <script src="https://toptmap.tmap.co.kr:10612/tmapv20/js?version=1&format=javascript&appKey=8156aff8-fff4-4b85-8329-ffc228d9624c"></script>
+  <script src="/static/drivingHabit/js/mapUtil.js"></script>
+  <script>
+  	var tripData = JSON.parse('{"tripInitSessionId":"107520190113183931832S00","tripStartTime":"20190113183944","tripEndTime":"20190113190541","tripDistance":10701,"tripTime":1557,"speedAccelCnt":0,"speedReduceCnt":0,"overSpeedCnt":0,"overSpeedDistance":0,"nightOperYN":"N","destName":"서울대입구역  4번출구","destPoiId":"1134044","tripScore":100,"screenTripScore":100,"tripTrace":[{"lonX":"14128259.898299813","latY":"4497213.069739157"},{"lonX":"14128108.083989462","latY":"4497292.482075335"},{"lonX":"14127991.208443634","latY":"4497376.177428586"},{"lonX":"14127851.143351745","latY":"4497470.384094412"},{"lonX":"14127734.886006638","latY":"4497578.606359053"},{"lonX":"14127633.779033836","latY":"4497697.340904400"},{"lonX":"14127523.087102273","latY":"4497813.351600891"},{"lonX":"14127431.565194760","latY":"4497920.798976826"},{"lonX":"14127528.651208162","latY":"4497993.989615015"},{"lonX":"14127628.210802844","latY":"4498062.119727266"},{"lonX":"14127755.597306691","latY":"4498189.815762923"},{"lonX":"14127853.919725928","latY":"4498311.283991140"},{"lonX":"14127929.670583820","latY":"4498496.213717059"},{"lonX":"14128010.368580554","latY":"4498674.138714927"},{"lonX":"14128088.284159303","latY":"4498810.017947814"},{"lonX":"14128175.784970848","latY":"4498912.415428232"},{"lonX":"14128215.669381770","latY":"4499106.699882802"},{"lonX":"14128163.104647703","latY":"4499363.284661389"},{"lonX":"14128106.211853214","latY":"4499535.382809235"},{"lonX":"14128050.246631514","latY":"4499708.262532194"},{"lonX":"14128040.659784844","latY":"4499954.738409086"},{"lonX":"14128088.273686152","latY":"4500192.653909449"},{"lonX":"14128134.959937492","latY":"4500439.920394626"},{"lonX":"14128184.428936072","latY":"4500685.635091323"},{"lonX":"14128233.588747151","latY":"4500930.576703498"},{"lonX":"14128277.801690178","latY":"4501146.706410729"},{"lonX":"14128367.775504004","latY":"4501320.003232783"},{"lonX":"14128482.484972384","latY":"4501463.705772223"},{"lonX":"14128587.609629605","latY":"4501585.211956656"},{"lonX":"14128693.043476492","latY":"4501707.108998036"},{"lonX":"14128790.747578012","latY":"4501818.881659438"},{"lonX":"14128891.852691580","latY":"4501945.065397644"},{"lonX":"14128806.204693876","latY":"4502151.867881362"},{"lonX":"14128752.094405342","latY":"4502354.001029163"},{"lonX":"14128807.129226184","latY":"4502553.023079629"},{"lonX":"14128780.846062629","latY":"4502785.933611199"},{"lonX":"14128787.028053252","latY":"4503031.702932907"},{"lonX":"14128881.639788990","latY":"4503200.746406542"},{"lonX":"14128972.231996240","latY":"4503372.519136380"},{"lonX":"14129033.760081720","latY":"4503543.125911032"},{"lonX":"14128755.487015227","latY":"4503474.569313412"},{"lonX":"14128550.490783963","latY":"4503652.966089273"},{"lonX":"14128563.165936742","latY":"4503883.953707255"},{"lonX":"14128710.647414062","latY":"4504347.503324196"},{"lonX":"14128670.140393548","latY":"4504709.786263944"},{"lonX":"14128656.534138842","latY":"4504942.355229906"},{"lonX":"14128603.660641225","latY":"4505141.815154608"},{"lonX":"14128513.066054959","latY":"4505283.231016017"},{"lonX":"14128310.851750065","latY":"4505568.405842688"},{"lonX":"14128194.593854103","latY":"4505749.566105035"},{"lonX":"14128143.575440100","latY":"4505958.781522163"},{"lonX":"14128109.562612990","latY":"4506170.728534928"},{"lonX":"14128093.173556892","latY":"4506411.901566900"},{"lonX":"14128451.526953297","latY":"4506561.130551918"},{"lonX":"14128557.579661570","latY":"4506619.575640199"},{"lonX":"14128777.106145682","latY":"4506678.801189364"},{"lonX":"14128895.526832482","latY":"4506702.569664501"},{"lonX":"14129004.362608677","latY":"4506717.376552239"},{"lonX":"14129125.875336936","latY":"4506726.339053522"},{"lonX":"14129242.750142558","latY":"4506739.197866534"},{"lonX":"14129354.059458807","latY":"4506754.394459977"},{"lonX":"14129700.045626601","latY":"4506839.727442700"},{"lonX":"14130448.910231540","latY":"4506907.920033678"},{"lonX":"14130821.180014787","latY":"4506702.194838297"},{"lonX":"14131037.306579717","latY":"4506604.009532865"},{"lonX":"14131155.418633630","latY":"4506554.527675318"},{"lonX":"14131387.622657467","latY":"4506531.151859567"},{"lonX":"14131549.021654140","latY":"4506489.463171727"},{"lonX":"14131661.877138207","latY":"4506478.164929496"},{"lonX":"14131839.663172873","latY":"4506460.633219169"},{"lonX":"14132057.025928013","latY":"4506438.815991037"},{"lonX":"14132167.098762940","latY":"4506416.218737528"},{"lonX":"14132237.594541142","latY":"4506441.934366322"}],"destCoordinate":[{"lonX":"14132261.402794253","latY":"4506389.335579068"}],"dottedLineTraces":{"data0":[{"lonX":"14128259.898299813","latY":"4497213.069739157"},{"lonX":"14128108.083989462","latY":"4497292.482075335"},{"lonX":"14127991.208443634","latY":"4497376.177428586"},{"lonX":"14127851.143351745","latY":"4497470.384094412"},{"lonX":"14127734.886006638","latY":"4497578.606359053"},{"lonX":"14127633.779033836","latY":"4497697.340904400"},{"lonX":"14127523.087102273","latY":"4497813.351600891"},{"lonX":"14127431.565194760","latY":"4497920.798976826"},{"lonX":"14127528.651208162","latY":"4497993.989615015"},{"lonX":"14127628.210802844","latY":"4498062.119727266"},{"lonX":"14127755.597306691","latY":"4498189.815762923"},{"lonX":"14127853.919725928","latY":"4498311.283991140"},{"lonX":"14127929.670583820","latY":"4498496.213717059"},{"lonX":"14128010.368580554","latY":"4498674.138714927"},{"lonX":"14128088.284159303","latY":"4498810.017947814"},{"lonX":"14128175.784970848","latY":"4498912.415428232"},{"lonX":"14128215.669381770","latY":"4499106.699882802"},{"lonX":"14128163.104647703","latY":"4499363.284661389"},{"lonX":"14128106.211853214","latY":"4499535.382809235"},{"lonX":"14128050.246631514","latY":"4499708.262532194"},{"lonX":"14128040.659784844","latY":"4499954.738409086"},{"lonX":"14128088.273686152","latY":"4500192.653909449"},{"lonX":"14128134.959937492","latY":"4500439.920394626"},{"lonX":"14128184.428936072","latY":"4500685.635091323"},{"lonX":"14128233.588747151","latY":"4500930.576703498"},{"lonX":"14128277.801690178","latY":"4501146.706410729"},{"lonX":"14128367.775504004","latY":"4501320.003232783"},{"lonX":"14128482.484972384","latY":"4501463.705772223"},{"lonX":"14128587.609629605","latY":"4501585.211956656"},{"lonX":"14128693.043476492","latY":"4501707.108998036"},{"lonX":"14128790.747578012","latY":"4501818.881659438"},{"lonX":"14128891.852691580","latY":"4501945.065397644"},{"lonX":"14128806.204693876","latY":"4502151.867881362"},{"lonX":"14128752.094405342","latY":"4502354.001029163"},{"lonX":"14128807.129226184","latY":"4502553.023079629"},{"lonX":"14128780.846062629","latY":"4502785.933611199"},{"lonX":"14128787.028053252","latY":"4503031.702932907"},{"lonX":"14128881.639788990","latY":"4503200.746406542"},{"lonX":"14128972.231996240","latY":"4503372.519136380"},{"lonX":"14129033.760081720","latY":"4503543.125911032"},{"lonX":"14128755.487015227","latY":"4503474.569313412"},{"lonX":"14128550.490783963","latY":"4503652.966089273"},{"lonX":"14128563.165936742","latY":"4503883.953707255"},{"lonX":"14128710.647414062","latY":"4504347.503324196"},{"lonX":"14128670.140393548","latY":"4504709.786263944"},{"lonX":"14128656.534138842","latY":"4504942.355229906"},{"lonX":"14128603.660641225","latY":"4505141.815154608"},{"lonX":"14128513.066054959","latY":"4505283.231016017"},{"lonX":"14128310.851750065","latY":"4505568.405842688"},{"lonX":"14128194.593854103","latY":"4505749.566105035"},{"lonX":"14128143.575440100","latY":"4505958.781522163"},{"lonX":"14128109.562612990","latY":"4506170.728534928"},{"lonX":"14128093.173556892","latY":"4506411.901566900"},{"lonX":"14128451.526953297","latY":"4506561.130551918"},{"lonX":"14128557.579661570","latY":"4506619.575640199"},{"lonX":"14128777.106145682","latY":"4506678.801189364"},{"lonX":"14128895.526832482","latY":"4506702.569664501"},{"lonX":"14129004.362608677","latY":"4506717.376552239"},{"lonX":"14129125.875336936","latY":"4506726.339053522"},{"lonX":"14129242.750142558","latY":"4506739.197866534"},{"lonX":"14129354.059458807","latY":"4506754.394459977"},{"lonX":"14129700.045626601","latY":"4506839.727442700"},{"lonX":"14130448.910231540","latY":"4506907.920033678"},{"lonX":"14130821.180014787","latY":"4506702.194838297"},{"lonX":"14131037.306579717","latY":"4506604.009532865"},{"lonX":"14131155.418633630","latY":"4506554.527675318"},{"lonX":"14131387.622657467","latY":"4506531.151859567"},{"lonX":"14131549.021654140","latY":"4506489.463171727"},{"lonX":"14131661.877138207","latY":"4506478.164929496"},{"lonX":"14131839.663172873","latY":"4506460.633219169"},{"lonX":"14132057.025928013","latY":"4506438.815991037"},{"lonX":"14132167.098762940","latY":"4506416.218737528"},{"lonX":"14132237.594541142","latY":"4506441.934366322"}]},"speedAccelSpots":[],"speedReduceSpots":[],"overSpeedTraces":[]}');
+	
+	/* 페이지 로딩시, 첫 주행기록 리스트 Map 생성 및 전체 주행거리 LineString으로 Graid */
+	var idx="";
+	var lonLatFullDistDataList = tripData.tripTrace;
+	var lonLatFullDistDataSolidList = tripData.dottedLineTraces;
+	var overSpeedList = tripData.overSpeedTraces;
+	var speedAccelList = tripData.speedAccelSpots;
+	var speedReduceList = tripData.speedReduceSpots;
+	var overSpeedDistance = tripData.overSpeedDistance;
+	var destCoordinateList = tripData.destCoordinate;  //목적지 좌표 추가 2018.07.30	
+	
+	
+	$(function(){
+		$(window).load(function(){
+			$(".mapArea").height($(window).height() - $(".contentArea").outerHeight());
+			mapGrideFun(idx, 'detail', lonLatFullDistDataList, lonLatFullDistDataSolidList, overSpeedList, speedAccelList, speedReduceList, destCoordinateList);
+			
+		})
+		
+		$(window).on("orientationchange", function(event){
+			location.replace('/app/dh/record/detail.do?tripId='+tripData.tripInitSessionId);
+		});
+		
+		
+		$(document).on("click", ".contentArea a.submit", function(){
+			alert("수정하기")
+		})
+		
+		var classes = ["btn naviBtn", "btn naviBtn setPosition", "btn naviBtn nowOn"]
+		var classFlag = 0;
+		$(".naviBtn").click(function(){
+			//alert("현위치 이동")
+			classFlag++;
+			$(this).attr("class", classes[classFlag % 3])
+		})
+		
+		$(".backBtn").click(function(){
+			//alert("뒤로가기")
+		})
+		
+		
+		//테스트를 위한 구문 필히 삭제 요망
+		
+		$("ul li").eq(0).click(function(){
+			testCode()
+		})
+	});
+	
+	//테스트를 위한 구문 필히 삭제 요망
+	var testLocation = ["짧은거리 짧은거리", "긴거리 긴거리 긴거리 긴거리 긴거리 긴거리 긴거리 "];
+	var testFlag = 0;
+	function testCode(){
+		map_div.moveByPx(200, 300);
+		
+		testFlag = Math.abs(testFlag - 1)
+		$("ul li").last().text("[수정위치] " + testLocation[testFlag])
+		if($(".submit").length == 0) {$("ul li").toggleClass("gray");}
+		$("a.modify").addClass("submit")
+	}
+  </script>
+</html>  
