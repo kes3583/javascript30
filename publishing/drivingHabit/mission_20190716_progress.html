@@ -118,10 +118,10 @@
 
                 <table>
                     <tr>
-                        <td>수집/이용
-                            목적</td>
-                        <td>수집 항목</td>
-                        <td>보유 기간</td>
+                        <th>수집/이용
+                            목적</th>
+                        <th>수집 항목</th>
+                        <th>보유 기간</th>
                     </tr>
                     <tr>
                         <td>본인 확인</td>
@@ -147,7 +147,7 @@
 
     </div>
     <div class="fixed">
-        <button type="button" class="btn btn-block btn-apply">“안전벨트 OK” 캠페인 응모하기</button>
+        <button type="button" class="btn btn-block btn-reg">“안전벨트 OK” 캠페인 응모하기</button>
     </div>
 </body>
 <script src="js/plugins/jquery-1.11.1.min.js"></script>
@@ -192,6 +192,14 @@
         });
     }, config);
     observer.observe(progressBar);
+    $('.register-box').hide();
+    $(".btn-reg").click(function() {
+        // $(this).toggleClass("open").next().stop().slideToggle()
+        $(this).parent().prev().toggle();
+        $("body, html").animate({
+            scrollTop: $("body").height()
+        }, 300)
+    });
 
     $(".footer a").click(function() {
         // $(this).toggleClass("open").next().stop().slideToggle()
