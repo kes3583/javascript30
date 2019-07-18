@@ -3,3 +3,4 @@ node_modules
 .DS_Store
 *.log
 .sass-cache/
+ignorefile.html
