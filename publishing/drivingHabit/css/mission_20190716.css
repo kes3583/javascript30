@@ -142,7 +142,7 @@ button{overflow: visible;}
 
 .circle .distance strong {  width: 100%; text-align: center;  font-size: 30px; }
 .circle .distance strong i { font-style: normal; font-size: 0.6em; font-weight: normal;line-height: 40px; }
-.progress .coupon{width:170px; height: 90px; margin-top: 35px}
+.progress .m-coupon{width:172px; height: auto; margin-top: 35px}
 .txt-03{font-family: 'NanumSquare', sans-serif;font-weight: 400 !important; text-align: center; color: #fff; line-height: 1.47; letter-spacing: -0.3px;font-size: 1.7rem; }
 .txt-04{padding:8px 0 0 0; font-size: 1.4rem;line-height: 1.5; opacity: 0.6; }
 
@@ -179,10 +179,10 @@ button{overflow: visible;}
 .checkmark:after { content: ""; position: absolute; display: none; }
 .register-box .container input:checked ~ .checkmark:after { display: block; }
 .register-box .container .checkmark:after { left: 8px; top: 4px; width: 5px; height: 10px; border: solid white; border-width: 0 3px 3px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); }
-.register-box .policy{margin-top:5px; padding:15px;  background-color: #e9eaeb;width:100%;height: 80px; overflow-y: scroll;}
+.register-box .policy{margin-top:5px; padding:15px; color:#4d4d4d; background-color: #e9eaeb;width:100%;height: 80px; overflow-y: scroll;}
 .register-box .policy p, .register-box .policy li{font-size: 1.2rem; color: #4d4d4d; line-height: 1.5;
   letter-spacing: -0.46px;}
-.register-box .policy p, .register-box .policy li{font-size: 1.2rem; color: #4d4d4d}
+
 
 @keyframes slideIn {
   from {
