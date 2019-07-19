@@ -52,12 +52,14 @@ body{background:#357fee; }
 .pdr0{padding-right:0 !important}
 .pdl0{padding-left:0 !important}
 .pdlr18{padding-left:18px !important; padding-right:18px !important}
+.pdb0{padding-bottom: 0 !important}
 .pdb100{padding-bottom: 100px !important}
 .pdt30{padding-top: 30px !important}
 .pdt50{padding-top: 50px !important}
 .mt15{margin-top: 15px !important}
 .mt10{margin-top: 10px !important}
 .mb0{margin-bottom: 0 !important}
+.mb20{margin-bottom: 20px !important}
 .ml5{margin-left: 5px !important}
 
 .op1{opacity: 1 !important}
@@ -99,7 +101,11 @@ button{overflow: visible;}
 .animation-belt .right{flex-grow: 7; margin-left:-30px; z-index: 10}
 
 .content{padding:0 1rem 2rem 1rem}
-.roundbox{padding:2.7rem 3rem 3rem 3em; border-radius: 15px; background-color: #ffffff;display: flex; flex-direction: column;justify-content: center; align-items: center;margin-bottom: 20px}
+.roundbox{padding:2.7rem 3rem 3rem 3rem; border-radius: 15px; background-color: #ffffff;display: flex; flex-direction: column;justify-content: center; align-items: center;margin-bottom: 20px}
+.br-radious0{border-radius: 15px 15px 0 0 !important}
+.coupon{display: flex; flex-direction: column; justify-content: center; align-items: center; margin-bottom: 20px; padding:0 3rem; background-color: #fff; border-radius: 0 0 15px 15px !important}
+.coupon-sb{background-color: #efeff0}
+
 .card{ position:relative; }
 .card .img{max-width: 564px; height: auto}
 .card .detail{position: absolute; right: 13%; top: 13%;  font-family: 'SKPGoBM_subset'; display: flex; flex-direction: column; justify-content: center; align-items: center;}
@@ -107,6 +113,7 @@ button{overflow: visible;}
 .card .detail .num{ font-family: inherit; font-size: 3rem; font-weight: 400; margin-bottom: 17px; letter-spacing: 1.5px;}
 .card .detail .roundbox{width:100%;height:34px; font-size: 1.5rem; color: #999;display: flex; justify-content: center; align-items: center;border-radius: 3px;}
 .gr{background-color:var(--background-light-gray3)}
+
 .roundbox .txt-01{line-height: 1.47; letter-spacing: -0.3px;}
 .roundbox .txt-01 strong{line-height: 1.7; }
 .bd-radius14{ height:28px; font-size: 1.5rem; color: #999;display: flex; justify-content: center; align-items: center;border-radius: 14px;letter-spacing: -0.3px;margin-top: 5px; padding:2px 15px}
