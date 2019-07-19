@@ -196,9 +196,6 @@
     $(".btn-reg").click(function() {
         // $(this).toggleClass("open").next().stop().slideToggle()
         $(this).parent().prev().toggle();
-        $("body, html").animate({
-            scrollTop: $("body").height()
-        }, 300)
     });
 
     $(".footer a").click(function() {
