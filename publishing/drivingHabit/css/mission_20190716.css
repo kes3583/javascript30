@@ -103,7 +103,7 @@ button{overflow: visible;}
 .content{padding:0 1rem 2rem 1rem}
 .roundbox{padding:2.7rem 3rem 3rem 3rem; border-radius: 15px; background-color: #ffffff;display: flex; flex-direction: column;justify-content: center; align-items: center;margin-bottom: 20px}
 .br-radious0{border-radius: 15px 15px 0 0 !important}
-.coupon{display: flex; flex-direction: column; justify-content: center; align-items: center; margin-bottom: 20px; padding:0 3rem; background-color: #fff; border-radius: 0 0 15px 15px !important}
+.coupon{display: flex; flex-direction: column; justify-content: center; align-items: center; margin-bottom: 20px; padding-bottom:3rem; background-color: #fff; border-radius: 0 0 15px 15px !important}
 .coupon-sb{background-color: #efeff0}
 
 .card{ position:relative; }
