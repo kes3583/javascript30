@@ -150,7 +150,7 @@
 
 
     </div>
-    <div class="fixed dn">
+    <div class="fixed">
         <button type="button" class="btn btn-block btn-reg">“안전벨트 OK” 캠페인 응모하기</button>
     </div>
 </body>
@@ -218,29 +218,23 @@
 
                 const isHalfShown = window.scrollY + window.innerHeight > progressBar.offsetTop;
                 const isNotScrolledPast = window.scrollY + window.innerHeight < progressBar.offsetTop + progressBar.offsetHeight;
-                // isNotScrolledPast? console.log('스크롤안 ' ) : console.log('스크롤 벗어남. ' )
-                // console.log('window.scrollY', window.scrollY + window.innerHeight, 'imgOffsetBottom', imgOffsetBottom)
-                // if(window.scrollY + window.innerHeight < imgOffsetBottom){
-                //     console.log('스크롤 안');
-                // }else{
-                //     console.log('스크롤 밖')
-                // }
 
-                if (myStatus==0 && isHalfShown && isNotScrolledPast) {
 
-                    //progressBar.classList.add('active')
+                if (isHalfShown && isNotScrolledPast) {
+
+                    progressBar.classList.add('active')
                     console.log('스크롤 안');
 
                     if (myStatus == 0) {
                         myStatus = 1;
-                        
+
                         graph();
                     }
 
                 } else {
                     progressBar.classList.remove('active')
                     console.log('스크롤 밖')
-                    //myStatus = false;
+                    myStatus = 0;
                 }
 
 
