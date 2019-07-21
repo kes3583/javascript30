@@ -221,26 +221,23 @@
 
 
                 if (isHalfShown && isNotScrolledPast) {
-
-                    progressBar.classList.add('active')
-                    console.log('스크롤 안');
-
+                    // progressBar.classList.add('active')
+                    // console.log('스크롤 안');
                     if (myStatus == 0) {
                         myStatus = 1;
 
                         graph();
                     }
-
-                } else {
-                    progressBar.classList.remove('active')
-                    console.log('스크롤 밖')
-                    myStatus = 0;
                 }
+                //else {
+                //     progressBar.classList.remove('active')
+                //     console.log('스크롤 밖')
+                //     myStatus = 0;
+                // }
 
 
 
-            //console.log(window.scrollY)
-            //console.log(window.pageYOffset)
+
         }
         //window.addEventListener('scroll', checkSlide);
         window.addEventListener('scroll', _debounce(checkSlide,0));
