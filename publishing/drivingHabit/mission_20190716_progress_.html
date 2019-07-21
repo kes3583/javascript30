@@ -36,7 +36,7 @@
         <!-- <h1 class="fs17">T map 운전습관 안전운전 캠페인</h1> -->
         <div class="roundbox br-radious0 mb0 pdb0">
             <!-- <img src="./images/mission/20190716/txt_01_01.png" alt="응모하기" class="mb20"> -->
-            <img src="./images/mission/20190716/txt_01_01_done.png" alt="응모완료">
+            <img src="./images/mission/20190716/txt_01_01_done.png" alt="응모완료" >
             <img src="./images/mission/20190716/txt_01_02.png" alt="">
             <div class="card">
                 <div class="detail">
@@ -112,7 +112,7 @@
                 <input type="text" name="search" placeholder="'-' 없이 휴대폰 번호 입력">
                 <div class="txt">※ 휴대폰 번호는 응모하기 후 수정이 불가능합니다.</div>
                 <label class="container">[필수] 개인정보 수집/이용 동의 및 처리 안내
-                    <input type="checkbox" id="checkbox" onclick="getChecked();">
+                    <input type="checkbox">
                     <span class="checkmark"></span>
                 </label>
 
@@ -150,7 +150,7 @@
 
 
     </div>
-    <div class="fixed">
+    <div class="fixed dn">
         <button type="button" class="btn btn-block btn-reg">“안전벨트 OK” 캠페인 응모하기</button>
     </div>
 </body>
@@ -159,22 +159,21 @@
 
 <script>
     "use strict";
-
     function _debounce(func, wait, immediate = true) {
-        var timeout;
-        return function() {
-            var context = this,
-                args = arguments;
-            var later = function() {
-                timeout = null;
-                if (!immediate) func.apply(context, args);
+            var timeout;
+            return function() {
+                var context = this,
+                    args = arguments;
+                var later = function() {
+                    timeout = null;
+                    if (!immediate) func.apply(context, args);
+                };
+                var callNow = immediate && !timeout;
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+                if (callNow) func.apply(context, args);
             };
-            var callNow = immediate && !timeout;
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-            if (callNow) func.apply(context, args);
         };
-    };
 
     //progress bar
     const graph = function() {
@@ -197,37 +196,65 @@
     const progressBar = document.querySelector('.circle');
     var myStatus = 0;
     function checkSlide(e) {
-        const slideInAt = window.scrollY >= window.innerHeight + progressBar.offsetHeight;
-        if (slideInAt) {
-            // trigger function only once
-            if (myStatus === 0) {
-                myStatus = 1;
-                graph();
-            }
-        }
-    }
-    window.addEventListener('scroll', _debounce(checkSlide, 5));
-    progressBar.addEventListener("click", graph);
+            //console.count(e)
+                const progressBarVal = progressBar.getBoundingClientRect();
+                //half way through the image
 
-    function getChecked() {
-      const checkBox = document.getElementById("checkbox");
-      // const text = document.getElementById("text");
-      if (checkBox.checked){
-        console.log('check')
-      } else {
-         console.log('uncheck')
-      }
-    }
+                // console.log('window.scrollY', window.scrollY)
+                // console.log('window.innerHeight', window.innerHeight)
+                // console.log('progressBarVal.height', progressBarVal.height)
+                // console.log('progressBar.offsetTop ', progressBar.offsetTop)
+                // console.log('progressBarVal.top ', progressBarVal.top)
+
+                //bottom ot the content area.
+                const slideInAt = (window.scrollY + window.innerHeight) - progressBar.offsetHeight / 2;
+
+                //bottom of the image
+                const imgOffsetBottom= progressBar.offsetTop + progressBar.offsetHeight;
+                //const imgRectBottom= progressBarVal.top + progressBarVal.height;
+                // console.log('progressBar.offsetTop ', progressBar.offsetTop, 'imgRectTop',progressBarVal.top )
+                console.log('window.scrollY + window.innerHeight ', window.scrollY + window.innerHeight, 'progressBar.offsetTop', progressBar.offsetTop)
+                console.log('window.scrollY + window.innerHeight ', window.scrollY + window.innerHeight, 'progressBar.offsetTop + offsetHeight', progressBar.offsetTop + progressBar.offsetHeight)
+
+                const isHalfShown = window.scrollY + window.innerHeight > progressBar.offsetTop;
+                const isNotScrolledPast = window.scrollY + window.innerHeight < progressBar.offsetTop + progressBar.offsetHeight;
+
+
+                if (isHalfShown && isNotScrolledPast) {
+                    // progressBar.classList.add('active')
+                    // console.log('스크롤 안');
+                    if (myStatus == 0) {
+                        myStatus = 1;
+
+                        graph();
+                    }
+                }
+                //else {
+                //     progressBar.classList.remove('active')
+                //     console.log('스크롤 밖')
+                //     myStatus = 0;
+                // }
+
+
+
+
+        }
+        //window.addEventListener('scroll', checkSlide);
+        window.addEventListener('scroll', _debounce(checkSlide,0));
 
     //$('.register-box').hide();
     $(".btn-reg").click(function() {
+        // $(this).toggleClass("open").next().stop().slideToggle()
         $(this).parent().prev().stop().slideToggle();
+        //$(this).parent().prev()
     });
     $(".btn-down").click(function() {
+        // $(this).toggleClass("open").next().stop().slideToggle()
         $(this).parent().parent().stop().slideToggle();
     });
 
     $(".footer a").click(function() {
+        // $(this).toggleClass("open").next().stop().slideToggle()
         $(this).toggleClass("open").next().toggle()
         $("body, html").animate({
             scrollTop: $("body").height()
