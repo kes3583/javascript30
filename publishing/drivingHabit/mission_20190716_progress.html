@@ -193,7 +193,8 @@
         });
     }
     graph();
-    const progressBar = document.querySelector('.sitbelt');
+    const progressBar = document.querySelector('.circle');
+    var myStatus = 0;
     function checkSlide(e) {
             //console.count(e)
                 const progressBarVal = progressBar.getBoundingClientRect();
@@ -224,16 +225,17 @@
                 // }else{
                 //     console.log('스크롤 밖')
                 // }
-                var myStatus = false;
-                if (isHalfShown && isNotScrolledPast) {
-                    progressBar.classList.add('active')
+
+                if (myStatus==0 && isHalfShown && isNotScrolledPast) {
+
+                    //progressBar.classList.add('active')
                     console.log('스크롤 안');
-                    // myStatus = false;
-                    // if (!myStatus) {
-                    //     myStatus = true;
-                    //     console.log('스크롤 밖')
-                    //     //graph();
-                    // }
+
+                    if (myStatus == 0) {
+                        myStatus = 1;
+                        
+                        graph();
+                    }
 
                 } else {
                     progressBar.classList.remove('active')
