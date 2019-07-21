@@ -195,8 +195,10 @@
                 console.log('slideImg.offsetTop', slideImg.offsetTop)
                 if (isHalfShown && isNotScrolledPast) {
                     slideImg.classList.add('active')
+                    console.log('in')
                 } else {
                     slideImg.classList.remove('active')
+                    console.log('out')
                 }
 
             })

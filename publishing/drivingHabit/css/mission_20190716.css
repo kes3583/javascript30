@@ -37,6 +37,7 @@ body{background:#357fee; }
 .fc-red{color:#f8483b !important}
 .fc-orange{color:#f86738 !important}
 .fc-fff{color:#fff !important}
+.fc-999{color:#999 !important}
 .bg-color-sky-blue{background-color:#dce9fe !important }
 .lh1-4{line-height: 1.4 !important}
 .lh1-6{line-height: 1.6 !important}
@@ -54,12 +55,14 @@ body{background:#357fee; }
 .pdlr18{padding-left:18px !important; padding-right:18px !important}
 .pdb0{padding-bottom: 0 !important}
 .pdb100{padding-bottom: 100px !important}
+.pdt20{padding-top: 20px !important}
 .pdt30{padding-top: 30px !important}
 .pdt50{padding-top: 50px !important}
 .mt15{margin-top: 15px !important}
 .mt10{margin-top: 10px !important}
 .mb0{margin-bottom: 0 !important}
 .mb20{margin-bottom: 20px !important}
+.mb30{margin-bottom: 30px !important}
 .ml5{margin-left: 5px !important}
 
 .op1{opacity: 1 !important}
@@ -78,6 +81,7 @@ body{background:#357fee; }
 .js-ct{justify-content: center !important;}
 .hidden{overflow-x: hidden;}
 .fixed{position:fixed;left:0;bottom:0; width:100%; z-index: 100001; }
+.dn{display: none}
 
 /* button */
 button{overflow: visible;}
@@ -180,27 +184,17 @@ button{overflow: visible;}
 .register-box .container input:checked ~ .checkmark:after { display: block; }
 .register-box .container .checkmark:after { left: 8px; top: 4px; width: 5px; height: 10px; border: solid white; border-width: 0 3px 3px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); }
 .register-box .policy{margin-top:5px; padding:15px; color:#4d4d4d; background-color: #e9eaeb;width:100%;height: 80px; overflow-y: scroll;}
-.register-box .policy p, .register-box .policy li{font-size: 1.2rem; color: #4d4d4d; line-height: 1.5;
-  letter-spacing: -0.46px;}
+.register-box .policy p, .register-box .policy li{font-size: 1.2rem; color: #4d4d4d; line-height: 1.5; letter-spacing: -0.46px;}
 
-
-@keyframes slideIn {
-  from {
-    bottom: -300px;
-    opacity: 0
-  }
-
-  to {
-    bottom: 0;
-    opacity: 1
-  }
-}
 
 
 table, td, th { border: 1px solid #ddd; text-align: left; }
 table { border-collapse: collapse; width: 100%; }
 table th{width:72px}
 th, td { padding: 5px;font-size: 1.2rem; color: #4d4d4d}
+
+.event{}
+.event h1{text-align: center; padding:3rem 0 2rem; color: #fff}
 
 @media all and (max-width: 720px) {
 	.card{width: 280px;}

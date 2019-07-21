@@ -32,27 +32,22 @@
             <div class="right"><img src="./images/mission/20190716/img-belt02.png" alt=""></div>
         </div>
     </section>
-    <section class="content">
-        <!-- <h1 class="fs17">T map 운전습관 안전운전 캠페인</h1> -->
+    <section class="content event">
+        <h1 class="fs17">T map 운전습관 안전운전 캠페인</h1>
         <div class="roundbox br-radious0 mb0 pdb0">
-            <!-- <img src="./images/mission/20190716/txt_01_01.png" alt="응모하기" class="mb20"> -->
-            <img src="./images/mission/20190716/txt_01_01_done.png" alt="응모완료" >
-            <img src="./images/mission/20190716/txt_01_02.png" alt="">
-            <div class="card">
-                <div class="detail">
-                    <div class="tit"><img src="./images/mission/20190716/tit.png" alt=""></div>
-                    <span class="num fc-000">1234567</span>
-                    <span class="roundbox gr pd0">010-12**-56**</span>
-                </div>
-                <img src="./images/mission/20190716/img_usernum.png" alt="" class="img">
-            </div>
+            <img src="./images/mission/20190716/txt_01_01.png" alt="함깨해요 안전벨트 ok" class="mb20">
+
             <!-- <div class="animation01"><img src="./images/mission/20190716/dummy01.png" alt=""></div>
         <p class="fs14">※ 안전벨트 OK 캠페인에서 지금 바로 응모하세요</p> -->
         </div>
         <div class="coupon">
-            <p class="txt-01 fs17  tc ff-nanumsquare">아래 응모하기 버튼을 눌러<br><strong class="fs17"> 스타벅스 카페 아메리카노(Tall)</strong>에<br> 응모하세요!</p>
-
-            <div class="roundbox gr bd-radius14 mb0">총 5,000명 추첨</div>
+            <p class="txt-01 fs17  tc ff-nanumsquare">NUGU 버튼을 눌러<br>
+            “안전벨트 OK” 말하고 응모하시면<br>
+            <strong class="fs17">스타벅스 카페 아메리카노(Tall)</strong>를<br>
+            드려요!</p>
+            <div class="roundbox gr bd-radius14">총 5,000명 추첨</div>
+            <img src="./images/mission/20190716/ani01.gif" alt=""></a>
+            <p class="fs14 fc-999 pdt20">※ 안전벨트 OK 캠페인에서 지금 바로 응모하세요</p>
         </div>
         <!-- <div class="coupon coupon-sb">
             <img src="./images/mission/20190716/coupon_starbucks.png" alt="">
@@ -63,27 +58,12 @@
                     <img src="./images/mission/20190716/img_campaign_sitbelt_01.png" alt=""></a></div>
             <div class="right"><img src="./images/mission/20190716/img_campaign_sitbelt_02.png" alt=""></div>
         </div>
-        <div class="roundbox progress">
-            <img src="./images/mission/20190716/txt_02.png" alt="">
-            <div class="circle" id="circle">
-                <div class="distance">
-                    <h3><img src="./images/mission/20190716/tit_02.png" alt=""></h3>
-                    <strong>100<i>%</i></strong>
-                    <ul>
-                        <li>
-                            <span class="tit"><em>주행거리</em></span>
-                            <span class="bold">100<em class="unit">km</em></span>
-                        </li>
-                        <li>
-                            <span class="tit"><em>과속주행</em></span>
-                            <span class="bold fc-orange">27.2<em class="unit">km</em></span>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-            <img src="./images/mission/20190716/img-coupon.png" alt="" class="m-coupon">
-            <div class="roundbox gr bd-radius14 mt15 mb0">준수율 100% 상위 1,000명</div>
+        <div class="roundbox">
+            <img src="./images/mission/20190716/txt_02.png" alt="" class="mb20">
+            <p class="txt-01 fs17  tc ff-nanumsquare">운전습관 동의하고 목적지까지<br>
+            200km이상 과속 없이 주행하시면,<br> <strong class="fs17">모바일 주유권 3만 원</strong>을 드려요!</p>
+            <div class="roundbox gr bd-radius14 mt15 mb30">준수율 100% 상위 1,000명</div>
+            <img src="./images/mission/20190716/ani02.gif" alt=""></a>
         </div>
         <p class="txt-03">2019년 8월 22일(목)<br> 오후 5시 순위가 발표됩니다!</p>
         <p class="txt-03 txt-04">※ 자세한 내용은 유의사항을 참고해주세요.</p>
@@ -150,7 +130,7 @@
 
 
     </div>
-    <div class="fixed dn">
+    <div class="fixed">
         <button type="button" class="btn btn-block btn-reg">“안전벨트 OK” 캠페인 응모하기</button>
     </div>
 </body>
@@ -158,7 +138,7 @@
 <script src="js/plugins/circle-progress.min.js"></script>
 
 <script>
-    "use strict";
+    //"use strict";
     function _debounce(func, wait, immediate = true) {
             var timeout;
             return function() {
@@ -174,80 +154,6 @@
                 if (callNow) func.apply(context, args);
             };
         };
-
-    //progress bar
-    const graph = function() {
-        var num = 0.8904; // max = 1
-        $('#circle').circleProgress({
-            value: num,
-            size: 220,
-            thickness: 10,
-            startAngle: -Math.PI / 4 * 2,
-            lineCap: 'round',
-            fill: {
-                color: '#00bc76'
-            }
-        }).on('circle-animation-progress', function(event, progress) {
-            //console.log('progress',Math.round(num))
-            $(this).find('strong').html((100 * (progress * num)).toFixed(2) + '<i>%</i>');
-        });
-    }
-    graph();
-    const progressBar = document.querySelector('.sitbelt');
-    function checkSlide(e) {
-            //console.count(e)
-                const progressBarVal = progressBar.getBoundingClientRect();
-                //half way through the image
-
-                // console.log('window.scrollY', window.scrollY)
-                // console.log('window.innerHeight', window.innerHeight)
-                // console.log('progressBarVal.height', progressBarVal.height)
-                // console.log('progressBar.offsetTop ', progressBar.offsetTop)
-                // console.log('progressBarVal.top ', progressBarVal.top)
-
-                //bottom ot the content area.
-                const slideInAt = (window.scrollY + window.innerHeight) - progressBar.offsetHeight / 2;
-
-                //bottom of the image
-                const imgOffsetBottom= progressBar.offsetTop + progressBar.offsetHeight;
-                //const imgRectBottom= progressBarVal.top + progressBarVal.height;
-                // console.log('progressBar.offsetTop ', progressBar.offsetTop, 'imgRectTop',progressBarVal.top )
-                console.log('window.scrollY + window.innerHeight ', window.scrollY + window.innerHeight, 'progressBar.offsetTop', progressBar.offsetTop)
-                console.log('window.scrollY + window.innerHeight ', window.scrollY + window.innerHeight, 'progressBar.offsetTop + offsetHeight', progressBar.offsetTop + progressBar.offsetHeight)
-
-                const isHalfShown = window.scrollY + window.innerHeight > progressBar.offsetTop;
-                const isNotScrolledPast = window.scrollY + window.innerHeight < progressBar.offsetTop + progressBar.offsetHeight;
-                // isNotScrolledPast? console.log('스크롤안 ' ) : console.log('스크롤 벗어남. ' )
-                // console.log('window.scrollY', window.scrollY + window.innerHeight, 'imgOffsetBottom', imgOffsetBottom)
-                // if(window.scrollY + window.innerHeight < imgOffsetBottom){
-                //     console.log('스크롤 안');
-                // }else{
-                //     console.log('스크롤 밖')
-                // }
-                var myStatus = false;
-                if (isHalfShown && isNotScrolledPast) {
-                    progressBar.classList.add('active')
-                    console.log('스크롤 안');
-                    // myStatus = false;
-                    // if (!myStatus) {
-                    //     myStatus = true;
-                    //     console.log('스크롤 밖')
-                    //     //graph();
-                    // }
-
-                } else {
-                    progressBar.classList.remove('active')
-                    console.log('스크롤 밖')
-                    //myStatus = false;
-                }
-
-
-
-            //console.log(window.scrollY)
-            //console.log(window.pageYOffset)
-        }
-        //window.addEventListener('scroll', checkSlide);
-        window.addEventListener('scroll', _debounce(checkSlide,0));
 
     //$('.register-box').hide();
     $(".btn-reg").click(function() {
