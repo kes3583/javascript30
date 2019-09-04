@@ -13,7 +13,7 @@ $(function(){
 	preloading([ './images/mission/20181015/images/main_ani_01.gif',
 		'./images/mission/20181015/main_ani_02.gif',
 		'./images/mission/20181015/main_ani_03.gif',
-		'./images/mission/20181015/main_ani_05.gif'
+		'./images/mission/20181015/main_ani_04.gif'
 		]);
 
 	var score =80;
